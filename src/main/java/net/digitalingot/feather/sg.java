@@ -8,7 +8,7 @@ import com.google.gson.stream.JsonWriter;
 import java.util.ArrayList;
 
 public class sg
-extends TypeAdapter<byte[]> {
+        extends TypeAdapter<byte[]> {
     public void ay(JsonWriter jsonWriter, byte[] byArray) {
         if (byArray == null) {
             jsonWriter.nullValue();
@@ -27,7 +27,7 @@ extends TypeAdapter<byte[]> {
         ArrayList<Byte> arrayList = new ArrayList<Byte>();
         while (jsonReader.peek() == JsonToken.NUMBER) {
             int n = jsonReader.nextInt();
-            arrayList.add((byte)n);
+            arrayList.add((byte) n);
         }
         jsonReader.endArray();
         byte[] byArray = new byte[arrayList.size()];
@@ -42,6 +42,6 @@ extends TypeAdapter<byte[]> {
     }
 
     public void write(JsonWriter jsonWriter, Object object) {
-        this.ay(jsonWriter, (byte[])object);
+        this.ay(jsonWriter, (byte[]) object);
     }
 }

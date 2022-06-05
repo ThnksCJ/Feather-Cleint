@@ -6,17 +6,17 @@ import net.digitalingot.feather.enums.qc;
 import java.util.List;
 
 public class cd {
-    @SerializedName(value="compact")
+    @SerializedName(value = "compact")
     private Boolean ya;
-    @SerializedName(value="favorites")
+    @SerializedName(value = "favorites")
     private Boolean xq;
-    @SerializedName(value="favoriteMods")
+    @SerializedName(value = "favoriteMods")
     private List<qc> ha;
-    @SerializedName(value="renderMods")
+    @SerializedName(value = "renderMods")
     private List<qc> hg;
-    @SerializedName(value="modPreview")
+    @SerializedName(value = "modPreview")
     private Boolean ad;
-    @SerializedName(value="modPreviewImage")
+    @SerializedName(value = "modPreviewImage")
     private String zd;
 
     public cd(boolean bl, boolean bl2, List<qc> list, List<qc> list2, boolean bl3, String string) {

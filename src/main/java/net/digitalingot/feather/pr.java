@@ -1,5 +1,7 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.an;
+import net.digitalingot.feather.interfaces.nb;
 import net.digitalingot.feather.mods.impl.General;
 import net.digitalingot.feather.mods.impl.Voice;
 import net.minecraft.client.gui.GuiChat;
@@ -50,9 +52,9 @@ public class pr {
         if (this.eN.qy() == null) {
             return null;
         }
-        pk.ay.uj.rf.uj uj2 = this.eN.qy().if().bD().get(uUID);
+        pk.ay.uj.rf.uj uj2 = this.eN.qy(). if ().bD().get(uUID);
         if (uj2 != null && uj2.bY()) {
-            switch (1.gW[uj2.cE().cG().ordinal()]) {
+            switch (1. gW[uj2.cE().cG().ordinal()]){
                 case 1: {
                     return -65531;
                 }

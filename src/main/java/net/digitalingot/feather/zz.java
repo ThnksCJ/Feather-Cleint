@@ -1,5 +1,7 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.sd;
+
 public class zz {
     private static zz rl;
     private sd sb;

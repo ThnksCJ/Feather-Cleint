@@ -6,7 +6,7 @@ import org.jetbrains.annotations.NotNull;
 public enum li {
     HUD_EDITOR("hudEditor");
 
-    @SerializedName(value="slug")
+    @SerializedName(value = "slug")
     @NotNull
     private final String slug;
 

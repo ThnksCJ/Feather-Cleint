@@ -1,6 +1,7 @@
 package net.digitalingot.feather;
 
 import net.digitalingot.feather.enums.qc;
+import net.digitalingot.feather.interfaces.bx;
 import net.digitalingot.feather.mods.Mod;
 import org.jetbrains.annotations.NotNull;
 

@@ -52,7 +52,7 @@ public class ul {
             bc bc2 = iterator.next();
             if (!bc2.oM()) continue;
             if (bc2 instanceof vo) {
-                vo vo2 = (vo)bc2;
+                vo vo2 = (vo) bc2;
                 if (vo2.oL()) {
                     iterator.remove();
                     continue;

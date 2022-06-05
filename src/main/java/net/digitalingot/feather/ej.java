@@ -3,8 +3,9 @@ package net.digitalingot.feather;
 import com.google.gson.JsonElement;
 import net.digitalingot.feather.enums.ho;
 import net.digitalingot.feather.enums.qc;
-import net.digitalingot.feather.mods.Mod;
+import net.digitalingot.feather.interfaces.*;
 import net.digitalingot.feather.mods.HUDMod;
+import net.digitalingot.feather.mods.Mod;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -31,6 +32,26 @@ public class ej {
         this.rs = list;
         this.vp = tk2;
         this.qa = new vb(this, et2);
+    }
+
+    @NotNull
+    public static <T extends Mod<?>> an<T> ay(final @NotNull Class<T> clazz) {
+        return new an<T>() {
+            private T qw;
+
+            @Override
+            public T nt() {
+                if (this.qw != null) {
+                    return this.qw;
+                }
+                sd sd2 = zz.nw();
+                if (sd2 == null) {
+                    return null;
+                }
+                this.qw = sd2.xn().rf(clazz);
+                return this.qw;
+            }
+        };
     }
 
     public void initialize() {
@@ -125,7 +146,7 @@ public class ej {
             throw new IllegalArgumentException("Config key \"" + string2 + "\" contained a payload which couldn't be validated: \"" + jsonElement + "\"");
         }
         if (c instanceof Mod) {
-            ca2.ay(((Mod)c).xd(), object);
+            ca2.ay(((Mod) c).xd(), object);
         } else {
             ca2.ay(c, object);
         }
@@ -145,7 +166,7 @@ public class ej {
             double d = cy2.dz();
             double d2 = cy2.ev();
             double d3 = cy2.bw();
-            ci ci2 = (ci)field.get(ft2.xd());
+            ci ci2 = (ci) field.get(ft2.xd());
             ci2.ay(ho2, d, d2, d3);
         }
         this.bu(ft2);
@@ -153,7 +174,7 @@ public class ej {
 
     public void kl(@NotNull kb kb3) {
         HUDMod<?> ft2 = kb3.bk();
-        switch (2.io[ft2.tk().ordinal()]) {
+        switch (2. io[ft2.tk().ordinal()]){
             case 1: {
                 kb3.te().ks = false;
                 break;
@@ -195,33 +216,13 @@ public class ej {
     }
 
     @NotNull
-    public static <T extends Mod<?>> an<T> ay(final @NotNull Class<T> clazz) {
-        return new an<T>(){
-            private T qw;
-
-            @Override
-            public T nt() {
-                if (this.qw != null) {
-                    return this.qw;
-                }
-                sd sd2 = zz.nw();
-                if (sd2 == null) {
-                    return null;
-                }
-                this.qw = sd2.xn().rf(clazz);
-                return this.qw;
-            }
-        };
-    }
-
-    @NotNull
     public Mod<?> ay(@NotNull qc qc2) {
         return this.mv.get(qc2);
     }
 
     @NotNull
     public <T extends Mod<?>> T rf(@NotNull Class<T> clazz) {
-        return (T)this.qf.get(clazz);
+        return (T) this.qf.get(clazz);
     }
 
     @NotNull

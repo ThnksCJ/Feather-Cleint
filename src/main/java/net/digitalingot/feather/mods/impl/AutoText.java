@@ -3,6 +3,7 @@ package net.digitalingot.feather.mods.impl;
 import net.digitalingot.feather.*;
 import net.digitalingot.feather.enums.ao;
 import net.digitalingot.feather.enums.qc;
+import net.digitalingot.feather.interfaces.*;
 import net.digitalingot.feather.mods.Mod;
 import net.minecraft.client.Minecraft;
 import org.jetbrains.annotations.NotNull;
@@ -12,12 +13,12 @@ import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-@sv(aw= qc.AUTO_TEXT, jf=@bx(vu="Auto Text", jm="https://assets.feathercdn.net/game/mods/autotext.svg", mz="", lq={}))
+@sv(aw = qc.AUTO_TEXT, jf = @bx(vu = "Auto Text", jm = "https://assets.feathercdn.net/game/mods/autotext.svg", mz = "", lq = {}))
 public class AutoText
-extends Mod<ay> {
-    private File eI;
+        extends Mod<ay> {
     @NotNull
     private final Set<bw> fp = new LinkedHashSet<bw>();
+    private File eI;
 
     @Override
     public void initialize() {
@@ -36,7 +37,7 @@ extends Mod<ay> {
             }
             this.gd(n + 100001);
         });
-        qo.ay(() -> ((ay)this.vz).eK, () -> {
+        qo.ay(() -> ((ay) this.vz).eK, () -> {
             if (!this.gc()) {
                 return;
             }
@@ -46,7 +47,7 @@ extends Mod<ay> {
             if (!Minecraft.getMinecraft().inGameHasFocus) {
                 return;
             }
-            if (((ay)this.vz).eK.xj()) {
+            if (((ay) this.vz).eK.xj()) {
                 wg.INSTANCE.show();
                 fd.cv();
             }
@@ -79,7 +80,7 @@ extends Mod<ay> {
     public void au() {
         this.eI = new File(zz.nw().iu(), "autotext.json");
         if (this.eI.exists()) {
-            Set set = (Set)zd.xn(this.eI).ay(new /* Unavailable Anonymous Inner Class!! */.getType());
+            Set set = (Set) zd.xn(this.eI).ay(new /* Unavailable Anonymous Inner Class!! */.getType());
             this.fp.addAll(set);
         }
         cw.ay(this.fp);
@@ -112,10 +113,10 @@ extends Mod<ay> {
         return this.fp;
     }
 
-    @rm(le=@xg(ae="autoText", vu="AutoText", jm="https://assets.feathercdn.net/game/hudselection/autotext.svg", un=1))
+    @rm(le = @xg(ae = "autoText", vu = "AutoText", jm = "https://assets.feathercdn.net/game/hudselection/autotext.svg", un = 1))
     public static class ay
-    extends zi {
-        @au(wd="keyOpenGui", vu="AutoText Editor", pr="77", yp=@de(vi=0))
+            extends zi {
+        @au(wd = "keyOpenGui", vu = "AutoText Editor", pr = "77", yp = @de(vi = 0))
         public km eK;
     }
 }

@@ -6,8 +6,15 @@ import org.lwjgl.opengl.GL11;
 import java.nio.FloatBuffer;
 
 public class hn
-extends gn {
+        extends gn {
     private static final FloatBuffer sg;
+
+    static {
+        float[] fArray = new float[]{0.0f, 1.0f, -1.0f, -1.0f, 0.0f, 1.0f, 1.0f, 1.0f, -1.0f, 0.0f, 1.0f, 0.0f, 1.0f, 1.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f};
+        sg = BufferUtils.createFloatBuffer(fArray.length);
+        sg.put(fArray, 0, fArray.length);
+        sg.rewind();
+    }
 
     @Override
     protected boolean et() {
@@ -55,12 +62,5 @@ extends gn {
         GL11.glPopAttrib();
         GL11.glPopClientAttrib();
         GL11.glTexEnvi(8960, 8704, n2);
-    }
-
-    static {
-        float[] fArray = new float[]{0.0f, 1.0f, -1.0f, -1.0f, 0.0f, 1.0f, 1.0f, 1.0f, -1.0f, 0.0f, 1.0f, 0.0f, 1.0f, 1.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f};
-        sg = BufferUtils.createFloatBuffer(fArray.length);
-        sg.put(fArray, 0, fArray.length);
-        sg.rewind();
     }
 }

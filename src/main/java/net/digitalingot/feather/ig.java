@@ -2,6 +2,7 @@ package net.digitalingot.feather;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import net.digitalingot.feather.interfaces.xs;
 import net.minecraft.util.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

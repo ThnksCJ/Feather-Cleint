@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 
 import java.util.Map;
 
-@Mixin(value={SimpleReloadableResourceManager.class})
+@Mixin(value = {SimpleReloadableResourceManager.class})
 public interface zs {
     @Accessor
     Map<String, FallbackResourceManager> getDomainResourceManagers();

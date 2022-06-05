@@ -84,15 +84,6 @@ public class kx {
         @NotNull
         private final String scoreboardName;
 
-        @NotNull
-        public static ay fromScoreboardName(@NotNull String string) {
-            for (ay ay2 : ay.values()) {
-                if (!string.equalsIgnoreCase(ay2.getScoreboardName())) continue;
-                return ay2;
-            }
-            return LOBBY;
-        }
-
         ay(String string2) {
             this.displayName = string2;
             this.scoreboardName = string2;
@@ -101,6 +92,15 @@ public class kx {
         ay(String string2, String string3) {
             this.displayName = string2;
             this.scoreboardName = string3;
+        }
+
+        @NotNull
+        public static ay fromScoreboardName(@NotNull String string) {
+            for (ay ay2 : ay.values()) {
+                if (!string.equalsIgnoreCase(ay2.getScoreboardName())) continue;
+                return ay2;
+            }
+            return LOBBY;
         }
 
         @NotNull

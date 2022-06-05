@@ -6,7 +6,7 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
 
 public class sc$ay
-implements PotionEffects.uj {
+        implements PotionEffects.uj {
     private static final ResourceLocation qR = new ResourceLocation("minecraft:textures/gui/container/inventory.png");
 
     @Override

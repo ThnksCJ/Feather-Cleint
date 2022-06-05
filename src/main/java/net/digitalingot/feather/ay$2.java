@@ -3,7 +3,7 @@ package net.digitalingot.feather;
 import java.util.function.Consumer;
 
 class ay$2
-implements Consumer<en> {
+        implements Consumer<en> {
     ay$2() {
     }
 
@@ -13,6 +13,6 @@ implements Consumer<en> {
 
     @Override
     public void accept(Object object) {
-        this.ay((en)object);
+        this.ay((en) object);
     }
 }

@@ -3,7 +3,7 @@ package net.digitalingot.feather;
 import org.jetbrains.annotations.NotNull;
 
 public class lu
-extends RuntimeException {
+        extends RuntimeException {
     public lu(@NotNull String string) {
         super(string);
     }

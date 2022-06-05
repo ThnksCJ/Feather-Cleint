@@ -1,13 +1,14 @@
 package net.digitalingot.feather;
 
 import net.digitalingot.feather.fc;
+import net.digitalingot.feather.interfaces.vt;
 import net.digitalingot.feather.jg;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Consumer;
 
 public class hq$ay
-implements vt<sp, fc, jg> {
+        implements vt<sp, fc, jg> {
     @NotNull
     private final if Bo;
 

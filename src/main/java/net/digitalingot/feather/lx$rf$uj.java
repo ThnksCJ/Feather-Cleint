@@ -7,7 +7,7 @@ import org.capnproto.SegmentReader;
 import org.capnproto.StructReader;
 
 public final class lx$rf$uj
-extends StructReader {
+        extends StructReader {
     lx$rf$uj(SegmentReader segmentReader, int n, int n2, int n3, short s, int n4) {
         super(segmentReader, n, n2, n3, s, n4);
     }
@@ -37,6 +37,6 @@ extends StructReader {
     }
 
     public Data.Reader oe() {
-        return (Data.Reader)this._getPointerField((FromPointerReaderBlobDefault)Data.factory, 0, null, 0, 0);
+        return (Data.Reader) this._getPointerField((FromPointerReaderBlobDefault) Data.factory, 0, null, 0, 0);
     }
 }

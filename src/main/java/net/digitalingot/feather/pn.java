@@ -3,8 +3,10 @@ package net.digitalingot.feather;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import net.digitalingot.feather.enums.qc;
+import net.digitalingot.feather.interfaces.sv;
 import net.digitalingot.feather.mods.Mod;
-import net.digitalingot.featherserverapi.proto.*;
+import net.digitalingot.featherserverapi.proto.ClientHello;
+import net.digitalingot.featherserverapi.proto.ServerboundWrapper;
 import net.digitalingot.featherserverapi.proto.models.PacketType;
 import net.minecraft.client.Minecraft;
 import org.jetbrains.annotations.NotNull;
@@ -28,17 +30,17 @@ public class pn {
     private void ig(byte[] byArray) {
         Minecraft.getMinecraft().addScheduledTask(() -> {
             String string = new String(byArray, StandardCharsets.UTF_8);
-            ClientboundWrapper clientboundWrapper = (ClientboundWrapper)this.Fj.fromJson(string, ClientboundWrapper.class);
+            ClientboundWrapper clientboundWrapper = (ClientboundWrapper) this.Fj.fromJson(string, ClientboundWrapper.class);
             PacketType.Clientbound clientbound = clientboundWrapper.getPacketType();
-            switch (1.Fk[clientbound.ordinal()]) {
+            switch (1.F k[clientbound.ordinal()]){
                 case 1: {
-                    DisableMods disableMods = (DisableMods)this.Fj.fromJson(clientboundWrapper.getPayload(), DisableMods.class);
+                    DisableMods disableMods = (DisableMods) this.Fj.fromJson(clientboundWrapper.getPayload(), DisableMods.class);
                     zz.nw().xn().nn(disableMods.getMods());
                     vm.Fq.info("Received instruction to disable mods from server: " + disableMods.getMods());
                     break;
                 }
                 case 2: {
-                    SetWaypoints setWaypoints = (SetWaypoints)this.Fj.fromJson(clientboundWrapper.getPayload(), SetWaypoints.class);
+                    SetWaypoints setWaypoints = (SetWaypoints) this.Fj.fromJson(clientboundWrapper.getPayload(), SetWaypoints.class);
                     ck.oR().ifPresent(ck2 -> {
                         List<cr> list = setWaypoints.getWaypoints().stream().map(cr::ay).collect(Collectors.toList());
                         ck2.rl(list);
@@ -63,7 +65,7 @@ public class pn {
         if (Minecraft.getMinecraft().getConnection() == null) {
             return;
         }
-        vm.Fq.debug("Sending " + (Object)serverbound + " to server over plugin messaging channel");
+        vm.Fq.debug("Sending " + serverbound + " to server over plugin messaging channel");
         JsonElement jsonElement = this.Fj.toJsonTree(object);
         ServerboundWrapper serverboundWrapper = new ServerboundWrapper(serverbound, jsonElement);
         String string = this.Fj.toJson(serverboundWrapper);

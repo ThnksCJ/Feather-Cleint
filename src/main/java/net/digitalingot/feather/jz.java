@@ -1,6 +1,7 @@
 package net.digitalingot.feather;
 
 import net.digitalingot.feather.enums.qc;
+import net.digitalingot.feather.interfaces.wz;
 import net.digitalingot.feather.mods.Mod;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.OpenGlHelper;
@@ -37,7 +38,7 @@ public class jz {
     private static void ay(rr.bu.sd.ay ay2) {
         Runtime runtime = Runtime.getRuntime();
         String string = System.getProperty("os.name");
-        short s = (short)runtime.availableProcessors();
+        short s = (short) runtime.availableProcessors();
         int n = jz.nn(runtime.maxMemory());
         String string2 = OpenGlHelper.getCpu();
         String string3 = GL11.glGetString(7936) + " " + GL11.glGetString(7937);
@@ -53,7 +54,7 @@ public class jz {
         List list = dk.pE().stream().map(net.digitalingot.featherserverapi.proto.models.Mod::getName).collect(Collectors.toList());
         TextList.Builder builder = ay2.gb(list.size());
         for (int i = 0; i < list.size(); ++i) {
-            String string = (String)list.get(i);
+            String string = (String) list.get(i);
             builder.set(i, new Text.Reader(string));
         }
     }
@@ -75,7 +76,7 @@ public class jz {
         ArrayList<qc> arrayList = new ArrayList<qc>();
         for (Map.Entry<qc, Mod<?>> entry : zz.nw().xn().qq().entrySet()) {
             object = entry.getValue();
-            if (!((Mod)object).gc()) continue;
+            if (!((Mod) object).gc()) continue;
             qc qc2 = entry.getKey();
             arrayList.add(qc2);
         }
@@ -87,6 +88,6 @@ public class jz {
     }
 
     private static int nn(long l) {
-        return (int)(l / 1024L / 1024L);
+        return (int) (l / 1024L / 1024L);
     }
 }

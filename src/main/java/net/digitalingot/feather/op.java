@@ -28,7 +28,7 @@ public class op {
                 list = null;
             }
             object = new kn(sb2.getName(), sb2.getSlug(), sb2.getIcon(), sb2.jo(), list);
-            arrayList.add((kn)object);
+            arrayList.add((kn) object);
         }
         return arrayList;
     }

@@ -5,9 +5,9 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class qi {
-    @SerializedName(value="favorites")
+    @SerializedName(value = "favorites")
     private List<String> gg;
-    @SerializedName(value="lastUsed")
+    @SerializedName(value = "lastUsed")
     private List<String> re;
 
     public qi(List<String> list, List<String> list2) {

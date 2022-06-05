@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.UUID;
 
 public class kd
-extends xu {
+        extends xu {
     public kd(@NotNull nn nn2, @NotNull gk gk2, @NotNull rt rt2) {
         super(nn2, rt2, gk2, xu.ay.IN_PARTY);
     }

@@ -1,11 +1,12 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.bs;
 import org.jetbrains.annotations.NotNull;
 
 import java.awt.*;
 
 public class ms
-implements bs<gp> {
+        implements bs<gp> {
     @NotNull
     private final iq ip = new iq();
     @NotNull
@@ -32,7 +33,7 @@ implements bs<gp> {
     @Override
     @NotNull
     public String kl(@NotNull Object object) {
-        return this.ay((gp)object);
+        return this.ay((gp) object);
     }
 
     @Override

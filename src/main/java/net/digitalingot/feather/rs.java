@@ -8,7 +8,7 @@ import net.digitalingot.feather.enums.vp;
 import java.util.List;
 
 public class rs
-extends ByteToMessageDecoder {
+        extends ByteToMessageDecoder {
     private final vp Gt;
 
     public rs() {
@@ -25,7 +25,7 @@ extends ByteToMessageDecoder {
             return;
         }
         int n2 = byteBuf.readerIndex();
-        switch (1.Gu[this.Gt.ordinal()]) {
+        switch (1. Gu[this.Gt.ordinal()]){
             case 1: {
                 n = Short.toUnsignedInt(byteBuf.readShort());
                 break;

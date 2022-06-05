@@ -2,17 +2,18 @@ package net.digitalingot.feather;
 
 import com.google.gson.annotations.SerializedName;
 import net.digitalingot.feather.enums.ao;
+import net.digitalingot.feather.interfaces.da;
 import org.jetbrains.annotations.NotNull;
 
 public class ax
-implements da {
-    @SerializedName(value="primary-contrast-color")
+        implements da {
+    @SerializedName(value = "primary-contrast-color")
     @NotNull
     private final String kc;
-    @SerializedName(value="primary-contrast-active-color")
+    @SerializedName(value = "primary-contrast-active-color")
     @NotNull
     private final String ct;
-    @SerializedName(value="secondary-contrast-color")
+    @SerializedName(value = "secondary-contrast-color")
     @NotNull
     private final String am;
 

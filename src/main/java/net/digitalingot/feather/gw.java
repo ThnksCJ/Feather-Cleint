@@ -10,6 +10,8 @@ import net.digitalingot.feather.at;
 import net.digitalingot.feather.enums.ao;
 import net.digitalingot.feather.enums.li;
 import net.digitalingot.feather.enums.qd;
+import net.digitalingot.feather.interfaces.da;
+import net.digitalingot.feather.interfaces.vt;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -24,7 +26,7 @@ import java.util.function.Consumer;
 
 public class gw {
     @NotNull
-    public static final Gson GSON = new GsonBuilder().addSerializationExclusionStrategy(new er()).enableComplexMapKeySerialization().setFieldNamingStrategy(new wx()).registerTypeAdapterFactory(new no()).registerTypeAdapter(Color.class, new ld()).registerTypeAdapter(gp.class, new sk()).registerTypeAdapter(InetSocketAddress.class, new xj()).registerTypeAdapter(byte[].class, new sg()).registerTypeAdapter(km.class, new zy()).registerTypeAdapter(qd.class, (Object)new at.ay()).registerTypeAdapter(fm.class, (Object)new at.rf()).registerTypeAdapter(li.class, (Object)new at.uj()).create();
+    public static final Gson GSON = new GsonBuilder().addSerializationExclusionStrategy(new er()).enableComplexMapKeySerialization().setFieldNamingStrategy(new wx()).registerTypeAdapterFactory(new no()).registerTypeAdapter(Color.class, new ld()).registerTypeAdapter(gp.class, new sk()).registerTypeAdapter(InetSocketAddress.class, new xj()).registerTypeAdapter(byte[].class, new sg()).registerTypeAdapter(km.class, new zy()).registerTypeAdapter(qd.class, (Object) new at.ay()).registerTypeAdapter(fm.class, (Object) new at.rf()).registerTypeAdapter(li.class, (Object) new at.uj()).create();
     @NotNull
     private final Multimap<ao, vt<da, da, da>> cm = ArrayListMultimap.create();
     @NotNull
@@ -66,19 +68,22 @@ public class gw {
         int n = this.lx.incrementAndGet();
         if (consumer != null || consumer2 != null) {
             object = new ay(rf2, n);
-            this.mh.put((ay)object, new nx<S, F>(consumer, consumer2));
+            this.mh.put((ay) object, new nx<S, F>(consumer, consumer2));
         }
         object = GSON.toJsonTree(da2);
-        pa pa2 = new pa(n, da2.xp(), (JsonElement)object, null, null);
+        pa pa2 = new pa(n, da2.xp(), (JsonElement) object, null, null);
         this.rf(pa2, rf2);
     }
 
     @VisibleForTesting
     public void ay(@NotNull pa pa2, @NotNull rf rf2) {
-        block6: {
-            block4: {
+        block6:
+        {
+            block4:
+            {
                 Consumer<da> consumer;
-                block5: {
+                block5:
+                {
                     if (pa2.nk() == null && pa2.bb() == null) break block4;
                     ay ay2 = new ay(rf2, pa2.zt());
                     nx<da, da> nx2 = this.mh.get(ay2);
@@ -89,13 +94,13 @@ public class gw {
                     consumer = nx2.rn();
                     if (pa2.nk() == null || consumer2 == null) break block5;
                     Class<?> clazz = hi.ay(consumer2.getClass(), 0, 0);
-                    da da3 = (da)GSON.fromJson(pa2.nk(), clazz);
+                    da da3 = (da) GSON.fromJson(pa2.nk(), clazz);
                     consumer2.accept(da3);
                     break block6;
                 }
                 if (pa2.bb() == null || consumer == null) break block6;
                 Class<?> clazz = hi.ay(consumer.getClass(), 0, 0);
-                da da4 = (da)GSON.fromJson(pa2.bb(), clazz);
+                da da4 = (da) GSON.fromJson(pa2.bb(), clazz);
                 consumer.accept(da4);
                 break block6;
             }
@@ -125,7 +130,7 @@ public class gw {
 
     private void rf(@NotNull pa pa2, @NotNull rf rf2) {
         String string = GSON.toJson(pa2);
-        switch (1.cr[rf2.ordinal()]) {
+        switch (1. cr[rf2.ordinal()]){
             case 1: {
                 bq.nl(string);
                 break;
@@ -160,7 +165,7 @@ public class gw {
             if (object == null || this.getClass() != object.getClass()) {
                 return false;
             }
-            ay ay2 = (ay)object;
+            ay ay2 = (ay) object;
             return this.id == ay2.id && this.ys == ay2.ys;
         }
 

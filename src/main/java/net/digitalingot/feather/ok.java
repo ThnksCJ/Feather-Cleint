@@ -18,8 +18,9 @@ import java.awt.event.MouseWheelEvent;
 import java.util.*;
 
 public class ok
-extends GuiScreen {
-    private static final Component lh = new Component(){};
+        extends GuiScreen {
+    private static final Component lh = new Component() {
+    };
     private final CefApp cefApp;
     private final CefBrowser cefBrowser;
     private final ICefRenderer no;
@@ -58,35 +59,35 @@ extends GuiScreen {
 
     private static int ja(int n) {
         switch (n) {
-            case 29: 
-            case 42: 
-            case 56: 
+            case 29:
+            case 42:
+            case 56:
             case 219: {
                 return 2;
             }
-            case 54: 
-            case 157: 
-            case 184: 
+            case 54:
+            case 157:
+            case 184:
             case 220: {
                 return 3;
             }
-            case 55: 
-            case 71: 
-            case 72: 
-            case 73: 
-            case 74: 
-            case 75: 
-            case 76: 
-            case 77: 
-            case 78: 
-            case 79: 
-            case 80: 
-            case 81: 
-            case 82: 
-            case 83: 
-            case 141: 
-            case 156: 
-            case 179: 
+            case 55:
+            case 71:
+            case 72:
+            case 73:
+            case 74:
+            case 75:
+            case 76:
+            case 77:
+            case 78:
+            case 79:
+            case 80:
+            case 81:
+            case 82:
+            case 83:
+            case 141:
+            case 156:
+            case 179:
             case 181: {
                 return 4;
             }

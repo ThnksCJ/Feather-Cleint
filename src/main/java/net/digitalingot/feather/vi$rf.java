@@ -1,6 +1,7 @@
 package net.digitalingot.feather;
 
 import net.digitalingot.feather.fc;
+import net.digitalingot.feather.interfaces.vt;
 import net.digitalingot.feather.jg;
 import net.digitalingot.feather.mods.impl.General;
 import org.jetbrains.annotations.NotNull;
@@ -9,7 +10,7 @@ import java.util.UUID;
 import java.util.function.Consumer;
 
 public class vi$rf
-implements vt<fy, fc, jg> {
+        implements vt<fy, fc, jg> {
     @NotNull
     private final vi eT;
 
@@ -22,7 +23,7 @@ implements vt<fy, fc, jg> {
         UUID uUID = fy2.zg();
         if (rf.nl()) {
             General rh2 = zz.nw().xn().rf(General.class);
-            rh2.qy().if().fk();
+            rh2.qy(). if ().fk();
         } else {
             this.eT.ed(uUID);
         }

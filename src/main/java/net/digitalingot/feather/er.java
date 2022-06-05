@@ -4,7 +4,7 @@ import com.google.gson.ExclusionStrategy;
 import com.google.gson.FieldAttributes;
 
 public class er
-implements ExclusionStrategy {
+        implements ExclusionStrategy {
     public boolean shouldSkipField(FieldAttributes fieldAttributes) {
         return fieldAttributes.getDeclaredClass().isAssignableFrom(iv.class);
     }

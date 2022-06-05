@@ -7,12 +7,19 @@ public class zl {
     private static Class<?> hy;
     private static Field he;
 
+    static {
+        Class.forName("club.sk1er.patcher.mixins.plugin.PatcherMixinPlugin");
+        eu = true;
+        vm.Fq.info("Detected PatcherMod! Disabling patches...");
+    }
+
     public static boolean xb() {
         return eu;
     }
 
     public static void al() {
-        block0: {
+        block0:
+        {
             if (!eu) break block0;
             hy = Class.forName("club.sk1er.patcher.config.PatcherConfig");
             he = hy.getField("batchModelRendering");
@@ -21,7 +28,8 @@ public class zl {
     }
 
     public static void fu() {
-        block0: {
+        block0:
+        {
             if (!eu) break block0;
             hy = Class.forName("club.sk1er.patcher.config.PatcherConfig");
             hy.getField("chatPosition").set(null, false);
@@ -33,11 +41,5 @@ public class zl {
             return he.getBoolean(null);
         }
         return false;
-    }
-
-    static {
-        Class.forName("club.sk1er.patcher.mixins.plugin.PatcherMixinPlugin");
-        eu = true;
-        vm.Fq.info("Detected PatcherMod! Disabling patches...");
     }
 }

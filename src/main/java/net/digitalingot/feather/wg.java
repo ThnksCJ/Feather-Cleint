@@ -1,5 +1,7 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.an;
+import net.digitalingot.feather.interfaces.tf;
 import net.digitalingot.feather.mods.impl.General;
 import net.digitalingot.feather.mods.impl.Hypixel;
 import net.minecraft.client.Minecraft;
@@ -15,11 +17,15 @@ import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 
-public enum wg implements sw.ay
-{
+public enum wg implements sw.ay {
     INSTANCE;
 
     private static final String URL;
+
+    static {
+        URL = wg.getUrl();
+    }
+
     private final an<General> coreGetter = ej.ay(General.class);
     private Minecraft minecraft;
     private CefApp cefApp;
@@ -37,7 +43,7 @@ public enum wg implements sw.ay
             }
             return "https://ig-client.feathermc.com/";
         }
-        switch (7.ld[ay.rf().ordinal()]) {
+        switch (7. ld[ay.rf().ordinal()]){
             case 1: {
                 return "https://ig-client.feathermc.com/";
             }
@@ -58,7 +64,7 @@ public enum wg implements sw.ay
     }
 
     private void initializeCef() {
-        Async.setImpl((Async.Impl)new Async.Impl(){
+        Async.setImpl((Async.Impl) new Async.Impl() {
 
             public void invokeLater(Runnable runnable) {
                 wg.this.minecraft.addScheduledTask(runnable);
@@ -82,30 +88,30 @@ public enum wg implements sw.ay
         if (rf.nl()) {
             cefSettings.remote_debugging_port = 9222;
         }
-        this.cefApp = CefApp.getInstance(null, (CefSettings)cefSettings);
-        CefApp.addAppHandler((CefAppHandler)new CefAppHandlerAdapter(new String[]{"--external-message-pump", "--disable-threaded-scrolling=1", "--disable-features=TouchpadAndWheelScrollLatching,AsyncWheelEvents"}){
+        this.cefApp = CefApp.getInstance(null, (CefSettings) cefSettings);
+        CefApp.addAppHandler((CefAppHandler) new CefAppHandlerAdapter(new String[]{"--external-message-pump", "--disable-threaded-scrolling=1", "--disable-features=TouchpadAndWheelScrollLatching,AsyncWheelEvents"}) {
 
             public void onScheduleMessagePumpWork(long l) {
             }
         });
         this.cefClient = this.cefApp.createClient();
-        this.cefClient.addContextMenuHandler((CefContextMenuHandler)new CefContextMenuHandlerAdapter(){
+        this.cefClient.addContextMenuHandler((CefContextMenuHandler) new CefContextMenuHandlerAdapter() {
 
             public void onBeforeContextMenu(CefBrowser cefBrowser, CefFrame cefFrame, CefContextMenuParams cefContextMenuParams, CefMenuModel cefMenuModel) {
                 cefMenuModel.clear();
             }
         });
         this.cefClient.removeLifeSpanHandler();
-        this.cefClient.addLifeSpanHandler((CefLifeSpanHandler)new CefLifeSpanHandlerAdapter(){
+        this.cefClient.addLifeSpanHandler((CefLifeSpanHandler) new CefLifeSpanHandlerAdapter() {
 
             public void onAfterCreated(CefBrowser cefBrowser) {
                 cefBrowser.setWindowlessFrameRate(144);
                 super.onAfterCreated(cefBrowser);
             }
         });
-        this.messageRouter = CefMessageRouter.create((CefMessageRouter.CefMessageRouterConfig)new CefMessageRouter.CefMessageRouterConfig());
+        this.messageRouter = CefMessageRouter.create((CefMessageRouter.CefMessageRouterConfig) new CefMessageRouter.CefMessageRouterConfig());
         this.cefClient.addMessageRouter(this.messageRouter);
-        this.messageRouter.addHandler((CefMessageRouterHandler)new CefMessageRouterHandlerAdapter(){
+        this.messageRouter.addHandler((CefMessageRouterHandler) new CefMessageRouterHandlerAdapter() {
 
             public boolean onQuery(CefBrowser cefBrowser, CefFrame cefFrame, long l, String string, boolean bl, CefQueryCallback cefQueryCallback) {
                 bq.xn(string);
@@ -113,7 +119,8 @@ public enum wg implements sw.ay
             }
         }, true);
         this.renderer = new hn();
-        this.cefBrowser = this.cefClient.createBrowser(URL, true, (ICefRenderer)this.renderer, new ICefPlatform(){});
+        this.cefBrowser = this.cefClient.createBrowser(URL, true, (ICefRenderer) this.renderer, new ICefPlatform() {
+        });
         this.cefBrowser.createImmediately();
         this.screen = new ok(this.cefApp, this.cefBrowser, this.renderer);
     }
@@ -146,13 +153,13 @@ public enum wg implements sw.ay
     public int getPreferredWidth() {
         int n = iz.aW();
         General rh2 = this.coreGetter.nt();
-        return (int)((float)n * (rh2 != null ? ((General.ay)rh2.xd()).fW.getScale() : 1.0f));
+        return (int) ((float) n * (rh2 != null ? ((General.ay) rh2.xd()).fW.getScale() : 1.0f));
     }
 
     public int getPreferredHeight() {
         int n = iz.aX();
         General rh2 = this.coreGetter.nt();
-        return (int)((float)n * (rh2 != null ? ((General.ay)rh2.xd()).fW.getScale() : 1.0f));
+        return (int) ((float) n * (rh2 != null ? ((General.ay) rh2.xd()).fW.getScale() : 1.0f));
     }
 
     public CefBrowser getCefBrowser() {
@@ -165,9 +172,5 @@ public enum wg implements sw.ay
 
     public boolean isOpen() {
         return this.minecraft != null && (this.minecraft.currentScreen instanceof ok || this.minecraft.currentScreen instanceof ov);
-    }
-
-    static {
-        URL = wg.getUrl();
     }
 }

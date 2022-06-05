@@ -3,7 +3,7 @@ package net.digitalingot.feather;
 import org.lwjgl.opengl.GL11;
 
 public class ya
-extends vr {
+        extends vr {
     private final kb Ey;
     private boolean Ez;
 
@@ -28,7 +28,7 @@ extends vr {
         GL11.glPushMatrix();
         ci ci2 = this.Ey.te();
         GL11.glTranslated(this.Ey.hh(), this.Ey.ix(), 0.0);
-        float f = (float)ci2.yx();
+        float f = (float) ci2.yx();
         GL11.glScalef(f, f, 1.0f);
         this.Ez = true;
     }

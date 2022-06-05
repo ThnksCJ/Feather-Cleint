@@ -4,16 +4,25 @@ import net.digitalingot.feather.enums.ic;
 import net.digitalingot.feather.enums.qx;
 
 public abstract class mo
-extends kb {
+        extends kb {
+    private final String np;
+    private final String dx;
     protected float rz;
     protected float eg;
     protected int qh;
     protected int cx;
     protected String qv;
     protected Object uu;
-    private final String np;
-    private final String dx;
     private qx dp;
+
+    public mo() {
+        this(null, null);
+    }
+
+    public mo(String string, String string2) {
+        this.np = string;
+        this.dx = string2;
+    }
 
     public abstract Object so();
 
@@ -25,15 +34,6 @@ extends kb {
 
     public boolean tj() {
         return true;
-    }
-
-    public mo() {
-        this(null, null);
-    }
-
-    public mo(String string, String string2) {
-        this.np = string;
-        this.dx = string2;
     }
 
     @Override
@@ -76,7 +76,7 @@ extends kb {
                 this.kw.rf(0, 0, this.wl, this.fg, this.bt().kv.getRGB());
                 if (this.bt().pi) {
                     int n = this.bt().hi.getRGB();
-                    float f = (float)this.bt().xt / 20.0f;
+                    float f = (float) this.bt().xt / 20.0f;
                     this.kw.ay(0, 0, this.wl, this.fg, n, f);
                 }
             }
@@ -90,7 +90,7 @@ extends kb {
 
     private void xa() {
         this.qh = fp.mq(this.qv);
-        this.cx = (int)fp.xs(this.bt().ki);
+        this.cx = (int) fp.xs(this.bt().ki);
     }
 
     protected void ay(qx qx2, boolean bl) {
@@ -118,8 +118,8 @@ extends kb {
 
     private void st() {
         if (this.bt().cu == ic.BACKGROUND) {
-            this.rz = (float)(this.df() - this.qh) / 2.0f;
-            this.eg = (float)(this.hu() - this.cx) / 2.0f;
+            this.rz = (float) (this.df() - this.qh) / 2.0f;
+            this.eg = (float) (this.hu() - this.cx) / 2.0f;
         } else {
             this.rz = 0.0f;
             this.eg = 0.0f;

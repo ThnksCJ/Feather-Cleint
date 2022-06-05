@@ -2,15 +2,16 @@ package net.digitalingot.feather;
 
 import com.google.gson.annotations.SerializedName;
 import net.digitalingot.feather.enums.ao;
+import net.digitalingot.feather.interfaces.da;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.UUID;
 
 public class xm
-implements da {
-    @SerializedName(value="id")
+        implements da {
+    @SerializedName(value = "id")
     private final int id;
-    @SerializedName(value="target")
+    @SerializedName(value = "target")
     @NotNull
     private final UUID yf;
 

@@ -4,13 +4,14 @@ import com.google.gson.annotations.SerializedName;
 import net.digitalingot.feather.enums.ai;
 import net.digitalingot.feather.enums.ao;
 import net.digitalingot.feather.enums.qc;
+import net.digitalingot.feather.interfaces.da;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
 public class ns
-implements da {
-    @SerializedName(value="tabs")
+        implements da {
+    @SerializedName(value = "tabs")
     @NotNull
     private final List<ay> jc;
 
@@ -30,22 +31,22 @@ implements da {
     }
 
     public static class ay {
-        @SerializedName(value="name")
+        @SerializedName(value = "name")
         @NotNull
         private final String name;
-        @SerializedName(value="slug")
+        @SerializedName(value = "slug")
         @NotNull
         private final qc wf;
-        @SerializedName(value="sidebar")
+        @SerializedName(value = "sidebar")
         @NotNull
         private final String cf;
-        @SerializedName(value="icon")
+        @SerializedName(value = "icon")
         @NotNull
         private final String icon;
-        @SerializedName(value="description")
+        @SerializedName(value = "description")
         @NotNull
         private final String vo;
-        @SerializedName(value="form")
+        @SerializedName(value = "form")
         @NotNull
         private final List<ai> gk;
 

@@ -1,6 +1,7 @@
 package net.digitalingot.feather;
 
 import com.google.gson.annotations.SerializedName;
+import net.digitalingot.feather.interfaces.hj;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.NetworkManager;
 import org.jetbrains.annotations.NotNull;
@@ -13,7 +14,7 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 public class ym
-extends HashMap<String, rf> {
+        extends HashMap<String, rf> {
     @NotNull
     private static final List<ay> Fb = new ArrayList<ay>();
 
@@ -29,7 +30,7 @@ extends HashMap<String, rf> {
             if (Minecraft.getMinecraft().isSingleplayer()) {
                 return;
             }
-            InetSocketAddress inetSocketAddress = (InetSocketAddress)networkManager.getRemoteAddress();
+            InetSocketAddress inetSocketAddress = (InetSocketAddress) networkManager.getRemoteAddress();
             String string = inetSocketAddress.getHostName();
             string = string.endsWith(".") ? string.substring(0, string.length() - 1) : string;
             ay ay2 = ym.ff(string);
@@ -56,10 +57,10 @@ extends HashMap<String, rf> {
     }
 
     public static class rf {
-        @SerializedName(value="match")
+        @SerializedName(value = "match")
         @NotNull
         private final List<String> Fe;
-        @SerializedName(value="disabledMods")
+        @SerializedName(value = "disabledMods")
         @NotNull
         private final List<String> Fd;
 

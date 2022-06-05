@@ -4,12 +4,13 @@ import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
+import net.digitalingot.feather.interfaces.zo;
 import net.minecraftforge.fml.common.network.internal.FMLProxyPacket;
 import org.jetbrains.annotations.NotNull;
 
 @ChannelHandler.Sharable
 class mv$ay
-extends ChannelInboundHandlerAdapter {
+        extends ChannelInboundHandlerAdapter {
     @NotNull
     private final zo Fg;
 
@@ -18,7 +19,7 @@ extends ChannelInboundHandlerAdapter {
     }
 
     public void channelRead(ChannelHandlerContext channelHandlerContext, Object object) {
-        ByteBuf byteBuf = ((FMLProxyPacket)object).payload();
+        ByteBuf byteBuf = ((FMLProxyPacket) object).payload();
         int n = byteBuf.readableBytes();
         byte[] byArray = new byte[n];
         byteBuf.readBytes(byArray);

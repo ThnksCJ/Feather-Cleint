@@ -2,16 +2,17 @@ package net.digitalingot.feather;
 
 import com.google.gson.annotations.SerializedName;
 import net.digitalingot.feather.enums.ao;
+import net.digitalingot.feather.interfaces.da;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.UUID;
 
 public class sp
-implements da {
-    @SerializedName(value="origin")
+        implements da {
+    @SerializedName(value = "origin")
     @NotNull
     private final UUID ph;
-    @SerializedName(value="serverPort")
+    @SerializedName(value = "serverPort")
     private final int av;
 
     public sp(@NotNull UUID uUID, int n) {

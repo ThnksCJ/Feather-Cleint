@@ -18,25 +18,22 @@ final class tc {
     }
 
     static class uj
-    extends rf {
+            extends rf {
         private static final int ri = 0;
         private static final int nk = 0;
         private static final Method bb;
 
+        static {
+            Class<?> clazz = Class.forName("org.lwjgl.opengl.WindowsKeyboard");
+            bb = clazz.getDeclaredMethod("MapVirtualKey", Integer.TYPE, Integer.TYPE);
+            bb.setAccessible(true);
+        }
+
         private uj() {
         }
 
-        @Override
-        public void rf(KeyEvent keyEvent, int n) {
-            int n2;
-            int n3 = uj.ac(n);
-            if (n3 != 0 && (n2 = uj.cp(n3)) != 0) {
-                sq.ay(keyEvent, n2);
-            }
-        }
-
         private static int cp(int n) {
-            return (Integer)bb.invoke(null, n, 0);
+            return (Integer) bb.invoke(null, n, 0);
         }
 
         private static int ac(int n) {
@@ -381,15 +378,18 @@ final class tc {
             return 0;
         }
 
-        static {
-            Class<?> clazz = Class.forName("org.lwjgl.opengl.WindowsKeyboard");
-            bb = clazz.getDeclaredMethod("MapVirtualKey", Integer.TYPE, Integer.TYPE);
-            bb.setAccessible(true);
+        @Override
+        public void rf(KeyEvent keyEvent, int n) {
+            int n2;
+            int n3 = uj.ac(n);
+            if (n3 != 0 && (n2 = uj.cp(n3)) != 0) {
+                sq.ay(keyEvent, n2);
+            }
         }
     }
 
     static class rf
-    implements ay {
+            implements ay {
         private rf() {
         }
 

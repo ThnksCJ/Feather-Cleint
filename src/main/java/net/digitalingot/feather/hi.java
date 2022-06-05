@@ -7,12 +7,12 @@ import java.lang.reflect.Type;
 
 public final class hi {
     public static Class<?> ay(Class<?> clazz, int n, int n2) {
-        ParameterizedType parameterizedType = (ParameterizedType)clazz.getGenericInterfaces()[n];
+        ParameterizedType parameterizedType = (ParameterizedType) clazz.getGenericInterfaces()[n];
         return hi.ay(parameterizedType, n2);
     }
 
     public static Class<?> ay(Class<?> clazz, int n) {
-        ParameterizedType parameterizedType = (ParameterizedType)clazz.getGenericSuperclass();
+        ParameterizedType parameterizedType = (ParameterizedType) clazz.getGenericSuperclass();
         return hi.ay(parameterizedType, n);
     }
 

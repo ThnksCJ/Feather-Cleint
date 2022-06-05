@@ -7,8 +7,8 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 
 import java.util.List;
 
-@Mixin(value={GuiScreen.class})
+@Mixin(value = {GuiScreen.class})
 public interface pv {
-    @Accessor(value="buttonList")
+    @Accessor(value = "buttonList")
     List<GuiButton> getRenderables();
 }

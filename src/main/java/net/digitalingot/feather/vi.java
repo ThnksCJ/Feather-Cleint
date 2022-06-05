@@ -4,6 +4,7 @@ import com.google.gson.annotations.SerializedName;
 import com.mojang.authlib.GameProfile;
 import net.digitalingot.feather.enums.ao;
 import net.digitalingot.feather.fc;
+import net.digitalingot.feather.interfaces.vt;
 import net.digitalingot.feather.jg;
 import net.digitalingot.feather.mixin.core.ed;
 import net.digitalingot.feather.mods.impl.General;
@@ -35,7 +36,7 @@ public class vi {
     public static vi ay(@NotNull General rh2) {
         final vi vi2 = new vi(rh2);
         final gw gw2 = zz.nw().pv();
-        gw2.rf(new el(), new Consumer<tg>(){
+        gw2.rf(new el(), new Consumer<tg>() {
 
             public void ay(tg tg2) {
                 vi2.oq = tg2.fx();
@@ -44,7 +45,7 @@ public class vi {
 
             @Override
             public void accept(Object object) {
-                this.ay((tg)object);
+                this.ay((tg) object);
             }
         }, null);
         if (net.digitalingot.feather.rf.nl()) {
@@ -61,25 +62,25 @@ public class vi {
         ay ay3 = this.oq.stream().filter(ay2 -> ay2.zx().equals(uUID)).findFirst().orElseThrow(IllegalArgumentException::new);
         Minecraft minecraft = Minecraft.getMinecraft();
         Session session = new Session(ay3.getName(), ay3.zx().toString(), ay3.wr(), "mojang");
-        ((ed)minecraft).setSession(session);
+        ((ed) minecraft).setSession(session);
         nn nn2 = this.eN.ex();
         if (nn2 != null) {
             nn2.ww().hs();
-            nn2.do();
+            nn2. do ();
         }
         if (this.eN.qy() != null) {
-            this.eN.qy().if().fk();
+            this.eN.qy(). if ().fk();
         }
     }
 
     public static class ay {
-        @SerializedName(value="email")
+        @SerializedName(value = "email")
         private final String eR;
-        @SerializedName(value="uuid")
+        @SerializedName(value = "uuid")
         private final UUID hj;
-        @SerializedName(value="name")
+        @SerializedName(value = "name")
         private final String name;
-        @SerializedName(value="authToken")
+        @SerializedName(value = "authToken")
         private final String eS;
 
         public ay(String string, UUID uUID, String string2, String string3) {
@@ -112,7 +113,7 @@ public class vi {
             if (object == null || this.getClass() != object.getClass()) {
                 return false;
             }
-            ay ay2 = (ay)object;
+            ay ay2 = (ay) object;
             return Objects.equals(this.eR, ay2.eR) && Objects.equals(this.hj, ay2.hj) && Objects.equals(this.name, ay2.name) && Objects.equals(this.eS, ay2.eS);
         }
 
@@ -122,7 +123,7 @@ public class vi {
     }
 
     public static class rf
-    implements vt<fy, fc, jg> {
+            implements vt<fy, fc, jg> {
         @NotNull
         private final vi eT;
 
@@ -135,7 +136,7 @@ public class vi {
             UUID uUID = fy2.zg();
             if (net.digitalingot.feather.rf.nl()) {
                 General rh2 = zz.nw().xn().rf(General.class);
-                rh2.qy().if().fk();
+                rh2.qy(). if ().fk();
             } else {
                 this.eT.ed(uUID);
             }

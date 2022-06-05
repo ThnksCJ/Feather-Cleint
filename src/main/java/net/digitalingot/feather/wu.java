@@ -1,17 +1,18 @@
 package net.digitalingot.feather;
 
 import com.google.gson.annotations.SerializedName;
+import net.digitalingot.feather.interfaces.mu;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class wu
-implements mu {
-    @SerializedName(value="dataTypes")
+        implements mu {
+    @SerializedName(value = "dataTypes")
     @NotNull
     private final String nm;
-    @SerializedName(value="range")
+    @SerializedName(value = "range")
     private final double[] ar;
-    @SerializedName(value="step")
+    @SerializedName(value = "step")
     @Nullable
     private final Double nz;
 

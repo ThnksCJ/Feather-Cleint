@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.UUID;
 
 public class nj
-extends kl {
+        extends kl {
     @NotNull
     private final Map<String, xu> hD = new HashMap<String, xu>();
     @NotNull
@@ -47,7 +47,7 @@ extends kl {
             dd.ay(entityPlayerSP, new TextComponentTranslation("feather.commands.featherparty.base.usage", new Object[0]));
             return;
         }
-        switch (1.hE[xu2.wc().ordinal()]) {
+        switch (1. hE[xu2.wc().ordinal()]){
             case 1: {
                 if (!this.xl()) break;
                 dd.ay(entityPlayerSP, new TextComponentTranslation("feather.commands.featherparty.error.alreadyInParty", new Object[0]));

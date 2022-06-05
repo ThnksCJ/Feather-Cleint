@@ -1,9 +1,12 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.an;
+import net.digitalingot.feather.interfaces.sd;
+
 class ej$1
-implements an<T> {
-    private T qw;
+        implements an<T> {
     final Class yq;
+    private T qw;
 
     ej$1(Class clazz) {
         this.yq = clazz;

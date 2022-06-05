@@ -3,7 +3,7 @@ package net.digitalingot.feather;
 import org.cef.ICefPlatform;
 
 class wg$6
-implements ICefPlatform {
+        implements ICefPlatform {
     wg$6() {
     }
 }

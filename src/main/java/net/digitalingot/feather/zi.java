@@ -1,15 +1,17 @@
 package net.digitalingot.feather;
 
 import com.google.gson.annotations.SerializedName;
+import net.digitalingot.feather.interfaces.au;
+import net.digitalingot.feather.interfaces.de;
 
 public abstract class zi {
-    @au(wd="hudSelection", vu="Hud Selection", pr="true", yp=@de(vi=-2))
+    @au(wd = "hudSelection", vu = "Hud Selection", pr = "true", yp = @de(vi = -2))
     public boolean vk;
-    @au(wd="enabled", vu="Enabled", yp=@de(vi=-10))
+    @au(wd = "enabled", vu = "Enabled", yp = @de(vi = -10))
     public transient boolean enabled;
-    @SerializedName(value="favorite")
+    @SerializedName(value = "favorite")
     public transient boolean bc;
-    @SerializedName(value="canRenderMod")
+    @SerializedName(value = "canRenderMod")
     public transient boolean us;
 
     public boolean nv() {

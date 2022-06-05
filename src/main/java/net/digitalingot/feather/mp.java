@@ -1,13 +1,15 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.hg;
+import net.digitalingot.feather.interfaces.rw;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.io.*;
 
 public class mp
-implements hg,
-rw {
+        implements hg,
+        rw {
     @NotNull
     private final File b;
     @Nullable

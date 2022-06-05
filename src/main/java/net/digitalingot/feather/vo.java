@@ -1,7 +1,7 @@
 package net.digitalingot.feather;
 
 public class vo
-extends bc {
+        extends bc {
     private final long ET;
     private boolean EU;
 

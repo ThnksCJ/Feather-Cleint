@@ -26,14 +26,14 @@ public class sw {
         }
     });
 
-    public interface sd {
-        void tick(@NotNull uj var1, float var2);
-    }
-
     public enum uj {
         START,
         END
 
+    }
+
+    public interface sd {
+        void tick(@NotNull uj var1, float var2);
     }
 
     public interface zz {

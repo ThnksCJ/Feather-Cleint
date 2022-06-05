@@ -3,6 +3,7 @@ package net.digitalingot.feather.mods.impl;
 import net.digitalingot.feather.*;
 import net.digitalingot.feather.enums.qc;
 import net.digitalingot.feather.enums.qx;
+import net.digitalingot.feather.interfaces.*;
 import net.digitalingot.feather.mixin.core.nl;
 import net.digitalingot.feather.mixin.core.uj;
 import net.digitalingot.feather.mods.HUDMod;
@@ -21,10 +22,10 @@ import java.awt.*;
 /*
  * Illegal identifiers - recommend switching to table mode
  */
-@sv(aw= qc.COORDINATES, jf=@bx(vu="Coordinates", jm="https://assets.feathercdn.net/game/mods/coordinates.svg", mz="Display your location and world info", lq={ly.ay.PVP, ly.ay.HUD}))
-@pq(we={@xd(bp=rf.class)})
+@sv(aw = qc.COORDINATES, jf = @bx(vu = "Coordinates", jm = "https://assets.feathercdn.net/game/mods/coordinates.svg", mz = "Display your location and world info", lq = {ly.ay.PVP, ly.ay.HUD}))
+@pq(we = {@xd(bp = rf.class)})
 public class Coordinates
-extends HUDMod<ay> {
+        extends HUDMod<ay> {
     private static final Minecraft MINECRAFT = Minecraft.getMinecraft();
     private static final int jT = 2;
     private static final String[] jU = new String[]{"N", "NE", "E", "SE", "S", "SW", "W", "NW"};
@@ -34,45 +35,47 @@ extends HUDMod<ay> {
     private static final int jY = 10;
 
     public static classss$ay
-    extends zi {
-        @de(vi=0)
+    extends
+
+    zi {
+        @de(vi = 0)
         public iv i = new iv("General");
-        @au(wd="orientation", vu="Orientation", pr="vertical", yp=@de(vi=1))
+        @au(wd = "orientation", vu = "Orientation", pr = "vertical", yp = @de(vi = 1))
         public ay kA;
-        @au(wd="coordinatesColor", vu="Color", yp=@de(vi=2))
+        @au(wd = "coordinatesColor", vu = "Color", yp = @de(vi = 2))
         public gp kB;
-        @au(wd="directionDetails", vu="Direction Details", pr="true", yp=@de(vi=3))
+        @au(wd = "directionDetails", vu = "Direction Details", pr = "true", yp = @de(vi = 3))
         public boolean kC;
-        @au(wd="yCoordinate", vu="Y Coordinate", pr="true", yp=@de(vi=4))
+        @au(wd = "yCoordinate", vu = "Y Coordinate", pr = "true", yp = @de(vi = 4))
         public boolean kD;
-        @au(wd="textShadow", vu="Text Shadow", pr="false", yp=@de(vi=5))
+        @au(wd = "textShadow", vu = "Text Shadow", pr = "false", yp = @de(vi = 5))
         public boolean ki;
-        @fl(yp=@de(vi=10))
-        @cy(dz=1.0, ev=28.0)
+        @fl(yp = @de(vi = 10))
+        @cy(dz = 1.0, ev = 28.0)
         public ci iO;
-        @de(vi=20)
+        @de(vi = 20)
         public iv kE = new iv("Background");
-        @au(wd="background", vu="Background", pr="true", yp=@de(vi=21))
+        @au(wd = "background", vu = "Background", pr = "true", yp = @de(vi = 21))
         public boolean bg;
-        @au(wd="backgroundColor", vu="Color", pr="7/7/7/146", nu=@ra(wd="background"), yp=@de(vi=22))
+        @au(wd = "backgroundColor", vu = "Color", pr = "7/7/7/146", nu = @ra(wd = "background"), yp = @de(vi = 22))
         public Color kv;
-        @de(vi=30)
+        @de(vi = 30)
         public iv kF = new iv("Biome");
-        @au(wd="biome", vu="Biome", pr="true", yp=@de(vi=31))
+        @au(wd = "biome", vu = "Biome", pr = "true", yp = @de(vi = 31))
         public boolean kG;
-        @au(wd="biomeColor", vu="Color", nu=@ra(wd="biome"), yp=@de(vi=32))
+        @au(wd = "biomeColor", vu = "Color", nu = @ra(wd = "biome"), yp = @de(vi = 32))
         public gp kH;
-        @de(vi=40)
+        @de(vi = 40)
         public iv kI = new iv("Chunk Counter");
-        @au(wd="chunkCounter", vu="Chunk Counter", pr="true", yp=@de(vi=41))
+        @au(wd = "chunkCounter", vu = "Chunk Counter", pr = "true", yp = @de(vi = 41))
         public boolean kJ;
-        @au(wd="chunkCounterColor", vu="Color", nu=@ra(wd="chunkCounter"), yp=@de(vi=42))
+        @au(wd = "chunkCounterColor", vu = "Color", nu = @ra(wd = "chunkCounter"), yp = @de(vi = 42))
         public gp kK;
-        @de(vi=50)
+        @de(vi = 50)
         public iv kL = new iv("Directions");
-        @au(wd="directions", vu="Directions", pr="true", yp=@de(vi=51))
+        @au(wd = "directions", vu = "Directions", pr = "true", yp = @de(vi = 51))
         public boolean kM;
-        @au(wd="directionsColor", vu="Color", pr="false/0/255/255", nu=@ra(wd="directions"), yp=@de(vi=52))
+        @au(wd = "directionsColor", vu = "Color", pr = "false/0/255/255", nu = @ra(wd = "directions"), yp = @de(vi = 52))
         public gp kN;
 
         public static enum ay {
@@ -83,7 +86,7 @@ extends HUDMod<ay> {
     }
 
     public class rf
-    extends kb {
+            extends kb {
         private String kO;
         private String kP;
         private int kQ;
@@ -91,9 +94,9 @@ extends HUDMod<ay> {
         @Override
         public void ay(qx qx2) {
             EntityPlayerSP entityPlayerSP = MINECRAFT.player;
-            int n = MathHelper.floor((double)entityPlayerSP.field_70169_q);
-            int n2 = MathHelper.floor((double)entityPlayerSP.field_70167_r);
-            int n3 = MathHelper.floor((double)entityPlayerSP.field_70166_s);
+            int n = MathHelper.floor((double) entityPlayerSP.field_70169_q);
+            int n2 = MathHelper.floor((double) entityPlayerSP.field_70167_r);
+            int n3 = MathHelper.floor((double) entityPlayerSP.field_70166_s);
             BlockPos blockPos = new BlockPos(n, n2, n3);
             Chunk chunk = MINECRAFT.world.func_175726_f(blockPos);
             BiomeProvider biomeProvider = MINECRAFT.world.func_72959_q();
@@ -138,26 +141,26 @@ extends HUDMod<ay> {
             String string3 = jU[n4];
             String string4 = jV[n4];
             String string5 = jW[n4];
-            switch (1.jZ[((ay) Coordinates.this.vz).kA.ordinal()]) {
+            switch (1. jZ[((ay) Coordinates.this.vz).kA.ordinal()]){
                 case 1: {
                     String string6 = "(" + n + ", " + (((ay) Coordinates.this.vz).kD ? n2 + ", " : "") + n3 + ")";
-                    this.kw.ay(string6, (float)n5, 2.0f, ((ay) Coordinates.this.vz).kB.aq(), ((ay) Coordinates.this.vz).ki, ((ay) Coordinates.this.vz).kB.sc());
+                    this.kw.ay(string6, (float) n5, 2.0f, ((ay) Coordinates.this.vz).kB.aq(), ((ay) Coordinates.this.vz).ki, ((ay) Coordinates.this.vz).kB.sc());
                     int n12 = this.kw.on(string6) + 3;
                     if (((ay) Coordinates.this.vz).kG) {
-                        this.kw.ay(string, (float)(n5 + n12), 2.0f, ((ay) Coordinates.this.vz).kH, ((ay) Coordinates.this.vz).ki);
+                        this.kw.ay(string, (float) (n5 + n12), 2.0f, ((ay) Coordinates.this.vz).kH, ((ay) Coordinates.this.vz).ki);
                         n12 += this.kw.on(string) + 3;
                     }
                     if (((ay) Coordinates.this.vz).kJ) {
-                        this.kw.ay(string2, (float)(n5 + n12), 2.0f, ((ay) Coordinates.this.vz).kK, ((ay) Coordinates.this.vz).ki);
+                        this.kw.ay(string2, (float) (n5 + n12), 2.0f, ((ay) Coordinates.this.vz).kK, ((ay) Coordinates.this.vz).ki);
                         n12 += this.kw.on(string2) + 3;
                     }
                     if (((ay) Coordinates.this.vz).kC) {
-                        this.kw.ay(string4, (float)(n5 + n12), -1.0f, ((ay) Coordinates.this.vz).kN, ((ay) Coordinates.this.vz).ki);
-                        this.kw.ay(string5, (float)(n5 + n12), 5.0f, ((ay) Coordinates.this.vz).kN, ((ay) Coordinates.this.vz).ki);
+                        this.kw.ay(string4, (float) (n5 + n12), -1.0f, ((ay) Coordinates.this.vz).kN, ((ay) Coordinates.this.vz).ki);
+                        this.kw.ay(string5, (float) (n5 + n12), 5.0f, ((ay) Coordinates.this.vz).kN, ((ay) Coordinates.this.vz).ki);
                         n12 += this.kw.on("++");
                     }
                     if (((ay) Coordinates.this.vz).kM) {
-                        this.kw.ay(string3, (float)(n5 + n12), 2.0f, ((ay) Coordinates.this.vz).kN, ((ay) Coordinates.this.vz).ki);
+                        this.kw.ay(string3, (float) (n5 + n12), 2.0f, ((ay) Coordinates.this.vz).kN, ((ay) Coordinates.this.vz).ki);
                         n12 += this.kw.on("NW");
                     }
                     this.kQ = n12;
@@ -168,24 +171,24 @@ extends HUDMod<ay> {
                     String string8 = ((ay) Coordinates.this.vz).kD ? "Y " + n2 : "";
                     String string9 = "Z " + n3;
                     int n13 = NumberUtils.max(new int[]{this.kw.on(string7), this.kw.on(string8), this.kw.on(string9)});
-                    this.kw.ay(string7, (float)n5, 2.0f, ((ay) Coordinates.this.vz).kB, ((ay) Coordinates.this.vz).ki);
+                    this.kw.ay(string7, (float) n5, 2.0f, ((ay) Coordinates.this.vz).kB, ((ay) Coordinates.this.vz).ki);
                     if (((ay) Coordinates.this.vz).kD) {
-                        this.kw.ay(string8, (float)n5, (float)(n6 + 2), ((ay) Coordinates.this.vz).kB, ((ay) Coordinates.this.vz).ki);
+                        this.kw.ay(string8, (float) n5, (float) (n6 + 2), ((ay) Coordinates.this.vz).kB, ((ay) Coordinates.this.vz).ki);
                     }
                     if (((ay) Coordinates.this.vz).kM) {
                         if (((ay) Coordinates.this.vz).kC && !((ay) Coordinates.this.vz).kD) {
-                            this.kw.ay(string3, (float)(n5 + n13 + 10 + 15), (float)n6 / 2.0f + 2.0f, ((ay) Coordinates.this.vz).kN, ((ay) Coordinates.this.vz).ki);
+                            this.kw.ay(string3, (float) (n5 + n13 + 10 + 15), (float) n6 / 2.0f + 2.0f, ((ay) Coordinates.this.vz).kN, ((ay) Coordinates.this.vz).ki);
                         } else {
-                            this.kw.ay(string3, (float)(n5 + n13 + 10), (float)(n6 + 2), ((ay) Coordinates.this.vz).kN, ((ay) Coordinates.this.vz).ki);
+                            this.kw.ay(string3, (float) (n5 + n13 + 10), (float) (n6 + 2), ((ay) Coordinates.this.vz).kN, ((ay) Coordinates.this.vz).ki);
                         }
                     }
                     if (((ay) Coordinates.this.vz).kC) {
-                        this.kw.ay(string4, (float)(n5 + n13 + 10), 2.0f, ((ay) Coordinates.this.vz).kN, ((ay) Coordinates.this.vz).ki);
-                        this.kw.ay(string5, (float)(n5 + n13 + 10), (float)((((ay) Coordinates.this.vz).kD ? 2 : 1) * n6 + 2), ((ay) Coordinates.this.vz).kN, ((ay) Coordinates.this.vz).ki);
+                        this.kw.ay(string4, (float) (n5 + n13 + 10), 2.0f, ((ay) Coordinates.this.vz).kN, ((ay) Coordinates.this.vz).ki);
+                        this.kw.ay(string5, (float) (n5 + n13 + 10), (float) ((((ay) Coordinates.this.vz).kD ? 2 : 1) * n6 + 2), ((ay) Coordinates.this.vz).kN, ((ay) Coordinates.this.vz).ki);
                     }
-                    this.kw.ay(string9, (float)n5, (float)((((ay) Coordinates.this.vz).kD ? 2 : 1) * n6 + 2), ((ay) Coordinates.this.vz).kB, ((ay) Coordinates.this.vz).ki);
+                    this.kw.ay(string9, (float) n5, (float) ((((ay) Coordinates.this.vz).kD ? 2 : 1) * n6 + 2), ((ay) Coordinates.this.vz).kB, ((ay) Coordinates.this.vz).ki);
                     if (((ay) Coordinates.this.vz).kG) {
-                        this.kw.ay(string, (float)n5, (float)((((ay) Coordinates.this.vz).kD ? 3 : 2) * n6 + 2), ((ay) Coordinates.this.vz).kH, ((ay) Coordinates.this.vz).ki);
+                        this.kw.ay(string, (float) n5, (float) ((((ay) Coordinates.this.vz).kD ? 3 : 2) * n6 + 2), ((ay) Coordinates.this.vz).kH, ((ay) Coordinates.this.vz).ki);
                     }
                     if (!((ay) Coordinates.this.vz).kJ) break;
                     int n14 = 0;
@@ -195,7 +198,7 @@ extends HUDMod<ay> {
                     if (((ay) Coordinates.this.vz).kG) {
                         ++n14;
                     }
-                    this.kw.ay(string2, (float)n5, (float)((2 + n14) * n6 + 2), ((ay) Coordinates.this.vz).kK, ((ay) Coordinates.this.vz).ki);
+                    this.kw.ay(string2, (float) n5, (float) ((2 + n14) * n6 + 2), ((ay) Coordinates.this.vz).kK, ((ay) Coordinates.this.vz).ki);
                 }
             }
         }
@@ -223,17 +226,17 @@ extends HUDMod<ay> {
         }
 
         private int bu(float f) {
-            double d = (double)MathHelper.wrapDegrees(f) + 180.0;
+            double d = (double) MathHelper.wrapDegrees(f) + 180.0;
             d += 22.5;
             d %= 360.0;
             return MathHelper.floor(d /= 45.0);
         }
 
         private String jz() {
-            int n = ((nl)MINECRAFT.renderGlobal).getViewFrustum().renderChunks.length;
+            int n = ((nl) MINECRAFT.renderGlobal).getViewFrustum().renderChunks.length;
             int n2 = 0;
-            for (Object object : ((nl)MINECRAFT.renderGlobal).getRenderInfos()) {
-                uj uj2 = (uj)object;
+            for (Object object : ((nl) MINECRAFT.renderGlobal).getRenderInfos()) {
+                uj uj2 = (uj) object;
                 CompiledChunk compiledChunk = CompiledChunk.DUMMY;
                 CompiledChunk compiledChunk2 = uj2.getRenderChunk().compiledChunk;
                 boolean bl = compiledChunk2.isEmpty();

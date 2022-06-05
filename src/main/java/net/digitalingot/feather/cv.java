@@ -23,15 +23,15 @@ public class cv {
         }
     });
 
-    public interface ay {
-        void render(Void var1, @NotNull uj var2);
-    }
-
     public enum uj {
         ALL,
         CROSSHAIRS,
         FOOD
 
+    }
+
+    public interface ay {
+        void render(Void var1, @NotNull uj var2);
     }
 
     public interface rf {

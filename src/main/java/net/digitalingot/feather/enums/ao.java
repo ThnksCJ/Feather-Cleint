@@ -1,6 +1,7 @@
 package net.digitalingot.feather.enums;
 
 import net.digitalingot.feather.*;
+import net.digitalingot.feather.interfaces.da;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 

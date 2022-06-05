@@ -27,8 +27,20 @@ enum lt$sd {
         this.arrowWidth = fp.mq(string3);
     }
 
+    static String access$2900(lt$sd sd2, Keystrokes.bu bu2) {
+        return sd2.getText(bu2);
+    }
+
+    static Keystrokes.uj access$3000(lt$sd sd2) {
+        return sd2.bounds;
+    }
+
+    static int access$3400(lt$sd sd2, Keystrokes.bu bu2) {
+        return sd2.getTextWidth(bu2);
+    }
+
     private String getText(Keystrokes.bu bu2) {
-        switch (Keystrokes .1.nZ[this.getDisplayMode(bu2).ordinal()]) {
+        switch (Keystrokes .1.nZ[this.getDisplayMode(bu2).ordinal()]){
             case 1: {
                 return this.name;
             }
@@ -40,7 +52,7 @@ enum lt$sd {
     }
 
     private int getTextWidth(Keystrokes.bu bu2) {
-        switch (Keystrokes .1.nZ[this.getDisplayMode(bu2).ordinal()]) {
+        switch (Keystrokes .1.nZ[this.getDisplayMode(bu2).ordinal()]){
             case 1: {
                 return this.nameWidth;
             }
@@ -52,33 +64,21 @@ enum lt$sd {
     }
 
     private Keystrokes.bu.rf getDisplayMode(Keystrokes.bu bu2) {
-        switch (Keystrokes .1.oA[this.ordinal()]) {
-            case 1: 
-            case 2: 
-            case 3: 
+        switch (Keystrokes .1.oA[this.ordinal()]){
+            case 1:
+            case 2:
+            case 3:
             case 4: {
                 return bu2.oX;
             }
             case 5: {
                 return bu2.oW;
             }
-            case 6: 
+            case 6:
             case 7: {
                 return bu2.oV;
             }
         }
         throw new AssertionError();
-    }
-
-    static String access$2900(lt$sd sd2, Keystrokes.bu bu2) {
-        return sd2.getText(bu2);
-    }
-
-    static Keystrokes.uj access$3000(lt$sd sd2) {
-        return sd2.bounds;
-    }
-
-    static int access$3400(lt$sd sd2, Keystrokes.bu bu2) {
-        return sd2.getTextWidth(bu2);
     }
 }

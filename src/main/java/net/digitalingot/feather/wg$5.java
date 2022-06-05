@@ -6,7 +6,7 @@ import org.cef.callback.CefQueryCallback;
 import org.cef.handler.CefMessageRouterHandlerAdapter;
 
 class wg$5
-extends CefMessageRouterHandlerAdapter {
+        extends CefMessageRouterHandlerAdapter {
     wg$5() {
     }
 

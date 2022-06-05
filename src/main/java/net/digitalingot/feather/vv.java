@@ -7,7 +7,7 @@ import net.minecraft.client.network.NetHandlerPlayClient;
 import org.jetbrains.annotations.NotNull;
 
 public class vv
-extends mn<Hypixel.ay> {
+        extends mn<Hypixel.ay> {
     private static final long uy = 20L;
     private vo uA = null;
 

@@ -1,5 +1,6 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.ey;
 import net.digitalingot.feather.je;
 import net.digitalingot.feather.kw;
 import net.digitalingot.feather.mods.impl.Voice;
@@ -14,12 +15,12 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 public class tx
-implements ey {
+        implements ey {
     @NotNull
     private final Voice eO;
-    private gm yC;
     @NotNull
     private final ue Af;
+    private gm yC;
 
     public tx(@NotNull Voice zv2) {
         this.eO = zv2;
@@ -28,23 +29,23 @@ implements ey {
 
     @Override
     public float qh() {
-        return (float)((Voice.rf)this.eO.xd()).yR;
+        return (float) ((Voice.rf) this.eO.xd()).yR;
     }
 
     @Override
     public float cx() {
-        return (float)((Voice.rf)this.eO.xd()).yU;
+        return (float) ((Voice.rf) this.eO.xd()).yU;
     }
 
     @Override
     public float qv() {
-        return (float)((Voice.rf)this.eO.xd()).yV;
+        return (float) ((Voice.rf) this.eO.xd()).yV;
     }
 
     @Override
     @NotNull
     public je.ay uu() {
-        return ((Voice.rf)this.eO.xd()).yH.toCapnProto();
+        return ((Voice.rf) this.eO.xd()).yH.toCapnProto();
     }
 
     @Override
@@ -55,13 +56,13 @@ implements ey {
 
     @Override
     public boolean dx() {
-        return ((Voice.rf)this.eO.xd()).yN != Voice.rf.rf.OFF;
+        return ((Voice.rf) this.eO.xd()).yN != Voice.rf.rf.OFF;
     }
 
     @Override
     @Nullable
     public je.uj[] uj(byte[] byArray) {
-         @Nullable je.uj[] ujArray = this.dp();
+        @Nullable je.uj[] ujArray = this.dp();
         if (ujArray != null) {
             return ujArray;
         }
@@ -93,7 +94,7 @@ implements ey {
         if (entityPlayerSP == null) {
             return null;
         }
-        kw kw2 = new kw((float)entityPlayerSP.field_70169_q, (float)entityPlayerSP.field_70167_r, (float)entityPlayerSP.field_70166_s);
+        kw kw2 = new kw((float) entityPlayerSP.field_70169_q, (float) entityPlayerSP.field_70167_r, (float) entityPlayerSP.field_70166_s);
         boolean bl = minecraft.gameSettings.thirdPersonView != 0;
         float f = minecraft.player.field_71109_bG;
         float f2 = minecraft.player.field_70726_aT;
@@ -112,7 +113,7 @@ implements ey {
         if (entityPlayer == null) {
             return null;
         }
-        return new kw((float)entityPlayer.field_70169_q, (float)entityPlayer.field_70167_r, (float)entityPlayer.field_70166_s);
+        return new kw((float) entityPlayer.field_70169_q, (float) entityPlayer.field_70167_r, (float) entityPlayer.field_70166_s);
     }
 
     @Override

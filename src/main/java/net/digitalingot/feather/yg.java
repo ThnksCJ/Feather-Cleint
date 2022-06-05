@@ -1,6 +1,8 @@
 package net.digitalingot.feather;
 
 import net.digitalingot.feather.fx;
+import net.digitalingot.feather.interfaces.au;
+import net.digitalingot.feather.interfaces.vt;
 import net.digitalingot.feather.jg;
 import net.digitalingot.feather.mods.Mod;
 import net.minecraft.client.Minecraft;
@@ -16,7 +18,7 @@ import java.util.Map;
 import java.util.function.Consumer;
 
 public class yg
-implements vt<ba, fx, jg> {
+        implements vt<ba, fx, jg> {
     @Override
     public void ay(ba ba2, Consumer<fx> consumer, Consumer<jg> consumer2) {
         wg.INSTANCE.getScreen().ay(nArray -> {
@@ -80,7 +82,7 @@ implements vt<ba, fx, jg> {
             for (Field field : obj.getClass().getDeclaredFields()) {
                 if (field.getType() != km.class) continue;
                 au au2 = field.getDeclaredAnnotation(au.class);
-                km km2 = (km)field.get(obj);
+                km km2 = (km) field.get(obj);
                 hashMap.put(km2, ux2.cs().jf().vu() + ": " + au2.vu());
             }
         }

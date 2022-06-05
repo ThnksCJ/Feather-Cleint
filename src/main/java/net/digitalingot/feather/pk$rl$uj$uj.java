@@ -5,7 +5,7 @@ import org.capnproto.SegmentReader;
 import org.capnproto.StructReader;
 
 public final class pk$rl$uj$uj
-extends StructReader {
+        extends StructReader {
     pk$rl$uj$uj(SegmentReader segmentReader, int n, int n2, int n3, short s, int n4) {
         super(segmentReader, n, n2, n3, s, n4);
     }
@@ -74,7 +74,7 @@ extends StructReader {
 
     public pk.xn.uj fO() {
         assert (this.eA() == pk.rl.uj.zz.SOFT_ERROR) : "Must check which() before get()ing a union member.";
-        return (pk.xn.uj)this._getPointerField((FromPointerReaderRefDefault)pk.xn.Df, 0, null, 0);
+        return (pk.xn.uj) this._getPointerField((FromPointerReaderRefDefault) pk.xn.Df, 0, null, 0);
     }
 
     public final boolean eH() {
@@ -87,7 +87,7 @@ extends StructReader {
 
     public pk.zz.uj fQ() {
         assert (this.eA() == pk.rl.uj.zz.EMOTE_UPDATE) : "Must check which() before get()ing a union member.";
-        return (pk.zz.uj)this._getPointerField((FromPointerReaderRefDefault)pk.zz.CE, 0, null, 0);
+        return (pk.zz.uj) this._getPointerField((FromPointerReaderRefDefault) pk.zz.CE, 0, null, 0);
     }
 
     public final boolean eK() {
@@ -100,7 +100,7 @@ extends StructReader {
 
     public pk.sd.uj fS() {
         assert (this.eA() == pk.rl.uj.zz.OPTION_REFRESH_PROMPT) : "Must check which() before get()ing a union member.";
-        return (pk.sd.uj)this._getPointerField((FromPointerReaderRefDefault)pk.sd.CF, 0, null, 0);
+        return (pk.sd.uj) this._getPointerField((FromPointerReaderRefDefault) pk.sd.CF, 0, null, 0);
     }
 
     public final boolean eN() {
@@ -113,7 +113,7 @@ extends StructReader {
 
     public pk.ay.zz fU() {
         assert (this.eA() == pk.rl.uj.zz.BULK_OPTION_RESPONSE) : "Must check which() before get()ing a union member.";
-        return (pk.ay.zz)((Object)this._getPointerField((FromPointerReaderRefDefault)pk.ay.Cx, 0, null, 0));
+        return (pk.ay.zz) ((Object) this._getPointerField((FromPointerReaderRefDefault) pk.ay.Cx, 0, null, 0));
     }
 
     public final boolean eQ() {
@@ -126,7 +126,7 @@ extends StructReader {
 
     public pk.uj.zz fW() {
         assert (this.eA() == pk.rl.uj.zz.COSMETIC_SET) : "Must check which() before get()ing a union member.";
-        return (pk.uj.zz)((Object)this._getPointerField((FromPointerReaderRefDefault)pk.uj.CC, 0, null, 0));
+        return (pk.uj.zz) ((Object) this._getPointerField((FromPointerReaderRefDefault) pk.uj.CC, 0, null, 0));
     }
 
     public final boolean eT() {
@@ -139,7 +139,7 @@ extends StructReader {
 
     public pk.rf.uj fY() {
         assert (this.eA() == pk.rl.uj.zz.COSMETIC_OWNED) : "Must check which() before get()ing a union member.";
-        return (pk.rf.uj)((Object)this._getPointerField((FromPointerReaderRefDefault)pk.rf.CB, 0, null, 0));
+        return (pk.rf.uj) ((Object) this._getPointerField((FromPointerReaderRefDefault) pk.rf.CB, 0, null, 0));
     }
 
     public final boolean eW() {
@@ -152,7 +152,7 @@ extends StructReader {
 
     public pk.nn.uj gl() {
         assert (this.eA() == pk.rl.uj.zz.PARTY_INFO) : "Must check which() before get()ing a union member.";
-        return (pk.nn.uj)this._getPointerField((FromPointerReaderRefDefault)pk.nn.CI, 0, null, 0);
+        return (pk.nn.uj) this._getPointerField((FromPointerReaderRefDefault) pk.nn.CI, 0, null, 0);
     }
 
     public final boolean eZ() {
@@ -165,7 +165,7 @@ extends StructReader {
 
     public pk.ed.uj gB() {
         assert (this.eA() == pk.rl.uj.zz.PARTY_INVITE) : "Must check which() before get()ing a union member.";
-        return (pk.ed.uj)this._getPointerField((FromPointerReaderRefDefault)pk.ed.CJ, 0, null, 0);
+        return (pk.ed.uj) this._getPointerField((FromPointerReaderRefDefault) pk.ed.CJ, 0, null, 0);
     }
 
     public final boolean fB() {
@@ -178,7 +178,7 @@ extends StructReader {
 
     public pk.zs.uj gD() {
         assert (this.eA() == pk.rl.uj.zz.PARTY_INVITE_DENIED) : "Must check which() before get()ing a union member.";
-        return (pk.zs.uj)this._getPointerField((FromPointerReaderRefDefault)pk.zs.CK, 0, null, 0);
+        return (pk.zs.uj) this._getPointerField((FromPointerReaderRefDefault) pk.zs.CK, 0, null, 0);
     }
 
     public final boolean fE() {
@@ -191,7 +191,7 @@ extends StructReader {
 
     public pk.nl.uj gF() {
         assert (this.eA() == pk.rl.uj.zz.PARTY_LEAVE) : "Must check which() before get()ing a union member.";
-        return (pk.nl.uj)this._getPointerField((FromPointerReaderRefDefault)pk.nl.CL, 0, null, 0);
+        return (pk.nl.uj) this._getPointerField((FromPointerReaderRefDefault) pk.nl.CL, 0, null, 0);
     }
 
     public final boolean fH() {
@@ -204,7 +204,7 @@ extends StructReader {
 
     public pk.kl.uj gH() {
         assert (this.eA() == pk.rl.uj.zz.P2P_JOIN_REQUEST) : "Must check which() before get()ing a union member.";
-        return (pk.kl.uj)this._getPointerField((FromPointerReaderRefDefault)pk.kl.CH, 0, null, 0);
+        return (pk.kl.uj) this._getPointerField((FromPointerReaderRefDefault) pk.kl.CH, 0, null, 0);
     }
 
     public final boolean fK() {
@@ -217,6 +217,6 @@ extends StructReader {
 
     public pk.bu.uj gJ() {
         assert (this.eA() == pk.rl.uj.zz.P2P_JOIN_ACCEPTED) : "Must check which() before get()ing a union member.";
-        return (pk.bu.uj)this._getPointerField((FromPointerReaderRefDefault)pk.bu.CG, 0, null, 0);
+        return (pk.bu.uj) this._getPointerField((FromPointerReaderRefDefault) pk.bu.CG, 0, null, 0);
     }
 }

@@ -7,7 +7,7 @@ import com.google.gson.stream.JsonWriter;
 import java.net.InetSocketAddress;
 
 public class xj
-extends TypeAdapter<InetSocketAddress> {
+        extends TypeAdapter<InetSocketAddress> {
     public void ay(JsonWriter jsonWriter, InetSocketAddress inetSocketAddress) {
         if (inetSocketAddress == null) {
             jsonWriter.nullValue();
@@ -30,6 +30,6 @@ extends TypeAdapter<InetSocketAddress> {
     }
 
     public void write(JsonWriter jsonWriter, Object object) {
-        this.ay(jsonWriter, (InetSocketAddress)object);
+        this.ay(jsonWriter, (InetSocketAddress) object);
     }
 }

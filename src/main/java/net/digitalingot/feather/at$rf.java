@@ -5,7 +5,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 public class at$rf
-extends TypeAdapter<fm> {
+        extends TypeAdapter<fm> {
     public void ay(JsonWriter jsonWriter, fm fm2) {
         jsonWriter.beginObject();
         jsonWriter.name("name").value(fm2.getName());

@@ -6,7 +6,7 @@ import net.minecraft.util.text.TextComponentTranslation;
 import org.jetbrains.annotations.NotNull;
 
 public class sn
-extends xu {
+        extends xu {
     protected sn(@NotNull nn nn2, @NotNull gk gk2, @NotNull rt rt2) {
         super(nn2, gk2, rt2);
     }

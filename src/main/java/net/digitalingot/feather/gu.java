@@ -10,17 +10,17 @@ import java.nio.ByteBuffer;
 import java.nio.channels.WritableByteChannel;
 
 public class gu
-extends MessageToByteEncoder<MessageBuilder> {
+        extends MessageToByteEncoder<MessageBuilder> {
     protected void ay(ChannelHandlerContext channelHandlerContext, MessageBuilder messageBuilder, ByteBuf byteBuf) {
-        SerializePacked.writeToUnbuffered((WritableByteChannel)new ay(byteBuf), (MessageBuilder)messageBuilder);
+        SerializePacked.writeToUnbuffered((WritableByteChannel) new ay(byteBuf), (MessageBuilder) messageBuilder);
     }
 
     protected void encode(ChannelHandlerContext channelHandlerContext, Object object, ByteBuf byteBuf) {
-        this.ay(channelHandlerContext, (MessageBuilder)object, byteBuf);
+        this.ay(channelHandlerContext, (MessageBuilder) object, byteBuf);
     }
 
     static class ay
-    implements WritableByteChannel {
+            implements WritableByteChannel {
         private final ByteBuf Gs;
 
         public ay(ByteBuf byteBuf) {

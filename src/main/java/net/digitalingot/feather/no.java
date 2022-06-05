@@ -6,7 +6,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 public class no
-implements TypeAdapterFactory {
+        implements TypeAdapterFactory {
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {
         Class clazz = typeToken.getRawType();
         if (!Enum.class.isAssignableFrom(clazz) || clazz == Enum.class) {

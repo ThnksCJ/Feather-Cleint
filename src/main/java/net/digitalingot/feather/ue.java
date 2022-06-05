@@ -18,7 +18,7 @@ public class ue {
 
     @Nullable
     public je.uj ay(byte[] byArray) {
-        if (((Voice.rf)this.eO.xd()).yN == Voice.rf.rf.OFF) {
+        if (((Voice.rf) this.eO.xd()).yN == Voice.rf.rf.OFF) {
             return null;
         }
         Minecraft minecraft = Minecraft.getMinecraft();
@@ -28,7 +28,7 @@ public class ue {
         if (!this.rf(byArray)) {
             return null;
         }
-        switch (1.yY[((Voice.rf)this.eO.xd()).yN.ordinal()]) {
+        switch (1. yY[((Voice.rf) this.eO.xd()).yN.ordinal()]){
             case 1: {
                 return je.uj.PROXIMITY;
             }
@@ -42,7 +42,7 @@ public class ue {
     private boolean rf(byte[] byArray) {
         long l = System.currentTimeMillis();
         double d = ws.zz(byArray);
-        if (d > ((Voice.rf)this.eO.xd()).yO) {
+        if (d > ((Voice.rf) this.eO.xd()).yO) {
             this.yX = l;
             return true;
         }

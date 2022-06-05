@@ -6,11 +6,11 @@ import net.minecraft.entity.Entity;
 import org.jetbrains.annotations.NotNull;
 
 public class cr$ay {
-    @SerializedName(value="x")
+    @SerializedName(value = "x")
     private final int cj;
-    @SerializedName(value="y")
+    @SerializedName(value = "y")
     private final int va;
-    @SerializedName(value="z")
+    @SerializedName(value = "z")
     private final int Bf;
 
     public cr$ay(int n, int n2, int n3) {
@@ -19,10 +19,15 @@ public class cr$ay {
         this.Bf = n3;
     }
 
+    @NotNull
+    public static cr$ay ay(@NotNull Waypoint.Location location) {
+        return new cr$ay(location.getX(), location.getY(), location.getZ());
+    }
+
     public double nl(@NotNull Entity entity) {
-        double d = (double)this.cj - entity.prevPosX;
-        double d2 = (double)this.va - entity.prevPosY;
-        double d3 = (double)this.Bf - entity.prevPosZ;
+        double d = (double) this.cj - entity.prevPosX;
+        double d2 = (double) this.va - entity.prevPosY;
+        double d3 = (double) this.Bf - entity.prevPosZ;
         return Math.sqrt(d * d + d2 * d2 + d3 * d3);
     }
 
@@ -36,10 +41,5 @@ public class cr$ay {
 
     public int E() {
         return this.Bf;
-    }
-
-    @NotNull
-    public static cr$ay ay(@NotNull Waypoint.Location location) {
-        return new cr$ay(location.getX(), location.getY(), location.getZ());
     }
 }

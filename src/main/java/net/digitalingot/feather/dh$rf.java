@@ -4,7 +4,7 @@ import net.digitalingot.feather.mixin.core.ed;
 import net.digitalingot.feather.mods.impl.FPS;
 
 public class dh$rf
-extends mo {
+        extends mo {
     public dh$rf() {
         super("FPS: ", " FPS");
     }
@@ -16,12 +16,12 @@ extends mo {
 
     @Override
     public boolean gf() {
-        return ((FPS.ay)((FPS) FPS.this).vz).jR;
+        return ((FPS.ay) ((FPS) FPS.this).vz).jR;
     }
 
     @Override
     public fw bt() {
-        return ((FPS.ay)((FPS) FPS.this).vz).jQ;
+        return ((FPS.ay) ((FPS) FPS.this).vz).jQ;
     }
 
     @Override

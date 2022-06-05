@@ -8,9 +8,9 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import org.jetbrains.annotations.NotNull;
 
-@SideOnly(value=Side.CLIENT)
+@SideOnly(value = Side.CLIENT)
 public class TickEvents
-implements Event {
+        implements Event {
     @SubscribeEvent
     public void ay(TickEvent.ClientTickEvent clientTickEvent) {
         sw.uj uj2 = this.ay(clientTickEvent.phase);

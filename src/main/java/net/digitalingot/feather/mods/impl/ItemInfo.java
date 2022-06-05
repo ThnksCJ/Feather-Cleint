@@ -4,8 +4,8 @@ import net.digitalingot.feather.*;
 import net.digitalingot.feather.enums.ho;
 import net.digitalingot.feather.enums.qc;
 import net.digitalingot.feather.enums.qx;
+import net.digitalingot.feather.interfaces.*;
 import net.digitalingot.feather.mods.HUDMod;
-import net.digitalingot.feather.qj;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.enchantment.Enchantment;
@@ -23,10 +23,10 @@ import java.awt.*;
 import java.util.List;
 import java.util.Map;
 
-@sv(aw= qc.ITEM_INFO, jf=@bx(vu="Item Info", jm="https://assets.feathercdn.net/game/mods/iteminfo.svg", mz="Display enchants when picking up an item", lq={ly.ay.PVP, ly.ay.HUD}))
-@pq(we={@xd(bp=rf.class)})
+@sv(aw = qc.ITEM_INFO, jf = @bx(vu = "Item Info", jm = "https://assets.feathercdn.net/game/mods/iteminfo.svg", mz = "Display enchants when picking up an item", lq = {ly.ay.PVP, ly.ay.HUD}))
+@pq(we = {@xd(bp = rf.class)})
 public class ItemInfo
-extends HUDMod<ay> {
+        extends HUDMod<ay> {
     private static final String nB = "";
     private static final String nC = "14";
     private static final Minecraft MINECRAFT = Minecraft.getMinecraft();
@@ -52,9 +52,9 @@ extends HUDMod<ay> {
         }
         StringBuilder stringBuilder = new StringBuilder();
         for (Map.Entry entry : EnchantmentHelper.getEnchantments(itemStack).entrySet()) {
-            Enchantment enchantment = (Enchantment)entry.getKey();
+            Enchantment enchantment = (Enchantment) entry.getKey();
             int n = Enchantment.REGISTRY.getIDForObject(enchantment);
-            stringBuilder.append((String)qj.Fv.get(n)).append(" ").append(entry.getValue()).append(" ");
+            stringBuilder.append((String) qj.Fv.get(n)).append(" ").append(entry.getValue()).append(" ");
         }
         return stringBuilder.toString().trim();
     }
@@ -90,45 +90,46 @@ extends HUDMod<ay> {
         int n2 = Item.getIdFromItem(item);
         int n3 = 0;
         for (ItemStack itemStack2 : entityPlayerSP.field_71071_by.mainInventory) {
-            if (itemStack2 == null || Item.getIdFromItem(itemStack2.getItem()) != n2 || itemStack2.getItemDamage() != n) continue;
+            if (itemStack2 == null || Item.getIdFromItem(itemStack2.getItem()) != n2 || itemStack2.getItemDamage() != n)
+                continue;
             n3 += itemStack2.getCount();
         }
         return n3;
     }
 
     public static class ay
-    extends zi {
-        @fl(yp=@de(vi=0))
-        @cy(yv= ho.BOTTOM_CENTER, dz=-1.0, ev=-56.0)
+            extends zi {
+        @fl(yp = @de(vi = 0))
+        @cy(yv = ho.BOTTOM_CENTER, dz = -1.0, ev = -56.0)
         public fw jQ;
-        @de(vi=10)
+        @de(vi = 10)
         public iv nD = new iv("Item Info");
-        @au(wd="showTime", vu="Show Time", pr="15", yp=@de(vi=11))
-        @mj(js=30)
+        @au(wd = "showTime", vu = "Show Time", pr = "15", yp = @de(vi = 11))
+        @mj(js = 30)
         public int nE;
-        @de(vi=20)
+        @de(vi = 20)
         public iv nF = new iv("Count");
-        @au(wd="count", vu="Count", pr="true", yp=@de(vi=21))
+        @au(wd = "count", vu = "Count", pr = "true", yp = @de(vi = 21))
         public boolean nG;
-        @au(wd="countColor", vu="Count Color", pr="false/192/192/192", nu=@ra(wd="count"), yp=@de(vi=22))
+        @au(wd = "countColor", vu = "Count Color", pr = "false/192/192/192", nu = @ra(wd = "count"), yp = @de(vi = 22))
         public gp nH;
-        @de(vi=30)
+        @de(vi = 30)
         public iv nI = new iv("Enchants");
-        @au(wd="enchants", vu="Enchants", yp=@de(vi=31))
+        @au(wd = "enchants", vu = "Enchants", yp = @de(vi = 31))
         public boolean nJ;
-        @au(wd="enchantsColor", vu="Color", pr="false/192/192/192", nu=@ra(wd="enchants"), yp=@de(vi=32))
+        @au(wd = "enchantsColor", vu = "Color", pr = "false/192/192/192", nu = @ra(wd = "enchants"), yp = @de(vi = 32))
         public gp nK;
-        @de(vi=40)
+        @de(vi = 40)
         public iv nL = new iv("Fade Out");
-        @au(wd="fadeOut", vu="Fade Out", pr="true", yp=@de(vi=41))
+        @au(wd = "fadeOut", vu = "Fade Out", pr = "true", yp = @de(vi = 41))
         public boolean nM;
-        @au(wd="fadeOutTime", vu="Time", pr="5", nu=@ra(wd="fadeOut"), yp=@de(vi=42))
-        @mj(js=20)
+        @au(wd = "fadeOutTime", vu = "Time", pr = "5", nu = @ra(wd = "fadeOut"), yp = @de(vi = 42))
+        @mj(js = 20)
         public int nN;
     }
 
     public class rf
-    extends kb {
+            extends kb {
         private String nO;
         private long nP;
         private float eg;
@@ -177,28 +178,28 @@ extends HUDMod<ay> {
                 object = string + "\n" + string2;
                 long l = 0L;
                 if (object.equals(this.nO)) {
-                    l = System.currentTimeMillis() - this.nP - (long)((ay) ItemInfo.this.vz).nE * 100L;
+                    l = System.currentTimeMillis() - this.nP - (long) ((ay) ItemInfo.this.vz).nE * 100L;
                 } else {
                     this.nO = object;
                     this.nP = System.currentTimeMillis();
                 }
-                if (l >= (long)((ay) ItemInfo.this.vz).nN * 100L) {
+                if (l >= (long) ((ay) ItemInfo.this.vz).nN * 100L) {
                     return;
                 }
                 if (l > 0L) {
-                    f2 = 1.0f - (float)l / 100.0f / (float)((ay) ItemInfo.this.vz).nN;
+                    f2 = 1.0f - (float) l / 100.0f / (float) ((ay) ItemInfo.this.vz).nN;
                 }
             }
             if (string != null) {
                 object = ((ay) ItemInfo.this.vz).nK.pg();
-                color = new Color(((Color)object).getRed(), ((Color)object).getGreen(), ((Color)object).getBlue(), Math.max(5, (int)((float)((Color)object).getAlpha() * f2)));
-                this.kw.ay(string, (float)(this.df() - this.kw.on(string)) / 2.0f, f, color.getRGB(), true, ((ay) ItemInfo.this.vz).nK.sc());
+                color = new Color(((Color) object).getRed(), ((Color) object).getGreen(), ((Color) object).getBlue(), Math.max(5, (int) ((float) ((Color) object).getAlpha() * f2)));
+                this.kw.ay(string, (float) (this.df() - this.kw.on(string)) / 2.0f, f, color.getRGB(), true, ((ay) ItemInfo.this.vz).nK.sc());
                 f += 16.0f;
             }
             if (string2 != null) {
                 object = ((ay) ItemInfo.this.vz).nH.pg();
-                color = new Color(((Color)object).getRed(), ((Color)object).getGreen(), ((Color)object).getBlue(), Math.max(5, (int)((float)((Color)object).getAlpha() * f2)));
-                this.kw.ay(string2, (float)(this.df() - this.kw.on(string2)) / 2.0f, f, color.getRGB(), true, ((ay) ItemInfo.this.vz).nH.sc());
+                color = new Color(((Color) object).getRed(), ((Color) object).getGreen(), ((Color) object).getBlue(), Math.max(5, (int) ((float) ((Color) object).getAlpha() * f2)));
+                this.kw.ay(string2, (float) (this.df() - this.kw.on(string2)) / 2.0f, f, color.getRGB(), true, ((ay) ItemInfo.this.vz).nH.sc());
             }
         }
 
@@ -218,7 +219,7 @@ extends HUDMod<ay> {
         @Override
         public void zq() {
             float f = 8.0f;
-            this.eg = ((float)this.hu() - f) / 2.0f;
+            this.eg = ((float) this.hu() - f) / 2.0f;
         }
 
         @Override

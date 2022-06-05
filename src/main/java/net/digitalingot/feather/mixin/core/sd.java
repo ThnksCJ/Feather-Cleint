@@ -7,11 +7,11 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Accessor;
 import org.spongepowered.asm.mixin.gen.Invoker;
 
-@Mixin(value={EntityRenderer.class})
+@Mixin(value = {EntityRenderer.class})
 public interface sd {
-    @Invoker(value="loadShader")
+    @Invoker(value = "loadShader")
     void feather$loadShader(ResourceLocation var1);
 
-    @Accessor(value="shaderGroup")
+    @Accessor(value = "shaderGroup")
     ShaderGroup feather$getEffect();
 }

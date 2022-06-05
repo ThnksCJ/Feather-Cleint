@@ -21,7 +21,7 @@ class gw$ay {
         if (object == null || this.getClass() != object.getClass()) {
             return false;
         }
-        gw$ay ay2 = (gw$ay)object;
+        gw$ay ay2 = (gw$ay) object;
         return this.id == ay2.id && this.ys == ay2.ys;
     }
 

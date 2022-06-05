@@ -6,6 +6,7 @@ import de.jcm.discordgamesdk.activity.Activity;
 import de.jcm.discordgamesdk.activity.ActivityType;
 import net.digitalingot.feather.*;
 import net.digitalingot.feather.enums.qc;
+import net.digitalingot.feather.interfaces.*;
 import net.digitalingot.feather.mods.Mod;
 import net.minecraft.client.Minecraft;
 import net.minecraft.server.integrated.IntegratedServer;
@@ -17,9 +18,9 @@ import java.time.Instant;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-@sv(aw= qc.DISCORD, jf=@bx(vu="Discord", jm="https://assets.feathercdn.net/game/mods/discord.svg", mz="Share your current status on Discord", lq={}))
+@sv(aw = qc.DISCORD, jf = @bx(vu = "Discord", jm = "https://assets.feathercdn.net/game/mods/discord.svg", mz = "Share your current status on Discord", lq = {}))
 public class Discord
-extends Mod<ay> {
+        extends Mod<ay> {
     private final Executor S = Executors.newSingleThreadExecutor();
     private final Instant T = Instant.now();
     private CreateParams U;
@@ -33,7 +34,7 @@ extends Mod<ay> {
             for (String string2 : string.split("[;:]")) {
                 File file = new File(string2, "discord_game_sdk.dll");
                 if (!file.exists()) continue;
-                Core.init((File)file);
+                Core.init((File) file);
                 return;
             }
             vm.Fq.error("Couldn't find discord api path! Tried those paths: " + string);
@@ -82,9 +83,9 @@ extends Mod<ay> {
         if (this.ob()) {
             this.vv();
         } else if (Minecraft.getMinecraft().isSingleplayer()) {
-            this.rf("Singleplayer", ((ay)this.vz).X ? this.ep() : null);
+            this.rf("Singleplayer", ((ay) this.vz).X ? this.ep() : null);
         } else if (Minecraft.getMinecraft().getCurrentServerData() != null) {
-            String string = ((ay)this.vz).Y ? (!Minecraft.getMinecraft().isConnectedToRealms() ? Minecraft.getMinecraft().getCurrentServerData().serverIP : "Realms") : null;
+            String string = ((ay) this.vz).Y ? (!Minecraft.getMinecraft().isConnectedToRealms() ? Minecraft.getMinecraft().getCurrentServerData().serverIP : "Realms") : null;
             this.rf("Multiplayer", string);
         } else {
             this.rf("Main Menu", null);
@@ -92,7 +93,7 @@ extends Mod<ay> {
     }
 
     private boolean ob() {
-        return ((ay)this.vz).Z && ck.oS();
+        return ((ay) this.vz).Z && ck.oS();
     }
 
     private void vv() {
@@ -129,7 +130,8 @@ extends Mod<ay> {
 
     @Override
     public void jl() {
-        block1: {
+        block1:
+        {
             if (this.U != null) {
                 this.U.close();
             }
@@ -138,14 +140,14 @@ extends Mod<ay> {
         }
     }
 
-    @rm(wm=true)
+    @rm(wm = true)
     public static class ay
-    extends zi {
-        @au(wd="showWorld", vu="Show Singleplayer World", pr="true", yp=@de(vi=0))
+            extends zi {
+        @au(wd = "showWorld", vu = "Show Singleplayer World", pr = "true", yp = @de(vi = 0))
         public boolean X;
-        @au(wd="showServer", vu="Show Server", pr="false", yp=@de(vi=1))
+        @au(wd = "showServer", vu = "Show Server", pr = "false", yp = @de(vi = 1))
         public boolean Y;
-        @au(wd="hypixelGamemode", vu="Show Hypixel Gamemodes", pr="true", yp=@de(vi=3))
+        @au(wd = "hypixelGamemode", vu = "Show Hypixel Gamemodes", pr = "true", yp = @de(vi = 3))
         public boolean Z;
     }
 }

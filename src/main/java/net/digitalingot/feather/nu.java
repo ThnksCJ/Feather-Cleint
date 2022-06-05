@@ -1,6 +1,7 @@
 package net.digitalingot.feather;
 
 import net.digitalingot.feather.enums.ao;
+import net.digitalingot.feather.interfaces.hj;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.entity.player.EntityPlayer;
@@ -11,11 +12,11 @@ import org.jetbrains.annotations.Nullable;
 import java.util.*;
 
 public class nu {
-    private sf eX;
     @NotNull
     private final ig dl;
     @NotNull
     private final Map<UUID, List<sb>> gX = new HashMap<UUID, List<sb>>();
+    private sf eX;
     private int gY = 0;
 
     public nu() {
@@ -68,7 +69,7 @@ public class nu {
 
     @Nullable
     public nf lx() {
-        return this.eX.if().lx();
+        return this.eX. if ().lx();
     }
 
     @NotNull

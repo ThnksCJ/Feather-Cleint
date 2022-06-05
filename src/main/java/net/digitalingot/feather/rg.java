@@ -5,7 +5,7 @@ import net.minecraft.item.ItemStack;
 
 public class rg {
     public static ay zs(ItemStack itemStack) {
-        ItemFood itemFood = (ItemFood)itemStack.getItem();
+        ItemFood itemFood = (ItemFood) itemStack.getItem();
         int n = itemFood.getHealAmount(itemStack);
         float f = itemFood.getSaturationModifier(itemStack);
         return new ay(n, f);
@@ -25,7 +25,7 @@ public class rg {
         }
 
         public float jc() {
-            return (float)this.wO * this.wP * 2.0f;
+            return (float) this.wO * this.wP * 2.0f;
         }
     }
 }

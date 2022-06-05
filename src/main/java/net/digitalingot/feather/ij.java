@@ -7,10 +7,10 @@ import java.util.Objects;
 import java.util.UUID;
 
 public class ij {
-    @SerializedName(value="uuid")
+    @SerializedName(value = "uuid")
     @NotNull
     private final UUID hj;
-    @SerializedName(value="username")
+    @SerializedName(value = "username")
     @NotNull
     private final String hs;
 
@@ -36,7 +36,7 @@ public class ij {
         if (object == null || this.getClass() != object.getClass()) {
             return false;
         }
-        ij ij2 = (ij)object;
+        ij ij2 = (ij) object;
         return this.hj.equals(ij2.hj);
     }
 

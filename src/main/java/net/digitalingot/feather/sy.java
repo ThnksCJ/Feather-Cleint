@@ -2,6 +2,7 @@ package net.digitalingot.feather;
 
 import net.digitalingot.feather.aj;
 import net.digitalingot.feather.bz;
+import net.digitalingot.feather.interfaces.an;
 import net.digitalingot.feather.ja;
 import net.digitalingot.feather.mods.impl.General;
 import net.digitalingot.fwebp.WebPImage;
@@ -22,18 +23,18 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 public class sy {
+    public static final sy jw = new sy();
     private static final an<General> CORE_PROVIDER = ej.ay(General.class);
     private static final pb ve = pb.ay(704, 544, 2000);
     private static final ResourceLocation lm = new ResourceLocation("feather:cosmetics/cloak/cloak.obj");
     private static final IResourceManager wz = Minecraft.getMinecraft().getResourceManager();
     private static final Executor mq = Executors.newSingleThreadExecutor();
-    private boolean vc;
-    private bz hl;
-    private long yk;
     private final Path cv = zz.nw().sb().toPath().resolve("assets/game/cosmetics/cloaks");
     private final Map<String, aj> zx = new HashMap<String, aj>();
     private final rc zr = new rc();
-    public static final sy jw = new sy();
+    private boolean vc;
+    private bz hl;
+    private long yk;
 
     public sy() {
         sw.sq.ay((uj2, f) -> {
@@ -55,11 +56,11 @@ public class sy {
                 return;
             }
             InputStream inputStream = iResource.getInputStream();
-            ja ja2 = ja.ay((InputStream)inputStream, (pb)ve);
+            ja ja2 = ja.ay((InputStream) inputStream, (pb) ve);
             if (inputStream != null) {
                 inputStream.close();
             }
-            this.hl = rf.nn().ay(() -> bz.rf((ja)ja2)).get();
+            this.hl = rf.nn().ay(() -> bz.rf((ja) ja2)).get();
             this.vc = false;
         });
     }
@@ -108,7 +109,7 @@ public class sy {
         if (this.hl == null) {
             return;
         }
-        int n = (int)(System.currentTimeMillis() - this.yk);
+        int n = (int) (System.currentTimeMillis() - this.yk);
         for (aj aj2 : this.zx.values()) {
             int n2 = aj2.ei();
             int n3 = aj2.hp() + n;

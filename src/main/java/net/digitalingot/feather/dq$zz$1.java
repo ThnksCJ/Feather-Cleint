@@ -5,7 +5,7 @@ import net.digitalingot.feather.mods.impl.NickHider;
 import org.jetbrains.annotations.NotNull;
 
 class dq$zz$1
-extends CacheLoader<String, String> {
+        extends CacheLoader<String, String> {
     final NickHider.zz.ay cJ;
 
     dq$zz$1(NickHider.zz.ay ay2) {

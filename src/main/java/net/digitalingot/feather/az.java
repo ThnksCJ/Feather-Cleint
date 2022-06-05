@@ -25,7 +25,7 @@ public class az {
     }
 
     public static int zz(float f, float f2, float f3, float f4) {
-        return az.bu((int)((double)(f * 255.0f) + 0.5), (int)((double)(f2 * 255.0f) + 0.5), (int)((double)(f3 * 255.0f) + 0.5), (int)((double)(f4 * 255.0f) + 0.5));
+        return az.bu((int) ((double) (f * 255.0f) + 0.5), (int) ((double) (f2 * 255.0f) + 0.5), (int) ((double) (f3 * 255.0f) + 0.5), (int) ((double) (f4 * 255.0f) + 0.5));
     }
 
     public static gp ay(@NotNull gp gp2, @NotNull gp gp3, float f) {
@@ -40,7 +40,7 @@ public class az {
 
     public static Color ay(@NotNull Color color, @NotNull Color color2, float f) {
         f = eb.ag(f);
-        return new Color((int)((float)color.getRed() + (float)(color2.getRed() - color.getRed()) * f), (int)((float)color.getGreen() + (float)(color2.getGreen() - color.getGreen()) * f), (int)((float)color.getBlue() + (float)(color2.getBlue() - color.getBlue()) * f), (int)((float)color.getAlpha() + (float)(color2.getAlpha() - color.getAlpha()) * f));
+        return new Color((int) ((float) color.getRed() + (float) (color2.getRed() - color.getRed()) * f), (int) ((float) color.getGreen() + (float) (color2.getGreen() - color.getGreen()) * f), (int) ((float) color.getBlue() + (float) (color2.getBlue() - color.getBlue()) * f), (int) ((float) color.getAlpha() + (float) (color2.getAlpha() - color.getAlpha()) * f));
     }
 
     public static String uf(String string) {

@@ -1,5 +1,6 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.hg;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -7,7 +8,7 @@ import java.io.BufferedInputStream;
 import java.io.InputStream;
 
 public class xk
-implements hg {
+        implements hg {
     @NotNull
     private final hg EH;
     @Nullable

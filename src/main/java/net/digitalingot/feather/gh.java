@@ -1,5 +1,6 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.hj;
 import net.minecraft.network.NetworkManager;
 import org.jetbrains.annotations.NotNull;
 
@@ -28,10 +29,10 @@ public class gh {
             if (this.hI) {
                 return;
             }
-            InetSocketAddress inetSocketAddress = (InetSocketAddress)networkManager.getRemoteAddress();
+            InetSocketAddress inetSocketAddress = (InetSocketAddress) networkManager.getRemoteAddress();
             String string = inetSocketAddress.getHostName();
             string = string.endsWith(".") ? string.substring(0, string.length() - 1) : string;
-            short s = (short)inetSocketAddress.getPort();
+            short s = (short) inetSocketAddress.getPort();
             nf2.ay(string, s);
         });
         hj.ii.ay((entityPlayer, netHandlerPlayClient) -> {

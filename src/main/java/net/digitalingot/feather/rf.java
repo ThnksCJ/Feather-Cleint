@@ -2,6 +2,7 @@ package net.digitalingot.feather;
 
 import net.digitalingot.feather.enums.ao;
 import net.digitalingot.feather.ii;
+import net.digitalingot.feather.interfaces.yb;
 import net.digitalingot.feather.mods.Mod;
 import net.minecraft.client.Minecraft;
 import org.jetbrains.annotations.NotNull;
@@ -25,6 +26,30 @@ public class rf extends zi {
         this.sd = path.resolve("feather");
         this.bu = new ul();
         this.kl = new bn();
+    }
+
+    public static rf kl() {
+        return zz;
+    }
+
+    public static ul nn() {
+        return net.digitalingot.feather.rf.zz.bu;
+    }
+
+    public static void ay(@NotNull Runnable runnable) {
+        uj.add(runnable);
+    }
+
+    public static bn ed() {
+        return net.digitalingot.feather.rf.zz.kl;
+    }
+
+    public static boolean zs() {
+        return Minecraft.getMinecraft().isCallingFromMinecraftThread();
+    }
+
+    public static boolean nl() {
+        return rf;
     }
 
     public void ay(@NotNull List<Class<? extends Mod<?>>> list) {
@@ -71,7 +96,7 @@ public class rf extends zi {
         yb.bo.ay(string -> {
             if (string.equals("featherMods")) {
                 wg.INSTANCE.show();
-                ii.zz((boolean)true);
+                ii.zz((boolean) true);
             }
         });
         dw.cv();
@@ -101,29 +126,5 @@ public class rf extends zi {
     @NotNull
     private String bu() {
         return zd.yd("git.hash").oB();
-    }
-
-    public static rf kl() {
-        return zz;
-    }
-
-    public static ul nn() {
-        return net.digitalingot.feather.rf.zz.bu;
-    }
-
-    public static void ay(@NotNull Runnable runnable) {
-        uj.add(runnable);
-    }
-
-    public static bn ed() {
-        return net.digitalingot.feather.rf.zz.kl;
-    }
-
-    public static boolean zs() {
-        return Minecraft.getMinecraft().isCallingFromMinecraftThread();
-    }
-
-    public static boolean nl() {
-        return rf;
     }
 }

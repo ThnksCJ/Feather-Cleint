@@ -4,7 +4,7 @@ import org.cef.browser.CefBrowser;
 import org.cef.handler.CefLifeSpanHandlerAdapter;
 
 class wg$4
-extends CefLifeSpanHandlerAdapter {
+        extends CefLifeSpanHandlerAdapter {
     wg$4() {
     }
 

@@ -1,5 +1,6 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.vt;
 import net.digitalingot.feather.jg;
 import net.digitalingot.feather.mods.impl.Waypoints;
 import org.jetbrains.annotations.NotNull;
@@ -8,7 +9,7 @@ import java.util.Optional;
 import java.util.function.Consumer;
 
 public class fq
-implements vt<hx, po, jg> {
+        implements vt<hx, po, jg> {
     @NotNull
     private final Waypoints Bn;
 

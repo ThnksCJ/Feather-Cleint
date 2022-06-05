@@ -3,7 +3,7 @@ package net.digitalingot.feather;
 import org.cef.Async;
 
 class wg$1
-implements Async.Impl {
+        implements Async.Impl {
     wg$1() {
     }
 

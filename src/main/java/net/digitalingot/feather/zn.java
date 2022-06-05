@@ -1,5 +1,6 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.dj;
 import net.digitalingot.feather.je;
 import net.digitalingot.feather.mt;
 import org.jetbrains.annotations.NotNull;
@@ -7,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.UUID;
 
 class zn
-implements dj {
+        implements dj {
     @NotNull
     private final gm yC;
 

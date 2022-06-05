@@ -4,7 +4,7 @@ import net.digitalingot.feather.lx;
 import org.capnproto.*;
 
 public final class lx$rf$rf
-extends StructFactory<lx.rf.ay, lx.rf.uj> {
+        extends StructFactory<lx.rf.ay, lx.rf.uj> {
     public final lx.rf.uj ed(SegmentReader segmentReader, int n, int n2, int n3, short s, int n4) {
         return new lx.rf.uj(segmentReader, n, n2, n3, s, n4);
     }
@@ -22,7 +22,7 @@ extends StructFactory<lx.rf.ay, lx.rf.uj> {
     }
 
     public StructReader asReader(Object object) {
-        return this.ay((lx.rf.ay)((Object)object));
+        return this.ay((lx.rf.ay) ((Object) object));
     }
 
     public Object constructBuilder(SegmentBuilder segmentBuilder, int n, int n2, int n3, short s) {

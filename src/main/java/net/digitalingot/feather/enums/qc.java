@@ -60,6 +60,13 @@ public enum qc {
     private final boolean core;
     private final boolean sidebar;
 
+    qc(boolean bl, boolean bl2) {
+        this.sidebar = bl2;
+        Field field = ((Object) this).getClass().getDeclaredField(this.name());
+        this.slug = field.getDeclaredAnnotation(SerializedName.class).value();
+        this.core = bl;
+    }
+
     @Nullable
     public static qc fromSlug(String string) {
         for (qc qc2 : qc.values()) {
@@ -67,13 +74,6 @@ public enum qc {
             return qc2;
         }
         return null;
-    }
-
-    qc(boolean bl, boolean bl2) {
-        this.sidebar = bl2;
-        Field field = ((Object) this).getClass().getDeclaredField(this.name());
-        this.slug = field.getDeclaredAnnotation(SerializedName.class).value();
-        this.core = bl;
     }
 
     @NotNull

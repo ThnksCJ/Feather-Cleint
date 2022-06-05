@@ -8,13 +8,13 @@ public enum qd {
     REALMS("Minecraft Realms", "mcRealms", "https://assets.feathercdn.net/game/homepageicons/realms.svg"),
     REPLAY_MOD("Replay Mod", "replayMod", "https://assets.feathercdn.net/game/homepageicons/replaymod.svg");
 
-    @SerializedName(value="name")
+    @SerializedName(value = "name")
     @NotNull
     private final String name;
-    @SerializedName(value="slug")
+    @SerializedName(value = "slug")
     @NotNull
     private final String slug;
-    @SerializedName(value="icon")
+    @SerializedName(value = "icon")
     @NotNull
     private final String icon;
 

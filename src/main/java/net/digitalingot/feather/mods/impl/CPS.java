@@ -3,36 +3,37 @@ package net.digitalingot.feather.mods.impl;
 import net.digitalingot.feather.*;
 import net.digitalingot.feather.enums.ho;
 import net.digitalingot.feather.enums.qc;
+import net.digitalingot.feather.interfaces.*;
 import net.digitalingot.feather.mods.HUDMod;
 
 import java.text.DecimalFormat;
 
-@sv(aw= qc.CPS, jf=@bx(vu="CPS", jm="https://assets.feathercdn.net/game/mods/cps.svg", mz="", lq={ly.ay.PVP, ly.ay.HUD}))
-@pq(we={@xd(bp=rf.class)})
+@sv(aw = qc.CPS, jf = @bx(vu = "CPS", jm = "https://assets.feathercdn.net/game/mods/cps.svg", mz = "", lq = {ly.ay.PVP, ly.ay.HUD}))
+@pq(we = {@xd(bp = rf.class)})
 public class CPS
-extends HUDMod<ay> {
+        extends HUDMod<ay> {
     private final yt pC = new yt(this);
 
     public static class ay
-    extends zi {
-        @fl(yp=@de(vi=0))
-        @cy(yv= ho.TOP_LEFT, ev=41.0)
+            extends zi {
+        @fl(yp = @de(vi = 0))
+        @cy(yv = ho.TOP_LEFT, ev = 41.0)
         public fw jQ;
-        @de(vi=10)
+        @de(vi = 10)
         public iv oZ = new iv("CPS");
-        @au(wd="digits", vu="Digits", yp=@de(vi=11))
-        @mj(js=2)
+        @au(wd = "digits", vu = "Digits", yp = @de(vi = 11))
+        @mj(js = 2)
         public int rJ;
-        @au(wd="right", vu="Right", pr="true", yp=@de(vi=12))
+        @au(wd = "right", vu = "Right", pr = "true", yp = @de(vi = 12))
         public boolean tI;
-        @au(wd="showCPSText", vu="Show CPS Text", pr="false", yp=@de(vi=13))
+        @au(wd = "showCPSText", vu = "Show CPS Text", pr = "false", yp = @de(vi = 13))
         public boolean tJ;
-        @au(wd="lineColor", vu="Line Color", pr="false/0/0/0", yp=@de(vi=14))
+        @au(wd = "lineColor", vu = "Line Color", pr = "false/0/0/0", yp = @de(vi = 14))
         public gp tK;
     }
 
     public class rf
-    extends mo {
+            extends mo {
         private static final String rR = " | ";
         private final DecimalFormat pD = wk.yl("#.#");
 

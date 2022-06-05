@@ -8,22 +8,22 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 public class ns$ay {
-    @SerializedName(value="name")
+    @SerializedName(value = "name")
     @NotNull
     private final String name;
-    @SerializedName(value="slug")
+    @SerializedName(value = "slug")
     @NotNull
     private final qc wf;
-    @SerializedName(value="sidebar")
+    @SerializedName(value = "sidebar")
     @NotNull
     private final String cf;
-    @SerializedName(value="icon")
+    @SerializedName(value = "icon")
     @NotNull
     private final String icon;
-    @SerializedName(value="description")
+    @SerializedName(value = "description")
     @NotNull
     private final String vo;
-    @SerializedName(value="form")
+    @SerializedName(value = "form")
     @NotNull
     private final List<ai> gk;
 

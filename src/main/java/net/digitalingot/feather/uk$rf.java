@@ -5,7 +5,7 @@ import net.digitalingot.feather.mods.impl.BossBar;
 import net.minecraft.client.gui.GuiIngame;
 
 public class uk$rf
-extends kb {
+        extends kb {
     @Override
     public int df() {
         return 182;
@@ -20,7 +20,7 @@ extends kb {
 
     private void ky() {
         int n = this.df();
-        int n2 = (int)(0.8 * (double)(n + 1));
+        int n2 = (int) (0.8 * (double) (n + 1));
         boolean bl = false;
         int n3 = 12;
         fp.ay(0, GuiIngame.field_110324_m);
@@ -31,12 +31,12 @@ extends kb {
         }
         String string = "Feather";
         int n4 = (n - this.kw.on("Feather")) / 2;
-        this.kw.ay("Feather", (float)n4, 3.0f, ((BossBar.ay)((BossBar) BossBar.this).vz).sa, ((BossBar.ay)((BossBar) BossBar.this).vz).ki);
+        this.kw.ay("Feather", (float) n4, 3.0f, ((BossBar.ay) ((BossBar) BossBar.this).vz).sa, ((BossBar.ay) ((BossBar) BossBar.this).vz).ki);
         this.fg = 19;
     }
 
     @Override
     public ci te() {
-        return ((BossBar.ay)((BossBar) BossBar.this).vz).iO;
+        return ((BossBar.ay) ((BossBar) BossBar.this).vz).iO;
     }
 }

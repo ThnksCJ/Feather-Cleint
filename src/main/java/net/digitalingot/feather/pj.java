@@ -27,18 +27,18 @@ public class pj {
         Bootstrap bootstrap = new Bootstrap();
         bootstrap.group(this.gy);
         bootstrap.channel(NioSocketChannel.class);
-        bootstrap.option(ChannelOption.SO_KEEPALIVE, (Object)true);
+        bootstrap.option(ChannelOption.SO_KEEPALIVE, (Object) true);
         int n = Integer.parseInt(jb.sd("FEATHER_MESSAGING_PORT", "1001"));
         bootstrap.remoteAddress("127.0.0.1", n);
-        bootstrap.handler(new ChannelInitializer<Channel>(){
+        bootstrap.handler(new ChannelInitializer<Channel>() {
 
             protected void initChannel(Channel channel) {
                 ChannelPipeline channelPipeline = channel.pipeline();
                 channelPipeline.addLast("frame-decoder", new rs(vp.INTEGER));
                 channelPipeline.addLast("frame-encoder", new qf(vp.INTEGER));
                 channelPipeline.addLast("packetProcessor", new ay());
-                channelPipeline.addLast("inboundExceptionHandler", (ChannelHandler)new jx.ay());
-                channelPipeline.addLast("outboundExceptionHandler", (ChannelHandler)new jx.rf());
+                channelPipeline.addLast("inboundExceptionHandler", (ChannelHandler) new jx.ay());
+                channelPipeline.addLast("outboundExceptionHandler", (ChannelHandler) new jx.rf());
             }
         });
         ChannelFuture channelFuture = bootstrap.connect();
@@ -64,12 +64,12 @@ public class pj {
     }
 
     public static class ay
-    extends ChannelDuplexHandler {
+            extends ChannelDuplexHandler {
         public void channelRead(ChannelHandlerContext channelHandlerContext, Object object) {
             if (!(object instanceof ByteBuf)) {
                 throw new IllegalArgumentException("Don't know how to cast " + object.getClass() + " to ByteBuf");
             }
-            ByteBuf byteBuf = (ByteBuf)object;
+            ByteBuf byteBuf = (ByteBuf) object;
             int n = byteBuf.readableBytes();
             byte[] byArray = new byte[n];
             byteBuf.readBytes(byArray);

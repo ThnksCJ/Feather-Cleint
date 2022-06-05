@@ -8,25 +8,25 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 public class ly
-implements Comparable<ly> {
-    @SerializedName(value="name")
+        implements Comparable<ly> {
+    @SerializedName(value = "name")
     @NotNull
     private final String name;
-    @SerializedName(value="slug")
+    @SerializedName(value = "slug")
     @NotNull
     private final qc wf;
-    @SerializedName(value="icon")
+    @SerializedName(value = "icon")
     @NotNull
     private final String icon;
-    @SerializedName(value="description")
+    @SerializedName(value = "description")
     @NotNull
     private final String vo;
-    @SerializedName(value="renderMod")
+    @SerializedName(value = "renderMod")
     private final Boolean xe;
-    @SerializedName(value="categories")
+    @SerializedName(value = "categories")
     @NotNull
     private final ay[] ts;
-    @SerializedName(value="form")
+    @SerializedName(value = "form")
     @NotNull
     private final List<ai> gk;
 
@@ -80,7 +80,7 @@ implements Comparable<ly> {
 
     @Override
     public int compareTo(@NotNull Object object) {
-        return this.ay((ly)object);
+        return this.ay((ly) object);
     }
 
     public enum ay {

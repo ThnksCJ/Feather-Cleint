@@ -18,7 +18,7 @@ public class lw {
         if (n >= 100000) {
             return "Mouse " + (n - 100000);
         }
-        String string = n < 256 ? Keyboard.getKeyName(n) : String.format("%c", Character.valueOf((char)(n - 256))).toUpperCase();
+        String string = n < 256 ? Keyboard.getKeyName(n) : String.format("%c", Character.valueOf((char) (n - 256))).toUpperCase();
         return string != null ? string : "Unknown";
     }
 }

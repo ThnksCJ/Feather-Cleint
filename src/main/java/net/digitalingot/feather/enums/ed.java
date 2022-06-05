@@ -14,6 +14,11 @@ public enum ed {
     ACCOUNT_SEARCH(HttpMethod.POST, "/minecraft/account-search");
 
     private static final String BASE;
+
+    static {
+        BASE = jb.sd("FEATHER_API_URL", "https://api.feathermc.com/v1");
+    }
+
     @NotNull
     private final HttpMethod method;
     @NotNull
@@ -24,7 +29,7 @@ public enum ed {
         this.endpoint = string2;
     }
 
-    public URL get(String ... stringArray) {
+    public URL get(String... stringArray) {
         String string = this.endpoint;
         for (String string2 : stringArray) {
             string = string.replaceFirst("\\{}", string2);
@@ -38,9 +43,5 @@ public enum ed {
     @NotNull
     public HttpMethod getMethod() {
         return this.method;
-    }
-
-    static {
-        BASE = jb.sd("FEATHER_API_URL", "https://api.feathermc.com/v1");
     }
 }

@@ -4,14 +4,15 @@ import net.digitalingot.feather.*;
 import net.digitalingot.feather.enums.ho;
 import net.digitalingot.feather.enums.qc;
 import net.digitalingot.feather.enums.qx;
+import net.digitalingot.feather.interfaces.*;
 import net.digitalingot.feather.mods.HUDMod;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.settings.KeyBinding;
 
-@sv(aw= qc.TOGGLE_SPRINT, jf=@bx(vu="Toggle Sprint", jm="https://assets.feathercdn.net/game/mods/togglesprint.svg", mz="Toggle your sprint and sneak key", lq={ly.ay.PVP}))
-@pq(we={@xd(bp= ay.class)})
+@sv(aw = qc.TOGGLE_SPRINT, jf = @bx(vu = "Toggle Sprint", jm = "https://assets.feathercdn.net/game/mods/togglesprint.svg", mz = "Toggle your sprint and sneak key", lq = {ly.ay.PVP}))
+@pq(we = {@xd(bp = ay.class)})
 public class ToggleSprint
-extends HUDMod<rf> {
+        extends HUDMod<rf> {
     private static final Minecraft MINECRAFT = Minecraft.getMinecraft();
     private static final KeyBinding sM = ToggleSprint.MINECRAFT.gameSettings.keyBindSprint;
     private static final KeyBinding sN = ToggleSprint.MINECRAFT.gameSettings.keyBindSneak;
@@ -33,7 +34,7 @@ extends HUDMod<rf> {
             }
             boolean bl2 = bl = ToggleSprint.MINECRAFT.gameSettings.keyBindSprint.getKeyCode() == n;
             if (bl && n3 == 1 && ToggleSprint.MINECRAFT.player.field_71075_bZ.isFlying) {
-                this.sQ = ((rf)this.vz).sW && !this.sQ;
+                this.sQ = ((rf) this.vz).sW && !this.sQ;
                 this.sR = !this.sR;
             }
         });
@@ -64,10 +65,10 @@ extends HUDMod<rf> {
     @Override
     public void zq() {
         super.zq();
-        if (!((rf)this.vz).sV) {
+        if (!((rf) this.vz).sV) {
             this.sO = false;
         }
-        this.sQ = ((rf)this.vz).sW;
+        this.sQ = ((rf) this.vz).sW;
     }
 
     @Override
@@ -89,7 +90,7 @@ extends HUDMod<rf> {
     }
 
     public boolean pn() {
-        return !this.gc() || !((rf)this.vz).sY;
+        return !this.gc() || !((rf) this.vz).sY;
     }
 
     public boolean zo() {
@@ -97,56 +98,56 @@ extends HUDMod<rf> {
     }
 
     public int wa() {
-        return ((rf)this.vz).sZ;
+        return ((rf) this.vz).sZ;
     }
 
-    @rm(wm=true)
+    @rm(wm = true)
     public static class rf
-    extends zi {
-        @de(vi=0)
+            extends zi {
+        @de(vi = 0)
         public iv sU = new iv("Toggle Sprint");
-        @au(wd="toggleSneak", vu="Toggle Sneak", yp=@de(vi=1))
+        @au(wd = "toggleSneak", vu = "Toggle Sneak", yp = @de(vi = 1))
         public boolean sV;
-        @au(wd="toggleSprint", vu="Toggle Sprint", pr="true", yp=@de(vi=2))
+        @au(wd = "toggleSprint", vu = "Toggle Sprint", pr = "true", yp = @de(vi = 2))
         public boolean sW;
-        @de(vi=10)
+        @de(vi = 10)
         public iv sX = new iv("Fly");
-        @au(wd="blockSprintWhenFlying", vu="Block Sprint", yp=@de(vi=11))
+        @au(wd = "blockSprintWhenFlying", vu = "Block Sprint", yp = @de(vi = 11))
         public boolean sY;
-        @au(wd="flyBoostAmount", vu="Boost Amount", pr="1", yp=@de(vi=12))
-        @mj(yu=1, js=8)
+        @au(wd = "flyBoostAmount", vu = "Boost Amount", pr = "1", yp = @de(vi = 12))
+        @mj(yu = 1, js = 8)
         public int sZ;
-        @fl(yp=@de(vi=20))
-        @cy(yv= ho.TOP_LEFT, dz=0.0, ev=52.0)
-        @wv(rh={@aw(ie="backgroundWidth", js=150, pr="110"), @aw(ie="backgroundHeight", yu=10, js=25, pr="16")})
+        @fl(yp = @de(vi = 20))
+        @cy(yv = ho.TOP_LEFT, dz = 0.0, ev = 52.0)
+        @wv(rh = {@aw(ie = "backgroundWidth", js = 150, pr = "110"), @aw(ie = "backgroundHeight", yu = 10, js = 25, pr = "16")})
         public uj tA;
-        @de(vi=30)
+        @de(vi = 30)
         public iv tB = new iv("Text Settings");
-        @au(wd="hideText", vu="Hide Text", yp=@de(vi=31))
+        @au(wd = "hideText", vu = "Hide Text", yp = @de(vi = 31))
         public boolean tC;
-        @au(wd="sneakingKeyHeldText", vu="Sneaking Held", pr="Sneaking (Key Held)", yp=@de(vi=32))
-        @jf(yu=0, js=32)
+        @au(wd = "sneakingKeyHeldText", vu = "Sneaking Held", pr = "Sneaking (Key Held)", yp = @de(vi = 32))
+        @jf(yu = 0, js = 32)
         public String tD;
-        @au(wd="sneakingToggledText", vu="Sneaking Toggled", pr="Sneaking (Toggled)", yp=@de(vi=33))
-        @jf(yu=0, js=32)
+        @au(wd = "sneakingToggledText", vu = "Sneaking Toggled", pr = "Sneaking (Toggled)", yp = @de(vi = 33))
+        @jf(yu = 0, js = 32)
         public String tE;
-        @au(wd="sprintingKeyHeldText", vu="Sprinting Held", pr="Sprinting (Key Held)", yp=@de(vi=34))
-        @jf(yu=0, js=32)
+        @au(wd = "sprintingKeyHeldText", vu = "Sprinting Held", pr = "Sprinting (Key Held)", yp = @de(vi = 34))
+        @jf(yu = 0, js = 32)
         public String tF;
-        @au(wd="sprintingToggledText", vu="Sprinting Toggled", pr="Sprinting (Toggled)", yp=@de(vi=35))
-        @jf(yu=0, js=32)
+        @au(wd = "sprintingToggledText", vu = "Sprinting Toggled", pr = "Sprinting (Toggled)", yp = @de(vi = 35))
+        @jf(yu = 0, js = 32)
         public String tG;
-        @au(wd="sprintingVanillaText", vu="Sprinting Vanilla", pr="Sprinting (Vanilla)", yp=@de(vi=36))
-        @jf(yu=0, js=32)
+        @au(wd = "sprintingVanillaText", vu = "Sprinting Vanilla", pr = "Sprinting (Vanilla)", yp = @de(vi = 36))
+        @jf(yu = 0, js = 32)
         public String tH;
     }
 
     public static class uj
-    extends fw {
+            extends fw {
     }
 
     public class ay
-    extends mo {
+            extends mo {
         @Override
         public Object so() {
             if (MINECRAFT.player == null) {

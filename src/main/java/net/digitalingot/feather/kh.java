@@ -3,6 +3,9 @@ package net.digitalingot.feather;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.gson.JsonObject;
+import net.digitalingot.feather.interfaces.em;
+import net.digitalingot.feather.interfaces.lm;
+import net.digitalingot.feather.interfaces.zr;
 import net.digitalingot.feather.mods.Mod;
 import net.digitalingot.feather.mods.impl.General;
 import net.digitalingot.feather.mods.impl.Hypixel;
@@ -18,17 +21,17 @@ import java.util.*;
 import java.util.concurrent.ForkJoinPool;
 
 public class kh
-extends mn<Hypixel.ay> {
+        extends mn<Hypixel.ay> {
     private static final int vP = 20;
     private static final int vQ = 100;
     private static final int vR = 500;
     private static final int vS = 100;
     private static final int vT = 5;
-    private Minecraft minecraft;
     private final Map<UUID, wp> vU = Maps.newHashMap();
     private final List<wp> vV = Lists.newArrayList();
     private final Set<UUID> vW = new HashSet<UUID>();
     private final Map<UUID, tt> vX = Collections.synchronizedMap(new LinkedHashMap());
+    private Minecraft minecraft;
     private int vY = 0;
     private zs ag;
 
@@ -172,13 +175,13 @@ extends mn<Hypixel.ay> {
         fp.mm(true);
         vr vr2 = vr.nR();
         if (ay2.uW) {
-            vr2.ay(string2, (float)n4, (float)(1 + n), ay2.uY.aq(), false, ay2.uY.sc());
+            vr2.ay(string2, (float) n4, (float) (1 + n), ay2.uY.aq(), false, ay2.uY.sc());
             n4 += fp.mq(string2);
         }
-        vr2.ay(string, (float)n4, (float)(1 + n), ay2.uU.aq(), false, ay2.uU.sc());
+        vr2.ay(string, (float) n4, (float) (1 + n), ay2.uU.aq(), false, ay2.uU.sc());
         n4 += fp.mq(string);
         if (ay2.vd) {
-            vr2.ay(string3, (float)n4, (float)(1 + n), ay2.vB.aq(), false, ay2.vB.sc());
+            vr2.ay(string3, (float) n4, (float) (1 + n), ay2.vB.aq(), false, ay2.vB.sc());
         }
         fp.mm(false);
         fp.aB();
@@ -191,12 +194,12 @@ extends mn<Hypixel.ay> {
         ++this.vY;
         this.vX.put(uUID, tt.wJ);
         ForkJoinPool.commonPool().execute(() -> {
-            JsonObject jsonObject = yc.rf((UUID)uUID, (String)this.ag.yw());
+            JsonObject jsonObject = yc.rf((UUID) uUID, (String) this.ag.yw());
             if (jsonObject == null) {
                 return;
             }
             int n = jsonObject.get("networkExp").getAsInt();
-            int n2 = (int)(Math.sqrt(2 * n + 30625) / 50.0 - 2.5);
+            int n2 = (int) (Math.sqrt(2 * n + 30625) / 50.0 - 2.5);
             this.vX.put(uUID, new tt(String.valueOf(n2)));
         });
     }

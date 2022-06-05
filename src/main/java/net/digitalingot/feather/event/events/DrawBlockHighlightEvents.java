@@ -1,13 +1,13 @@
 package net.digitalingot.feather.event.events;
 
-import net.digitalingot.feather.event.Event;
-import net.digitalingot.feather.ql;
 import net.digitalingot.feather.enums.wi;
+import net.digitalingot.feather.event.Event;
+import net.digitalingot.feather.interfaces.ql;
 import net.minecraftforge.client.event.DrawBlockHighlightEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class DrawBlockHighlightEvents
-implements Event {
+        implements Event {
     @SubscribeEvent
     public void ay(DrawBlockHighlightEvent drawBlockHighlightEvent) {
         wi wi2 = ql.cb.mg().drawHighlightBlock();

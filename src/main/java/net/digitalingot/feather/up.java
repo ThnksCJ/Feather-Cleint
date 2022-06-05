@@ -3,14 +3,15 @@ package net.digitalingot.feather;
 import com.google.gson.annotations.SerializedName;
 import net.digitalingot.feather.enums.ao;
 import net.digitalingot.feather.enums.qc;
+import net.digitalingot.feather.interfaces.da;
 import org.jetbrains.annotations.NotNull;
 
 public class up
-implements da {
-    @SerializedName(value="mod")
+        implements da {
+    @SerializedName(value = "mod")
     @NotNull
     private final qc jq;
-    @SerializedName(value="box")
+    @SerializedName(value = "box")
     @NotNull
     private final ay gt;
 

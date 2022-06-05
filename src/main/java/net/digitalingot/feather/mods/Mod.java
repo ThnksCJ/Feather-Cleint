@@ -1,7 +1,7 @@
 package net.digitalingot.feather.mods;
 
 import com.mojang.authlib.GameProfile;
-import net.digitalingot.feather.sv;
+import net.digitalingot.feather.interfaces.sv;
 import net.digitalingot.feather.zi;
 import org.jetbrains.annotations.NotNull;
 

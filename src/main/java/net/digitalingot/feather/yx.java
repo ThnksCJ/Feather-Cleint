@@ -1,11 +1,12 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.bs;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.StringJoiner;
 
 public class yx
-implements bs<km> {
+        implements bs<km> {
     @NotNull
     private final hz la = new hz();
 
@@ -37,7 +38,7 @@ implements bs<km> {
     @Override
     @NotNull
     public String kl(@NotNull Object object) {
-        return this.ay((km)object);
+        return this.ay((km) object);
     }
 
     @Override

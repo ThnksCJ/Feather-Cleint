@@ -1,23 +1,27 @@
 package net.digitalingot.feather;
 
 import net.digitalingot.feather.enums.qc;
+import net.digitalingot.feather.interfaces.au;
+import net.digitalingot.feather.interfaces.bx;
+import net.digitalingot.feather.interfaces.de;
+import net.digitalingot.feather.interfaces.sv;
 import net.digitalingot.feather.mods.Mod;
 
 import java.awt.*;
 
-@sv(aw= qc.WEATHER_CHANGER, jf=@bx(vu="Weather Changer", jm="https://assets.feathercdn.net/game/mods/weatherchanger.svg", mz="Change the weather locally", lq={}))
+@sv(aw = qc.WEATHER_CHANGER, jf = @bx(vu = "Weather Changer", jm = "https://assets.feathercdn.net/game/mods/weatherchanger.svg", mz = "Change the weather locally", lq = {}))
 public class dz
-extends Mod<ay> {
+        extends Mod<ay> {
     public boolean ws() {
-        return ((ay)this.xd()).dU == ay.ay.DEFAULT;
+        return ((ay) this.xd()).dU == ay.ay.DEFAULT;
     }
 
     public boolean lo() {
-        return ((ay)this.xd()).dU == ay.ay.RAIN;
+        return ((ay) this.xd()).dU == ay.ay.RAIN;
     }
 
     public boolean oy() {
-        return ((ay)this.xd()).dU == ay.ay.THUNDER;
+        return ((ay) this.xd()).dU == ay.ay.THUNDER;
     }
 
     public boolean eo() {
@@ -25,13 +29,13 @@ extends Mod<ay> {
     }
 
     public static class dz$ay
-    extends zi {
-        @au(wd="weatherMode", vu="Weather Mode", pr="default", yp=@de(vi=0))
+            extends zi {
+        @au(wd = "weatherMode", vu = "Weather Mode", pr = "default", yp = @de(vi = 0))
         public ay dU;
-        @au(wd="fallingColor", vu="Rain / Snow Color", pr="255/255/255", yp=@de(vi=1))
+        @au(wd = "fallingColor", vu = "Rain / Snow Color", pr = "255/255/255", yp = @de(vi = 1))
         public Color dV;
 
-        public static enum ay {
+        public enum ay {
             DEFAULT,
             CLEAR,
             RAIN,

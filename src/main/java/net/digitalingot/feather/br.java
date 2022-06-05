@@ -1,6 +1,7 @@
 package net.digitalingot.feather;
 
 import com.google.common.collect.Maps;
+import net.digitalingot.feather.interfaces.bs;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Map;

@@ -19,6 +19,26 @@ public class lo {
         this.Aq = string != null && !string.isEmpty() ? string : null;
     }
 
+    public static List<String> cu() {
+        return lo.kl(TargetDataLine.class);
+    }
+
+    public static List<String> sa() {
+        return lo.kl(SourceDataLine.class);
+    }
+
+    private static List<String> kl(Class<?> clazz) {
+        Mixer.Info[] infoArray;
+        ArrayList<String> arrayList = new ArrayList<String>();
+        for (Mixer.Info info : infoArray = AudioSystem.getMixerInfo()) {
+            Line.Info info2;
+            Mixer mixer = AudioSystem.getMixer(info);
+            if (!mixer.isLineSupported(info2 = new Line.Info(clazz))) continue;
+            arrayList.add(info.getName());
+        }
+        return arrayList;
+    }
+
     public void zz(@Nullable String string, @Nullable String string2) {
         this.Ap = string2 != null && !string2.isEmpty() ? string2 : null;
         this.Aq = string != null && !string.isEmpty() ? string : null;
@@ -65,8 +85,9 @@ public class lo {
             Line line;
             Line.Info info2;
             Mixer mixer = AudioSystem.getMixer(info);
-            if (!mixer.isLineSupported(info2 = new Line.Info(clazz)) || !info.getName().equals(string) || !clazz.isAssignableFrom((line = mixer.getLine(info2)).getClass())) continue;
-            return (T)line;
+            if (!mixer.isLineSupported(info2 = new Line.Info(clazz)) || !info.getName().equals(string) || !clazz.isAssignableFrom((line = mixer.getLine(info2)).getClass()))
+                continue;
+            return (T) line;
         }
         return null;
     }
@@ -74,7 +95,8 @@ public class lo {
     @Nullable
     public TargetDataLine jd() {
         TargetDataLine targetDataLine;
-        block1: {
+        block1:
+        {
             targetDataLine = this.lv(this.Aq);
             if (targetDataLine == null) break block1;
             if (targetDataLine.isOpen()) {
@@ -88,7 +110,8 @@ public class lo {
     @Nullable
     public SourceDataLine nd() {
         SourceDataLine sourceDataLine;
-        block1: {
+        block1:
+        {
             sourceDataLine = this.bv(this.Ap);
             if (sourceDataLine == null) break block1;
             if (sourceDataLine.isOpen()) {
@@ -97,25 +120,5 @@ public class lo {
             sourceDataLine.open(Ao);
         }
         return sourceDataLine;
-    }
-
-    public static List<String> cu() {
-        return lo.kl(TargetDataLine.class);
-    }
-
-    public static List<String> sa() {
-        return lo.kl(SourceDataLine.class);
-    }
-
-    private static List<String> kl(Class<?> clazz) {
-        Mixer.Info[] infoArray;
-        ArrayList<String> arrayList = new ArrayList<String>();
-        for (Mixer.Info info : infoArray = AudioSystem.getMixerInfo()) {
-            Line.Info info2;
-            Mixer mixer = AudioSystem.getMixer(info);
-            if (!mixer.isLineSupported(info2 = new Line.Info(clazz))) continue;
-            arrayList.add(info.getName());
-        }
-        return arrayList;
     }
 }

@@ -4,10 +4,10 @@ import com.google.gson.annotations.SerializedName;
 import org.jetbrains.annotations.NotNull;
 
 public class ne {
-    @SerializedName(value="updateClientPreferences")
+    @SerializedName(value = "updateClientPreferences")
     @NotNull
     private cd ce;
-    @SerializedName(value="colorPickerPreferences")
+    @SerializedName(value = "colorPickerPreferences")
     @NotNull
     private qi yo;
 

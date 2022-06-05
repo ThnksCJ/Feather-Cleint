@@ -6,7 +6,7 @@ import java.nio.ByteBuffer;
 import java.nio.channels.WritableByteChannel;
 
 class gu$ay
-implements WritableByteChannel {
+        implements WritableByteChannel {
     private final ByteBuf Gs;
 
     public gu$ay(ByteBuf byteBuf) {

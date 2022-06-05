@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Objects;
 
 class db
-implements Comparator<Integer> {
+        implements Comparator<Integer> {
     private static final List<Integer> ot = Arrays.asList(18, 17, 16, 10018, 10017, 10016, 524, 10, 10524, 10010);
 
     db() {
@@ -32,6 +32,6 @@ implements Comparator<Integer> {
 
     @Override
     public int compare(Object object, Object object2) {
-        return this.ay((Integer)object, (Integer)object2);
+        return this.ay((Integer) object, (Integer) object2);
     }
 }

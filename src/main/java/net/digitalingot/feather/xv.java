@@ -1,9 +1,10 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.bs;
 import org.jetbrains.annotations.NotNull;
 
 public class xv
-implements bs<String> {
+        implements bs<String> {
     @NotNull
     public String nl(@NotNull String string, @NotNull Class<? extends String> clazz) {
         return string;
@@ -17,7 +18,7 @@ implements bs<String> {
     @Override
     @NotNull
     public String kl(@NotNull Object object) {
-        return this.ig((String)object);
+        return this.ig((String) object);
     }
 
     @Override

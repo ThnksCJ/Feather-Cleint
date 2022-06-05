@@ -2,16 +2,17 @@ package net.digitalingot.feather;
 
 import com.google.gson.annotations.SerializedName;
 import net.digitalingot.feather.enums.ao;
+import net.digitalingot.feather.interfaces.da;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
 public class id
-implements da {
-    @SerializedName(value="categories")
+        implements da {
+    @SerializedName(value = "categories")
     @NotNull
     private final ly.ay[] ts = ly.ay.values();
-    @SerializedName(value="mods")
+    @SerializedName(value = "mods")
     @NotNull
     private final List<ly> xk;
 

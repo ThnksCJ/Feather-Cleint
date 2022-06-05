@@ -3,13 +3,14 @@ package net.digitalingot.feather;
 import com.google.gson.annotations.SerializedName;
 import net.digitalingot.feather.enums.ao;
 import net.digitalingot.feather.enums.qc;
+import net.digitalingot.feather.interfaces.da;
 import org.jetbrains.annotations.NotNull;
 
 public class oz
-implements da {
-    @SerializedName(value="mod")
+        implements da {
+    @SerializedName(value = "mod")
     public qc qr;
-    @SerializedName(value="hudEditButton")
+    @SerializedName(value = "hudEditButton")
     private boolean zp;
 
     public oz(qc qc2, boolean bl) {

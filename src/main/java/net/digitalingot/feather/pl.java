@@ -1,11 +1,13 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.bs;
+import net.digitalingot.feather.interfaces.uq;
 import org.jetbrains.annotations.NotNull;
 
 import java.lang.reflect.Field;
 
 public class pl
-implements bs<Enum<?>> {
+        implements bs<Enum<?>> {
     @NotNull
     public Enum<?> kl(@NotNull String string, @NotNull Class<? extends Enum<?>> clazz) {
         for (Enum<?> enum_ : clazz.getEnumConstants()) {
@@ -34,7 +36,7 @@ implements bs<Enum<?>> {
     @Override
     @NotNull
     public String kl(@NotNull Object object) {
-        return this.ay((Enum)object);
+        return this.ay((Enum) object);
     }
 
     @Override

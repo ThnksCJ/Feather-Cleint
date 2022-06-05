@@ -27,8 +27,8 @@ public class co {
             ++this.tq;
         }
         this.en = f;
-        float f2 = (float)this.tq + f;
-        this.ay(this.zg.mc, (float)Math.sin(f2 * 0.001f) * 5.0f + 25.0f, -f2 * 0.1f, 1.0f);
+        float f2 = (float) this.tq + f;
+        this.ay(this.zg.mc, (float) Math.sin(f2 * 0.001f) * 5.0f + 25.0f, -f2 * 0.1f, 1.0f);
     }
 
     public void ay(Minecraft minecraft, float f, float f2, float f3) {
@@ -37,7 +37,7 @@ public class co {
         GlStateManager.matrixMode(5889);
         GlStateManager.pushMatrix();
         GlStateManager.loadIdentity();
-        GlStateManager.multMatrix(this.ay(85.0, (float)minecraft.currentScreen.width / (float)minecraft.currentScreen.height, 0.05f, 10.0f));
+        GlStateManager.multMatrix(this.ay(85.0, (float) minecraft.currentScreen.width / (float) minecraft.currentScreen.height, 0.05f, 10.0f));
         GlStateManager.matrixMode(5888);
         GlStateManager.pushMatrix();
         GlStateManager.loadIdentity();
@@ -50,8 +50,8 @@ public class co {
         GlStateManager.enableBlend();
         for (int i = 0; i < 4; ++i) {
             GlStateManager.pushMatrix();
-            float f4 = ((float)(i % 2) / 2.0f - 0.5f) / 256.0f;
-            float f5 = ((float)(i / 2) / 2.0f - 0.5f) / 256.0f;
+            float f4 = ((float) (i % 2) / 2.0f - 0.5f) / 256.0f;
+            float f5 = ((float) (i / 2) / 2.0f - 0.5f) / 256.0f;
             float f6 = 0.0f;
             GlStateManager.translate(f4, f5, 0.0f);
             GlStateManager.rotate(f, 1.0f, 0.0f, 0.0f);
@@ -112,7 +112,7 @@ public class co {
     }
 
     private FloatBuffer ay(double d, float f, float f2, float f3) {
-        float f4 = (float)(1.0 / Math.tan(d * 0.01745329238474369 / 2.0));
+        float f4 = (float) (1.0 / Math.tan(d * 0.01745329238474369 / 2.0));
         FloatBuffer floatBuffer = BufferUtils.createFloatBuffer(16);
         floatBuffer.put(this.uj(0, 0), f4 / f);
         floatBuffer.put(this.uj(0, 1), 0.0f);

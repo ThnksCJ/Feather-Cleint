@@ -13,10 +13,10 @@ import java.nio.channels.ReadableByteChannel;
 import java.util.List;
 
 public class fk
-extends MessageToMessageDecoder<Object> {
+        extends MessageToMessageDecoder<Object> {
     public boolean acceptInboundMessage(Object object) {
         if (object instanceof DatagramPacket) {
-            return this.acceptInboundMessage(((DatagramPacket)object).content());
+            return this.acceptInboundMessage(((DatagramPacket) object).content());
         }
         return object instanceof ByteBuf;
     }
@@ -24,16 +24,16 @@ extends MessageToMessageDecoder<Object> {
     protected void decode(ChannelHandlerContext channelHandlerContext, Object object, List<Object> list) {
         ByteBuf byteBuf;
         if (object instanceof ByteBuf) {
-            byteBuf = (ByteBuf)object;
+            byteBuf = (ByteBuf) object;
         } else if (object instanceof DatagramPacket) {
-            byteBuf = ((DatagramPacket)object).content();
+            byteBuf = ((DatagramPacket) object).content();
         } else {
             throw new IllegalArgumentException("Unsupported message type: " + object.getClass().getName());
         }
         if (!byteBuf.isReadable()) {
             return;
         }
-        MessageReader messageReader = SerializePacked.readFromUnbuffered((ReadableByteChannel)new ay(byteBuf));
+        MessageReader messageReader = SerializePacked.readFromUnbuffered((ReadableByteChannel) new ay(byteBuf));
         if (byteBuf.isReadable()) {
             throw new CorruptedFrameException("Did not read full packet");
         }
@@ -41,7 +41,7 @@ extends MessageToMessageDecoder<Object> {
     }
 
     static class ay
-    implements ReadableByteChannel {
+            implements ReadableByteChannel {
         private final ByteBuf Gr;
 
         public ay(ByteBuf byteBuf) {

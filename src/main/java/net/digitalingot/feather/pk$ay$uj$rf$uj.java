@@ -5,7 +5,7 @@ import org.capnproto.SegmentReader;
 import org.capnproto.StructReader;
 
 public final class pk$ay$uj$rf$uj
-extends StructReader {
+        extends StructReader {
     pk$ay$uj$rf$uj(SegmentReader segmentReader, int n, int n2, int n3, short s, int n4) {
         super(segmentReader, n, n2, n3, s, n4);
     }
@@ -32,7 +32,7 @@ extends StructReader {
 
     public pk.ay.uj.zz.zz cE() {
         assert (this.bW() == pk.ay.uj.rf.zz.FEATHER) : "Must check which() before get()ing a union member.";
-        return (pk.ay.uj.zz.zz)this._getPointerField((FromPointerReaderRefDefault)pk.ay.uj.zz.CA, 1, null, 0);
+        return (pk.ay.uj.zz.zz) this._getPointerField((FromPointerReaderRefDefault) pk.ay.uj.zz.CA, 1, null, 0);
     }
 
     public final boolean cB() {

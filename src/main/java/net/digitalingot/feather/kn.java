@@ -8,19 +8,19 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class kn {
-    @SerializedName(value="name")
+    @SerializedName(value = "name")
     @NotNull
     private final String name;
-    @SerializedName(value="slug")
+    @SerializedName(value = "slug")
     @NotNull
     private final String slug;
-    @SerializedName(value="icon")
+    @SerializedName(value = "icon")
     @NotNull
     private final String icon;
-    @SerializedName(value="category")
+    @SerializedName(value = "category")
     @NotNull
     private final sb.ay yw;
-    @SerializedName(value="form")
+    @SerializedName(value = "form")
     @Nullable
     private final List<ai> gk;
 

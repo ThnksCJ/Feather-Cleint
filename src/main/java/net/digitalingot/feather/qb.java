@@ -1,5 +1,7 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.ny;
+import net.digitalingot.feather.interfaces.qg;
 import net.digitalingot.feather.lr;
 import net.digitalingot.feather.ps;
 import net.digitalingot.feather.vx;
@@ -9,7 +11,7 @@ import java.util.List;
 import java.util.UUID;
 
 public class qb
-implements qg {
+        implements qg {
     @NotNull
     private final ny BG;
     @NotNull

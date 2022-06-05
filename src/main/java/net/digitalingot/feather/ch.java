@@ -25,15 +25,15 @@ public class ch<T> {
             return false;
         }
         if (this.jv.uw() != null) {
-            double d = (Double)t;
+            double d = (Double) t;
             return !(d > this.jv.uw().lf()) && !(d < this.jv.uw().hd());
         }
         if (this.jv.tw() != null) {
-            int n = (Integer)t;
+            int n = (Integer) t;
             return n <= this.jv.tw().js() && n >= this.jv.tw().yu();
         }
         if (this.jv.pf() != null) {
-            String string = (String)t;
+            String string = (String) t;
             return string.length() <= this.jv.pf().js() && string.length() >= this.jv.pf().yu();
         }
         return true;
@@ -46,12 +46,12 @@ public class ch<T> {
             throw new IllegalStateException(method.getName() + " does not return a Collection or a subtype of one");
         }
         Object object = method.invoke(null);
-        Class<?> clazz = hi.ay((ParameterizedType)method.getGenericReturnType(), 0);
+        Class<?> clazz = hi.ay((ParameterizedType) method.getGenericReturnType(), 0);
         if (clazz == String.class) {
-            Collection collection = (Collection)object;
-            return this.ay(collection, (Class)zq2.rt());
+            Collection collection = (Collection) object;
+            return this.ay(collection, (Class) zq2.rt());
         }
-        return (Collection)object;
+        return (Collection) object;
     }
 
     @NotNull

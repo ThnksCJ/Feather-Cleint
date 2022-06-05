@@ -3,7 +3,7 @@ package net.digitalingot.feather;
 import org.capnproto.*;
 
 public final class rr$bu$bu$ay
-extends StructBuilder {
+        extends StructBuilder {
     rr$bu$bu$ay(SegmentBuilder segmentBuilder, int n, int n2, int n3, short s) {
         super(segmentBuilder, n, n2, n3, s);
     }
@@ -24,7 +24,7 @@ extends StructBuilder {
     }
 
     public final rr.bu.bu.uj iG() {
-        return new rr.bu.bu.uj((SegmentReader)this.segment, this.data, this.pointers, this.dataSize, this.pointerCount, Integer.MAX_VALUE);
+        return new rr.bu.bu.uj((SegmentReader) this.segment, this.data, this.pointers, this.dataSize, this.pointerCount, Integer.MAX_VALUE);
     }
 
     public final boolean iH() {
@@ -33,17 +33,17 @@ extends StructBuilder {
 
     public final rr.bu.sd.ay iI() {
         assert (this.iF() == rr.bu.bu.zz.START_METRICS) : "Must check which() before get()ing a union member.";
-        return (rr.bu.sd.ay)((Object)this._getPointerField((FromPointerBuilderRefDefault)rr.bu.sd.Dp, 0, null, 0));
+        return (rr.bu.sd.ay) ((Object) this._getPointerField((FromPointerBuilderRefDefault) rr.bu.sd.Dp, 0, null, 0));
     }
 
     public final void ay(rr.bu.sd.zz zz2) {
-        this._setShortField(0, (short)rr.bu.bu.zz.START_METRICS.ordinal());
-        this._setPointerField((SetPointerBuilder)rr.bu.sd.Dp, 0, (Object)zz2);
+        this._setShortField(0, (short) rr.bu.bu.zz.START_METRICS.ordinal());
+        this._setPointerField((SetPointerBuilder) rr.bu.sd.Dp, 0, (Object) zz2);
     }
 
     public final rr.bu.sd.ay iJ() {
-        this._setShortField(0, (short)rr.bu.bu.zz.START_METRICS.ordinal());
-        return (rr.bu.sd.ay)((Object)this._initPointerField((FromPointerBuilder)rr.bu.sd.Dp, 0, 0));
+        this._setShortField(0, (short) rr.bu.bu.zz.START_METRICS.ordinal());
+        return (rr.bu.sd.ay) ((Object) this._initPointerField((FromPointerBuilder) rr.bu.sd.Dp, 0, 0));
     }
 
     public final boolean iK() {
@@ -52,17 +52,17 @@ extends StructBuilder {
 
     public final rr.bu.zz.ay iL() {
         assert (this.iF() == rr.bu.bu.zz.SERVER_JOIN) : "Must check which() before get()ing a union member.";
-        return (rr.bu.zz.ay)((Object)this._getPointerField((FromPointerBuilderRefDefault)rr.bu.zz.Do, 0, null, 0));
+        return (rr.bu.zz.ay) ((Object) this._getPointerField((FromPointerBuilderRefDefault) rr.bu.zz.Do, 0, null, 0));
     }
 
     public final void ay(rr.bu.zz.uj uj2) {
-        this._setShortField(0, (short)rr.bu.bu.zz.SERVER_JOIN.ordinal());
-        this._setPointerField((SetPointerBuilder)rr.bu.zz.Do, 0, (Object)uj2);
+        this._setShortField(0, (short) rr.bu.bu.zz.SERVER_JOIN.ordinal());
+        this._setPointerField((SetPointerBuilder) rr.bu.zz.Do, 0, (Object) uj2);
     }
 
     public final rr.bu.zz.ay iM() {
-        this._setShortField(0, (short)rr.bu.bu.zz.SERVER_JOIN.ordinal());
-        return (rr.bu.zz.ay)((Object)this._initPointerField((FromPointerBuilder)rr.bu.zz.Do, 0, 0));
+        this._setShortField(0, (short) rr.bu.bu.zz.SERVER_JOIN.ordinal());
+        return (rr.bu.zz.ay) ((Object) this._initPointerField((FromPointerBuilder) rr.bu.zz.Do, 0, 0));
     }
 
     public final boolean iN() {
@@ -75,6 +75,6 @@ extends StructBuilder {
     }
 
     public final void zz(Void void_) {
-        this._setShortField(0, (short)rr.bu.bu.zz.SERVER_QUIT.ordinal());
+        this._setShortField(0, (short) rr.bu.bu.zz.SERVER_QUIT.ordinal());
     }
 }

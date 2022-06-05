@@ -1,5 +1,7 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.hj;
+import net.digitalingot.feather.interfaces.vc;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.network.NetHandlerPlayClient;
@@ -23,11 +25,18 @@ public class sf {
     private final rt hC;
     private int hJ;
 
+    {
+        return this.hG;
+    }
+
     private sf(@NotNull gk gk2, @NotNull nu nu2, @NotNull rt rt2) {
         this.hG = gk2;
         this.gZ = nu2;
         this.hC = rt2;
     }
+
+    @NotNull
+    public gk if()
 
     @Nullable
     public static sf ay(@NotNull nn nn2) {
@@ -79,11 +88,6 @@ public class sf {
             }
         });
         return sf2;
-    }
-
-    @NotNull
-    public gk if() {
-        return this.hG;
     }
 
     @NotNull

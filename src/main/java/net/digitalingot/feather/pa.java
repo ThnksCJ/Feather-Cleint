@@ -8,18 +8,18 @@ import org.jetbrains.annotations.Nullable;
 
 @VisibleForTesting
 public class pa {
-    @SerializedName(value="requestId")
+    @SerializedName(value = "requestId")
     private final int th;
-    @SerializedName(value="callType")
+    @SerializedName(value = "callType")
     @Nullable
     private final ao wr;
-    @SerializedName(value="message")
+    @SerializedName(value = "message")
     @Nullable
     private final JsonElement qy;
-    @SerializedName(value="success")
+    @SerializedName(value = "success")
     @Nullable
     private final JsonElement ex;
-    @SerializedName(value="failure")
+    @SerializedName(value = "failure")
     @Nullable
     private final JsonElement tb;
 

@@ -8,7 +8,7 @@ public enum zv$rf$ay {
 
 
     public je.ay toCapnProto() {
-        switch (zv.1.yF[this.ordinal()]) {
+        switch (zv .1.yF[this.ordinal()]){
             case 1: {
                 return je.ay.EVERYONE;
             }

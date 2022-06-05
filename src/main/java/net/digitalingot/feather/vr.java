@@ -25,13 +25,6 @@ public class vr {
         Minecraft.getMinecraft().getRenderItem().zLevel = 200.0f;
     }
 
-    private General.ay nQ() {
-        if (this.En == null) {
-            this.En = (General.ay)zz.nw().xn().rf(General.class).xd();
-        }
-        return this.En;
-    }
-
     public static vr nR() {
         if (Em == null) {
             Em = new vr();
@@ -41,6 +34,13 @@ public class vr {
 
     public static xq nS() {
         return Ek;
+    }
+
+    private General.ay nQ() {
+        if (this.En == null) {
+            this.En = (General.ay) zz.nw().xn().rf(General.class).xd();
+        }
+        return this.En;
     }
 
     public final void zz(int n, int n2, int n3, int n4) {
@@ -60,10 +60,10 @@ public class vr {
         int n6 = n + n3;
         int n7 = n2 + n4;
         if (n5 != -1) {
-            f5 = (float)(n5 >> 24 & 0xFF) / 255.0f;
-            f4 = (float)(n5 >> 16 & 0xFF) / 255.0f;
-            f3 = (float)(n5 >> 8 & 0xFF) / 255.0f;
-            f2 = (float)(n5 & 0xFF) / 255.0f;
+            f5 = (float) (n5 >> 24 & 0xFF) / 255.0f;
+            f4 = (float) (n5 >> 16 & 0xFF) / 255.0f;
+            f3 = (float) (n5 >> 8 & 0xFF) / 255.0f;
+            f2 = (float) (n5 & 0xFF) / 255.0f;
         } else {
             f2 = 1.0f;
             f3 = 1.0f;
@@ -99,9 +99,9 @@ public class vr {
             if (ay2.fN == gg.NORMAL) {
                 double d = ay2.fO;
                 long l = System.currentTimeMillis();
-                float f = (float)(((double)l - (double)(n * 100) / d - (double)(n2 * 100) / d) % (50000.0 / d) / (50000.0 / d));
+                float f = (float) (((double) l - (double) (n * 100) / d - (double) (n2 * 100) / d) % (50000.0 / d) / (50000.0 / d));
                 int n6 = Math.abs(n3 - n);
-                float f2 = (float)(((double)l - (double)((n + n6) * 100) / d - (double)(n2 * 100) / d) % (50000.0 / d) / (50000.0 / d));
+                float f2 = (float) (((double) l - (double) ((n + n6) * 100) / d - (double) (n2 * 100) / d) % (50000.0 / d) / (50000.0 / d));
                 int n7 = Color.HSBtoRGB(f, 0.8f, 0.8f);
                 int n8 = Color.HSBtoRGB(f2, 0.8f, 0.8f);
                 this.uj(n, n2, n3, n4, n7, n8);
@@ -125,10 +125,10 @@ public class vr {
             n2 = n4;
             n4 = n6;
         }
-        float f = (float)(n5 >> 24 & 0xFF) / 255.0f;
-        float f2 = (float)(n5 >> 16 & 0xFF) / 255.0f;
-        float f3 = (float)(n5 >> 8 & 0xFF) / 255.0f;
-        float f4 = (float)(n5 & 0xFF) / 255.0f;
+        float f = (float) (n5 >> 24 & 0xFF) / 255.0f;
+        float f2 = (float) (n5 >> 16 & 0xFF) / 255.0f;
+        float f3 = (float) (n5 >> 8 & 0xFF) / 255.0f;
+        float f4 = (float) (n5 & 0xFF) / 255.0f;
         fp.aE();
         fp.aI();
         fp.uj(770, 771, 1, 0);
@@ -210,7 +210,7 @@ public class vr {
     protected void rf(String string, float f, float f2, int n, boolean bl) {
         string = az.uf(string);
         General.ay ay2 = this.nQ();
-        switch (1.Er[ay2.fN.ordinal()]) {
+        switch (1.E r[ay2.fN.ordinal()]){
             case 1: {
                 Color color = new Color(this.nT(), true);
                 color = new Color(color.getRed(), color.getGreen(), color.getBlue(), color.getAlpha() * n / 255);
@@ -219,13 +219,13 @@ public class vr {
             }
             case 2: {
                 for (char c : string.toCharArray()) {
-                    float f3 = (float)(((double)System.currentTimeMillis() - ((double)f * this.Eo - this.Ep) * 100.0 / ay2.fO - ((double)f2 * this.Eo - this.Eq) * 100.0 / ay2.fO) % (50000.0 / ay2.fO) / (50000.0 / ay2.fO));
+                    float f3 = (float) (((double) System.currentTimeMillis() - ((double) f * this.Eo - this.Ep) * 100.0 / ay2.fO - ((double) f2 * this.Eo - this.Eq) * 100.0 / ay2.fO) % (50000.0 / ay2.fO) / (50000.0 / ay2.fO));
                     int n2 = Color.HSBtoRGB(f3, 0.8f, 0.8f);
                     Color color = new Color(n2, true);
                     color = new Color(color.getRed(), color.getGreen(), color.getBlue(), color.getAlpha() * n / 255);
                     String string2 = String.valueOf(c);
                     this.ay(string2, f, f2, color.getRGB(), bl, false);
-                    f += (float)this.on(string2);
+                    f += (float) this.on(string2);
                 }
                 break;
             }
@@ -234,8 +234,8 @@ public class vr {
 
     public int nT() {
         double d = 50000.0 / this.nQ().fO;
-        double d2 = (double)System.currentTimeMillis() % d / d;
-        return Color.HSBtoRGB((float)d2, 0.8f, 0.8f);
+        double d2 = (double) System.currentTimeMillis() % d / d;
+        return Color.HSBtoRGB((float) d2, 0.8f, 0.8f);
     }
 
     public int on(String string) {
@@ -266,15 +266,15 @@ public class vr {
     public void ay(int n, int n2, float f, float f2, float f3, int n3, int n4, int n5, int n6, float f4, float f5, int n7) {
         float f6 = 1.0f / f4;
         float f7 = 1.0f / f5;
-        float f8 = (float)(n7 >> 24 & 0xFF) / 255.0f;
-        float f9 = (float)(n7 >> 16 & 0xFF) / 255.0f;
-        float f10 = (float)(n7 >> 8 & 0xFF) / 255.0f;
-        float f11 = (float)(n7 & 0xFF) / 255.0f;
+        float f8 = (float) (n7 >> 24 & 0xFF) / 255.0f;
+        float f9 = (float) (n7 >> 16 & 0xFF) / 255.0f;
+        float f10 = (float) (n7 >> 8 & 0xFF) / 255.0f;
+        float f11 = (float) (n7 & 0xFF) / 255.0f;
         wa wa2 = wa.Fl;
         wa2.ay(7, DefaultVertexFormats.POSITION_TEX_COLOR);
-        wa2.zz(n, n2 + n6, f).zz(f2 * f6, (f3 + (float)n4) * f7).uj(f9, f10, f11, f8).pe();
-        wa2.zz(n + n5, n2 + n6, f).zz((f2 + (float)n3) * f6, (f3 + (float)n4) * f7).uj(f9, f10, f11, f8).pe();
-        wa2.zz(n + n5, n2, f).zz((f2 + (float)n3) * f6, f3 * f7).uj(f9, f10, f11, f8).pe();
+        wa2.zz(n, n2 + n6, f).zz(f2 * f6, (f3 + (float) n4) * f7).uj(f9, f10, f11, f8).pe();
+        wa2.zz(n + n5, n2 + n6, f).zz((f2 + (float) n3) * f6, (f3 + (float) n4) * f7).uj(f9, f10, f11, f8).pe();
+        wa2.zz(n + n5, n2, f).zz((f2 + (float) n3) * f6, f3 * f7).uj(f9, f10, f11, f8).pe();
         wa2.zz(n, n2, f).zz(f2 * f6, f3 * f7).uj(f9, f10, f11, f8).pe();
         wa2.ok();
     }
@@ -300,9 +300,9 @@ public class vr {
         }
         wa wa2 = wa.Fl;
         wa2.ay(5, DefaultVertexFormats.POSITION_TEX_COLOR);
-        wa2.zz(n + n5, n2 + n6, 0.0f).zz((f + (float)n3) * f5, (f2 + (float)n4) * f6).sd(n14, n15, n16, n13).pe();
-        wa2.zz(n + n5, n2, 0.0f).zz((f + (float)n3) * f5, f2 * f6).sd(n14, n15, n16, n13).pe();
-        wa2.zz(n, n2 + n6, 0.0f).zz(f * f5, (f2 + (float)n4) * f6).sd(n10, n11, n12, n9).pe();
+        wa2.zz(n + n5, n2 + n6, 0.0f).zz((f + (float) n3) * f5, (f2 + (float) n4) * f6).sd(n14, n15, n16, n13).pe();
+        wa2.zz(n + n5, n2, 0.0f).zz((f + (float) n3) * f5, f2 * f6).sd(n14, n15, n16, n13).pe();
+        wa2.zz(n, n2 + n6, 0.0f).zz(f * f5, (f2 + (float) n4) * f6).sd(n10, n11, n12, n9).pe();
         wa2.zz(n, n2, 0.0f).zz(f * f5, f2 * f6).sd(n10, n11, n12, n9).pe();
         wa2.ok();
         if (!bl) {

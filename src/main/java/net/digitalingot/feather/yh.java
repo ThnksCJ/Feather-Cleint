@@ -4,26 +4,27 @@ import com.google.gson.JsonElement;
 import com.google.gson.annotations.SerializedName;
 import net.digitalingot.feather.enums.ao;
 import net.digitalingot.feather.enums.qc;
+import net.digitalingot.feather.interfaces.da;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Map;
 
 public class yh
-implements da {
-    @SerializedName(value="mod")
+        implements da {
+    @SerializedName(value = "mod")
     @NotNull
     private final qc wf;
-    @SerializedName(value="enabled")
+    @SerializedName(value = "enabled")
     @Nullable
     private final Boolean mp;
-    @SerializedName(value="favorite")
+    @SerializedName(value = "favorite")
     @Nullable
     private final Boolean dt;
-    @SerializedName(value="renderMod")
+    @SerializedName(value = "renderMod")
     @Nullable
     private final Boolean xe;
-    @SerializedName(value="settings")
+    @SerializedName(value = "settings")
     @Nullable
     private final Map<String, JsonElement> ul;
 

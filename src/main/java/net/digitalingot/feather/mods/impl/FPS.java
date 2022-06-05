@@ -3,26 +3,27 @@ package net.digitalingot.feather.mods.impl;
 import net.digitalingot.feather.*;
 import net.digitalingot.feather.enums.ho;
 import net.digitalingot.feather.enums.qc;
+import net.digitalingot.feather.interfaces.*;
 import net.digitalingot.feather.mixin.core.ed;
 import net.digitalingot.feather.mods.HUDMod;
 
-@sv(aw= qc.FPS, jf=@bx(vu="FPS", jm="https://assets.feathercdn.net/game/mods/fps.svg", mz="Display your frames per second", lq={ly.ay.HUD}))
-@pq(we={@xd(bp=rf.class)})
+@sv(aw = qc.FPS, jf = @bx(vu = "FPS", jm = "https://assets.feathercdn.net/game/mods/fps.svg", mz = "Display your frames per second", lq = {ly.ay.HUD}))
+@pq(we = {@xd(bp = rf.class)})
 public class FPS
-extends HUDMod<ay> {
+        extends HUDMod<ay> {
 
-    @rm(wm=true)
+    @rm(wm = true)
     public static class ay
-    extends zi {
-        @fl(yp=@de(vi=0))
-        @cy(yv= ho.TOP_LEFT)
+            extends zi {
+        @fl(yp = @de(vi = 0))
+        @cy(yv = ho.TOP_LEFT)
         public fw jQ;
-        @au(wd="reversed", vu="Reversed", yp=@de(vi=1))
+        @au(wd = "reversed", vu = "Reversed", yp = @de(vi = 1))
         public boolean jR;
     }
 
     public class rf
-    extends mo {
+            extends mo {
         public rf() {
             super("FPS: ", " FPS");
         }

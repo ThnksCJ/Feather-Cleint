@@ -9,7 +9,7 @@ class dq$zz {
     private final LoadingCache<String, String> cI;
 
     private dq$zz(long l, final ay ay2) {
-        this.cI = CacheBuilder.newBuilder().maximumSize(l).build(new CacheLoader<String, String>(){
+        this.cI = CacheBuilder.newBuilder().maximumSize(l).build(new CacheLoader<String, String>() {
 
             @Override
             @NotNull

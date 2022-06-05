@@ -1,5 +1,6 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.*;
 import org.apache.commons.lang3.ClassUtils;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -67,7 +68,7 @@ public class ca {
         if (this.qs == null) {
             throw new NullPointerException("Field is null");
         }
-        return (T)this.qs.get(object);
+        return (T) this.qs.get(object);
     }
 
     public void ay(@NotNull Object object, @NotNull Object object2) {

@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 import org.jetbrains.annotations.NotNull;
 
 public class nw {
-    @SerializedName(value="slug")
+    @SerializedName(value = "slug")
     @NotNull
     private final String slug;
 

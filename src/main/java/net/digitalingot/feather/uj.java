@@ -1,11 +1,12 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.sd;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 
 public class uj
-implements sd {
+        implements sd {
     @NotNull
     private final gw nn;
     @NotNull

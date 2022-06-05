@@ -6,10 +6,10 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 public class Class5 {
-    @SerializedName(value="cosmetics")
+    @SerializedName(value = "cosmetics")
     @NotNull
     private List<sb> it;
-    @SerializedName(value="emotes")
+    @SerializedName(value = "emotes")
     @NotNull
     private List<nw> dy;
 

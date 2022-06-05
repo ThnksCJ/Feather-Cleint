@@ -4,10 +4,10 @@ import com.google.gson.annotations.SerializedName;
 import org.jetbrains.annotations.NotNull;
 
 public class os {
-    @SerializedName(value="slug")
+    @SerializedName(value = "slug")
     @NotNull
     private final String slug;
-    @SerializedName(value="name")
+    @SerializedName(value = "name")
     @NotNull
     private final String name;
 

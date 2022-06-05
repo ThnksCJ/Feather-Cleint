@@ -1,5 +1,6 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.gv;
 import net.minecraft.client.Minecraft;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -53,6 +54,10 @@ public class qo {
         }
     }
 
+    public interface rf {
+        void onInteract();
+    }
+
     static final class ay {
         @NotNull
         private final Supplier<km> oi;
@@ -90,9 +95,5 @@ public class qo {
         public void kl(boolean bl) {
             this.dj = bl;
         }
-    }
-
-    public interface rf {
-        void onInteract();
     }
 }

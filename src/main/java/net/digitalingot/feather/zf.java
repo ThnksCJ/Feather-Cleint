@@ -10,9 +10,10 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class zf {
-    public static int ay(EntityPlayer entityPlayer, Item ... itemArray) {
+    public static int ay(EntityPlayer entityPlayer, Item... itemArray) {
         int n = 0;
-        block0: for (ItemStack itemStack : entityPlayer.inventory.mainInventory) {
+        block0:
+        for (ItemStack itemStack : entityPlayer.inventory.mainInventory) {
             if (itemStack.isEmpty()) continue;
             for (Item item : itemArray) {
                 if (itemStack.getItem() != item) continue;
@@ -23,7 +24,7 @@ public class zf {
         return n;
     }
 
-    public static int ay(EntityPlayer entityPlayer, ItemStack ... itemStackArray) {
+    public static int ay(EntityPlayer entityPlayer, ItemStack... itemStackArray) {
         int n = 0;
         for (ItemStack itemStack : entityPlayer.inventory.mainInventory) {
             if (itemStack.isEmpty()) continue;
@@ -47,10 +48,10 @@ public class zf {
         float f3 = 0.00390625f;
         wa wa2 = wa.Fl;
         wa2.ay(7, DefaultVertexFormats.POSITION_TEX);
-        wa2.zz(n, n2 + n6, f).zz((float)n3 * f2, (float)(n4 + n6) * f3).pe();
-        wa2.zz(n + n5, n2 + n6, f).zz((float)(n3 + n5) * f2, (float)(n4 + n6) * f3).pe();
-        wa2.zz(n + n5, n2, f).zz((float)(n3 + n5) * f2, (float)n4 * f3).pe();
-        wa2.zz(n, n2, f).zz((float)n3 * f2, (float)n4 * f3).pe();
+        wa2.zz(n, n2 + n6, f).zz((float) n3 * f2, (float) (n4 + n6) * f3).pe();
+        wa2.zz(n + n5, n2 + n6, f).zz((float) (n3 + n5) * f2, (float) (n4 + n6) * f3).pe();
+        wa2.zz(n + n5, n2, f).zz((float) (n3 + n5) * f2, (float) n4 * f3).pe();
+        wa2.zz(n, n2, f).zz((float) n3 * f2, (float) n4 * f3).pe();
         wa2.ok();
     }
 
@@ -61,8 +62,8 @@ public class zf {
             return;
         }
         if (itemStack.isItemDamaged() && bl) {
-            n3 = (int)Math.round(13.0 - (double)itemStack.getItemDamage() * 13.0 / (double)itemStack.getMaxDamage());
-            int n4 = (int)Math.round(255.0 - (double)itemStack.getItemDamage() * 255.0 / (double)itemStack.getMaxDamage());
+            n3 = (int) Math.round(13.0 - (double) itemStack.getItemDamage() * 13.0 / (double) itemStack.getMaxDamage());
+            int n4 = (int) Math.round(255.0 - (double) itemStack.getItemDamage() * 255.0 / (double) itemStack.getMaxDamage());
             fp.Z();
             fp.aB();
             fp.aI();
@@ -121,8 +122,8 @@ public class zf {
             return;
         }
         if (itemStack.isItemDamaged() && bl) {
-            n4 = (int)Math.round(13.0 - (double)itemStack.getItemDamage() * 13.0 / (double)itemStack.getMaxDamage());
-            int n5 = (int)Math.round(255.0 - (double)itemStack.getItemDamage() * 255.0 / (double)itemStack.getMaxDamage());
+            n4 = (int) Math.round(13.0 - (double) itemStack.getItemDamage() * 13.0 / (double) itemStack.getMaxDamage());
+            int n5 = (int) Math.round(255.0 - (double) itemStack.getItemDamage() * 255.0 / (double) itemStack.getMaxDamage());
             int n6 = 255 - n5 << 16 | n5 << 8;
             n3 = (255 - n5) / 4 << 16 | 0x3F00;
             fp.Z();
@@ -150,7 +151,7 @@ public class zf {
                 String string = String.valueOf(n4);
                 n3 = fp.mq(string);
                 fp.aB();
-                vr.nR().ay(string, (float)(n + 19 - 2 - n3), (float)(n2 + 6 + 3), -1, false);
+                vr.nR().ay(string, (float) (n + 19 - 2 - n3), (float) (n2 + 6 + 3), -1, false);
                 fp.aA();
             }
         }

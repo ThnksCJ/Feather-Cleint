@@ -5,13 +5,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonToken;
 import com.google.gson.stream.JsonWriter;
+import net.digitalingot.feather.interfaces.uq;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
 
 public final class lh<T extends Enum<T>>
-extends TypeAdapter<T> {
+        extends TypeAdapter<T> {
     private final Map<String, T> xw = new HashMap<String, T>();
     private final Map<T, String> wc = new HashMap<T, String>();
 
@@ -21,18 +22,6 @@ extends TypeAdapter<T> {
             this.xw.put(string, enum_);
             this.wc.put(enum_, string);
         }
-    }
-
-    public T sd(JsonReader jsonReader) {
-        if (jsonReader.peek() == JsonToken.NULL) {
-            jsonReader.nextNull();
-            return null;
-        }
-        return this.xw.get(jsonReader.nextString());
-    }
-
-    public void ay(JsonWriter jsonWriter, T t) {
-        jsonWriter.value(t == null ? null : this.wc.get(t));
     }
 
     private static <T> String ay(Class<T> clazz, T t) {
@@ -48,11 +37,23 @@ extends TypeAdapter<T> {
         return t.toString();
     }
 
+    public T sd(JsonReader jsonReader) {
+        if (jsonReader.peek() == JsonToken.NULL) {
+            jsonReader.nextNull();
+            return null;
+        }
+        return this.xw.get(jsonReader.nextString());
+    }
+
+    public void ay(JsonWriter jsonWriter, T t) {
+        jsonWriter.value(t == null ? null : this.wc.get(t));
+    }
+
     public Object read(JsonReader jsonReader) {
         return this.sd(jsonReader);
     }
 
     public void write(JsonWriter jsonWriter, Object object) {
-        this.ay(jsonWriter, (Enum)object);
+        this.ay(jsonWriter, (Enum) object);
     }
 }

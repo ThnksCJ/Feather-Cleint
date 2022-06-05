@@ -5,7 +5,7 @@ import net.minecraft.util.text.TextComponentTranslation;
 import org.jetbrains.annotations.NotNull;
 
 public class tw
-extends xu {
+        extends xu {
     public tw(@NotNull nn nn2, @NotNull gk gk2, @NotNull rt rt2) {
         super(nn2, rt2, gk2, xu.ay.IN_PARTY);
     }

@@ -14,7 +14,7 @@ import java.util.UUID;
 import java.util.function.Consumer;
 
 public class nf
-extends jq {
+        extends jq {
     @NotNull
     private List<UUID> Ct = new ArrayList<UUID>();
 
@@ -63,11 +63,11 @@ extends jq {
             object = new ArrayList<UUID>(arrayList);
             object.removeAll(set);
             if (!set.isEmpty()) {
-                this.xn((List<UUID>)object);
+                this.xn((List<UUID>) object);
             }
         }
         object = new MessageBuilder();
-        rr.ig.uj.ay ay2 = this.zz((MessageBuilder)object);
+        rr.ig.uj.ay ay2 = this.zz((MessageBuilder) object);
         rr.iu.ay ay3 = ay2.lE();
         rr.iu.sd.ay ay4 = ay3.kA();
         rr.iu.uj.ay ay5 = ay4.kN();
@@ -82,7 +82,7 @@ extends jq {
             builder2.set(i, new Data.Reader(hc.sy(uUID)));
         }
         this.Ct = list;
-        this.ay((MessageBuilder)object);
+        this.ay((MessageBuilder) object);
     }
 
     public void rf(@NotNull Set<UUID> set) {

@@ -5,10 +5,10 @@ import org.capnproto.*;
 public class pk$ay$uj {
     public static final StructSize AI = new StructSize(1, 2);
     public static final uj Cy = new uj();
-    public static final StructList.Factory<ay, sd> AK = new StructList.Factory((StructFactory)Cy);
+    public static final StructList.Factory<ay, sd> AK = new StructList.Factory((StructFactory) Cy);
 
     public static final class uj
-    extends StructFactory<ay, sd> {
+            extends StructFactory<ay, sd> {
         public final sd pv(SegmentReader segmentReader, int n, int n2, int n3, short s, int n4) {
             return new sd(segmentReader, n, n2, n3, s, n4);
         }
@@ -26,7 +26,7 @@ public class pk$ay$uj {
         }
 
         public StructReader asReader(Object object) {
-            return this.ay((ay)object);
+            return this.ay((ay) object);
         }
 
         public Object constructBuilder(SegmentBuilder segmentBuilder, int n, int n2, int n3, short s) {
@@ -39,7 +39,7 @@ public class pk$ay$uj {
     }
 
     public static final class sd
-    extends StructReader {
+            extends StructReader {
         sd(SegmentReader segmentReader, int n, int n2, int n3, short s, int n4) {
             super(segmentReader, n, n2, n3, s, n4);
         }
@@ -49,7 +49,7 @@ public class pk$ay$uj {
         }
 
         public Data.Reader cH() {
-            return (Data.Reader)this._getPointerField((FromPointerReaderBlobDefault)Data.factory, 0, null, 0, 0);
+            return (Data.Reader) this._getPointerField((FromPointerReaderBlobDefault) Data.factory, 0, null, 0, 0);
         }
 
         public rf.uj cI() {

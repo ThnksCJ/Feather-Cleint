@@ -2,12 +2,16 @@ package net.digitalingot.feather.mods.impl;
 
 import net.digitalingot.feather.*;
 import net.digitalingot.feather.enums.qc;
+import net.digitalingot.feather.interfaces.bx;
+import net.digitalingot.feather.interfaces.jw;
+import net.digitalingot.feather.interfaces.rm;
+import net.digitalingot.feather.interfaces.sv;
 import net.digitalingot.feather.mods.Mod;
 import net.minecraft.client.Minecraft;
 
-@sv(aw= qc.SCROLLABLE_TOOLTIPS, jf=@bx(vu="Scrollable Tooltips", jm="https://assets.feathercdn.net/game/mods/scrollabletooltips.svg", mz="Makes tooltips scrollable", lq={}))
+@sv(aw = qc.SCROLLABLE_TOOLTIPS, jf = @bx(vu = "Scrollable Tooltips", jm = "https://assets.feathercdn.net/game/mods/scrollabletooltips.svg", mz = "Makes tooltips scrollable", lq = {}))
 public class ScrollableTooltips
-extends Mod<ay> {
+        extends Mod<ay> {
     private static final int dJ = fz.yw(16).fy();
     private boolean dK;
     private int dL = 0;
@@ -56,8 +60,8 @@ extends Mod<ay> {
         });
     }
 
-    @rm(wm=true)
+    @rm(wm = true)
     public static class ay
-    extends zi {
+            extends zi {
     }
 }

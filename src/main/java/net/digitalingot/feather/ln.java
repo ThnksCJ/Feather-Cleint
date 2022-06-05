@@ -1,5 +1,6 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.Class4;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.resources.ResourcePackRepository;
@@ -8,7 +9,7 @@ import net.minecraft.util.ResourceLocation;
 import java.util.List;
 
 public class ln
-implements Class4<ResourcePackRepository.Entry> {
+        implements Class4<ResourcePackRepository.Entry> {
     private final ResourceLocation FQ = new ResourceLocation("textures/misc/unknown_pack.png");
 
     @Override
@@ -21,7 +22,7 @@ implements Class4<ResourcePackRepository.Entry> {
         List list = Minecraft.getMinecraft().fontRenderer.listFormattedStringToWidth(entry.getTexturePackDescription(), 157);
         int n2 = 0;
         for (String string : list) {
-            vr2.ay(string, f, f2 + (float)n2, n, bl, false);
+            vr2.ay(string, f, f2 + (float) n2, n, bl, false);
             n2 += 12;
         }
     }
@@ -44,6 +45,6 @@ implements Class4<ResourcePackRepository.Entry> {
 
     @Override
     public void pv(Object object) {
-        this.ay((ResourcePackRepository.Entry)object);
+        this.ay((ResourcePackRepository.Entry) object);
     }
 }

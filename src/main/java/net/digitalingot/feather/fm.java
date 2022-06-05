@@ -9,10 +9,10 @@ public enum fm {
     COSMETICS("Cosmetics", "cosmetics"),
     QUIT_GAME("Quit Game", "quitGame");
 
-    @SerializedName(value="name")
+    @SerializedName(value = "name")
     @NotNull
     private final String name;
-    @SerializedName(value="slug")
+    @SerializedName(value = "slug")
     @NotNull
     private final String slug;
 

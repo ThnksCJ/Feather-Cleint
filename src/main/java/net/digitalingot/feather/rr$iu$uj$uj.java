@@ -6,7 +6,7 @@ import org.capnproto.SegmentReader;
 import org.capnproto.StructReader;
 
 public final class rr$iu$uj$uj
-extends StructReader {
+        extends StructReader {
     rr$iu$uj$uj(SegmentReader segmentReader, int n, int n2, int n3, short s, int n4) {
         super(segmentReader, n, n2, n3, s, n4);
     }
@@ -16,7 +16,7 @@ extends StructReader {
     }
 
     public final DataList.Reader kG() {
-        return (DataList.Reader)this._getPointerField((FromPointerReaderRefDefault)DataList.factory, 0, null, 0);
+        return (DataList.Reader) this._getPointerField((FromPointerReaderRefDefault) DataList.factory, 0, null, 0);
     }
 
     public final boolean kE() {
@@ -24,6 +24,6 @@ extends StructReader {
     }
 
     public final DataList.Reader kH() {
-        return (DataList.Reader)this._getPointerField((FromPointerReaderRefDefault)DataList.factory, 1, null, 0);
+        return (DataList.Reader) this._getPointerField((FromPointerReaderRefDefault) DataList.factory, 1, null, 0);
     }
 }

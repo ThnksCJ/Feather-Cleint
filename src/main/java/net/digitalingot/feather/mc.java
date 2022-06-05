@@ -2,6 +2,7 @@ package net.digitalingot.feather;
 
 import com.google.gson.JsonElement;
 import net.digitalingot.feather.enums.qc;
+import net.digitalingot.feather.interfaces.vt;
 import net.digitalingot.feather.jg;
 import net.digitalingot.feather.mods.Mod;
 import org.jetbrains.annotations.NotNull;
@@ -10,7 +11,7 @@ import java.util.Map;
 import java.util.function.Consumer;
 
 public class mc
-implements vt<yh, po, jg> {
+        implements vt<yh, po, jg> {
     @NotNull
     private final et zs;
 
@@ -26,15 +27,15 @@ implements vt<yh, po, jg> {
         Mod<?> ux2 = ej2.ay(qc2);
         Object obj = ux2.xd();
         if (yh2.sp() != null) {
-            ((zi)obj).enabled = yh2.sp();
+            ((zi) obj).enabled = yh2.sp();
         }
         if (yh2.hf() != null) {
-            ((zi)obj).bc = yh2.hf();
+            ((zi) obj).bc = yh2.hf();
             object = this.zs.wq().ub();
             if (yh2.hf().booleanValue()) {
-                ((cd)object).zh().add(yh2.lg());
+                ((cd) object).zh().add(yh2.lg());
             } else {
-                ((cd)object).zh().remove(yh2.lg());
+                ((cd) object).zh().remove(yh2.lg());
             }
             this.zs.ii();
         }
@@ -42,7 +43,7 @@ implements vt<yh, po, jg> {
             this.zs.ii();
         }
         if ((object = yh2.lp()) != null) {
-            ej2.ay(ux2, (Map<String, JsonElement>)object);
+            ej2.ay(ux2, (Map<String, JsonElement>) object);
         }
         ej2.bu(ux2);
         consumer.accept(new po("success"));

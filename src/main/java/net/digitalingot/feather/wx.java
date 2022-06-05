@@ -3,11 +3,13 @@ package net.digitalingot.feather;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.FieldNamingStrategy;
 import com.google.gson.annotations.SerializedName;
+import net.digitalingot.feather.interfaces.au;
+import net.digitalingot.feather.interfaces.fl;
 
 import java.lang.reflect.Field;
 
 public class wx
-implements FieldNamingStrategy {
+        implements FieldNamingStrategy {
     public String translateName(Field field) {
         au au2 = field.getDeclaredAnnotation(au.class);
         if (au2 != null) {

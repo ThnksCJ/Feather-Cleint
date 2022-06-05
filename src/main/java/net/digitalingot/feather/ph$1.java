@@ -1,13 +1,15 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.av;
+
 import java.util.concurrent.Callable;
 
 class ph$1
-implements av<T> {
-    private long Fr = 0L;
-    private T Fs = null;
+        implements av<T> {
     final long Ft;
     final Callable Fu;
+    private long Fr = 0L;
+    private T Fs = null;
 
     ph$1() {
         this.Ft = l;

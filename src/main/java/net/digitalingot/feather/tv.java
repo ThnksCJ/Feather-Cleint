@@ -1,11 +1,12 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.bs;
 import org.jetbrains.annotations.NotNull;
 
 import java.awt.*;
 
 public class tv
-implements bs<Color> {
+        implements bs<Color> {
     @NotNull
     public Color sd(@NotNull String string, @NotNull Class<? extends Color> clazz) {
         String[] stringArray = string.split("/");
@@ -30,7 +31,7 @@ implements bs<Color> {
     @Override
     @NotNull
     public String kl(@NotNull Object object) {
-        return this.zz((Color)object);
+        return this.zz((Color) object);
     }
 
     @Override

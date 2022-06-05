@@ -3,13 +3,14 @@ package net.digitalingot.feather;
 import com.google.gson.annotations.SerializedName;
 import net.digitalingot.feather.enums.ao;
 import net.digitalingot.feather.enums.qc;
+import net.digitalingot.feather.interfaces.da;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
 public class kq
-implements da {
-    @SerializedName(value="sidebar")
+        implements da {
+    @SerializedName(value = "sidebar")
     @NotNull
     private final List<qc> jr;
 

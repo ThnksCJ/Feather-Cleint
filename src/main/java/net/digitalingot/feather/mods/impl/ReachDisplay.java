@@ -3,6 +3,7 @@ package net.digitalingot.feather.mods.impl;
 import net.digitalingot.feather.*;
 import net.digitalingot.feather.enums.ho;
 import net.digitalingot.feather.enums.qc;
+import net.digitalingot.feather.interfaces.*;
 import net.digitalingot.feather.mods.HUDMod;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
@@ -11,10 +12,10 @@ import net.minecraft.util.math.Vec3d;
 
 import java.text.DecimalFormat;
 
-@sv(aw= qc.REACH_DISPLAY, jf=@bx(vu="Reach Display", jm="https://assets.feathercdn.net/game/mods/reachdisplay.svg", mz="Shows the distance when hitting a player", lq={ly.ay.PVP, ly.ay.HUD}))
-@pq(we={@xd(bp= ay.class)})
+@sv(aw = qc.REACH_DISPLAY, jf = @bx(vu = "Reach Display", jm = "https://assets.feathercdn.net/game/mods/reachdisplay.svg", mz = "Shows the distance when hitting a player", lq = {ly.ay.PVP, ly.ay.HUD}))
+@pq(we = {@xd(bp = ay.class)})
 public class ReachDisplay
-extends HUDMod<rf> {
+        extends HUDMod<rf> {
     private static final long rB = 2000L;
     private static final float rC = 0.0f;
     private static final String rD = "No hit";
@@ -49,7 +50,7 @@ extends HUDMod<rf> {
             }
             Entity entity3 = MINECRAFT.getRenderViewEntity();
             Vec3d vec3d2 = entity3.getPositionEyes(1.0f);
-            float f = (float)vec3d.distanceTo(vec3d2);
+            float f = (float) vec3d.distanceTo(vec3d2);
             this.jN = System.currentTimeMillis();
             this.rF = f;
             this.ts();
@@ -72,24 +73,24 @@ extends HUDMod<rf> {
     @Override
     public void zq() {
         super.zq();
-        wk.ay(this.rE, ((rf)this.vz).rJ);
+        wk.ay(this.rE, ((rf) this.vz).rJ);
         this.ts();
     }
 
     public static class rf
-    extends zi {
-        @fl(yp=@de(vi=0))
-        @cy(yv= ho.TOP_LEFT)
+            extends zi {
+        @fl(yp = @de(vi = 0))
+        @cy(yv = ho.TOP_LEFT)
         public fw jQ;
-        @de(vi=10)
+        @de(vi = 10)
         public iv rI = new iv("Reach Display");
-        @au(wd="digits", vu="Digits", pr="1", yp=@de(vi=11))
-        @mj(js=3)
+        @au(wd = "digits", vu = "Digits", pr = "1", yp = @de(vi = 11))
+        @mj(js = 3)
         public int rJ;
     }
 
     public class ay
-    extends mo {
+            extends mo {
         @Override
         public Object so() {
             return ReachDisplay.this.rG;

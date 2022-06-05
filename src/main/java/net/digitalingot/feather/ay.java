@@ -10,7 +10,7 @@ public class ay extends zi {
     public static en.ay ay;
 
     public static void ay() {
-        new Thread(null, null, "Feather-DRM"){
+        new Thread(null, null, "Feather-DRM") {
 
             @Override
             public void run() {
@@ -22,7 +22,7 @@ public class ay extends zi {
                 }
             }
         }.start();
-        zz.nw().pv().rf(new zg(), new Consumer<en>(){
+        zz.nw().pv().rf(new zg(), new Consumer<en>() {
 
             public void ay(en en2) {
                 ay = en2.rf();
@@ -30,7 +30,7 @@ public class ay extends zi {
 
             @Override
             public void accept(Object object) {
-                this.ay((en)object);
+                this.ay((en) object);
             }
         }, null);
     }

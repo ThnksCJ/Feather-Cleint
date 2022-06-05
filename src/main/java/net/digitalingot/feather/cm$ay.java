@@ -5,10 +5,10 @@ import org.capnproto.*;
 public class cm$ay {
     public static final StructSize AI = new StructSize(1, 0);
     public static final rf AL = new rf();
-    public static final StructList.Factory<ay, uj> AK = new StructList.Factory((StructFactory)AL);
+    public static final StructList.Factory<ay, uj> AK = new StructList.Factory((StructFactory) AL);
 
     public static final class rf
-    extends StructFactory<ay, uj> {
+            extends StructFactory<ay, uj> {
         public final uj rf(SegmentReader segmentReader, int n, int n2, int n3, short s, int n4) {
             return new uj(segmentReader, n, n2, n3, s, n4);
         }
@@ -26,7 +26,7 @@ public class cm$ay {
         }
 
         public StructReader asReader(Object object) {
-            return this.ay((ay)object);
+            return this.ay((ay) object);
         }
 
         public Object constructBuilder(SegmentBuilder segmentBuilder, int n, int n2, int n3, short s) {
@@ -39,7 +39,7 @@ public class cm$ay {
     }
 
     public static final class uj
-    extends StructReader {
+            extends StructReader {
         uj(SegmentReader segmentReader, int n, int n2, int n3, short s, int n4) {
             super(segmentReader, n, n2, n3, s, n4);
         }

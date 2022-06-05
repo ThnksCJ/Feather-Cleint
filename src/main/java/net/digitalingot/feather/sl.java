@@ -2,13 +2,14 @@ package net.digitalingot.feather;
 
 import com.google.gson.annotations.SerializedName;
 import net.digitalingot.feather.enums.ao;
+import net.digitalingot.feather.interfaces.da;
 import org.jetbrains.annotations.NotNull;
 
 public class sl
-implements da {
-    @SerializedName(value="create")
+        implements da {
+    @SerializedName(value = "create")
     private final boolean du;
-    @SerializedName(value="nextFields")
+    @SerializedName(value = "nextFields")
     @NotNull
     private final ay uo;
 

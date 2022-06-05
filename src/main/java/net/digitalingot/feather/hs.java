@@ -1,13 +1,14 @@
 package net.digitalingot.feather;
 
 import com.google.gson.JsonElement;
+import net.digitalingot.feather.interfaces.vt;
 import net.digitalingot.feather.jg;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Consumer;
 
 public class hs
-implements vt<nk, po, jg> {
+        implements vt<nk, po, jg> {
     @NotNull
     private final ig qt;
 

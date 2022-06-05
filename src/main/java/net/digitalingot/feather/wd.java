@@ -1,13 +1,14 @@
 package net.digitalingot.feather;
 
 import net.digitalingot.feather.enums.qc;
+import net.digitalingot.feather.interfaces.vt;
 import net.digitalingot.feather.jg;
 import net.digitalingot.feather.mods.Mod;
 
 import java.util.function.Consumer;
 
 public class wd
-implements vt<uz, po, jg> {
+        implements vt<uz, po, jg> {
     @Override
     public void ay(uz uz2, Consumer<po> consumer, Consumer<jg> consumer2) {
         qc qc2 = uz2.uq();

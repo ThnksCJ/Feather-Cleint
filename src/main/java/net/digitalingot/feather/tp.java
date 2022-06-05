@@ -3,13 +3,14 @@ package net.digitalingot.feather;
 import com.google.gson.annotations.SerializedName;
 import net.digitalingot.feather.enums.ao;
 import net.digitalingot.feather.enums.jt;
+import net.digitalingot.feather.interfaces.da;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
 public class tp
-implements da {
-    @SerializedName(value="pages")
+        implements da {
+    @SerializedName(value = "pages")
     @NotNull
     private final List<jt> jy;
 

@@ -1,5 +1,6 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.vt;
 import net.digitalingot.feather.jg;
 import net.digitalingot.feather.mods.impl.Waypoints;
 import org.jetbrains.annotations.NotNull;
@@ -7,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.function.Consumer;
 
 public class gy
-implements vt<cg, po, jg> {
+        implements vt<cg, po, jg> {
     @NotNull
     private final Waypoints Bn;
 
@@ -23,7 +24,7 @@ implements vt<cg, po, jg> {
             if (cr4 == null) {
                 throw new IllegalArgumentException("Waypoint not found");
             }
-            cr4.do(cr3.getName());
+            cr4. do (cr3.getName());
             cr4.nw(cr3.B());
             cr4.rf(cr3.ra());
             cr4.ay(cr3.de());

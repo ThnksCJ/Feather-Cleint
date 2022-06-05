@@ -29,7 +29,8 @@ public class yw {
         if (!this.oo.exists()) {
             this.oo.createNewFile();
         }
-        if ((hashMap = gw.GSON.fromJson(string = Strings.join(list = Files.readAllLines(this.oo.toPath()), "\n"), type = new TypeToken<HashMap<String, oh>>(){}.getType())) == null) {
+        if ((hashMap = gw.GSON.fromJson(string = Strings.join(list = Files.readAllLines(this.oo.toPath()), "\n"), type = new TypeToken<HashMap<String, oh>>() {
+        }.getType())) == null) {
             hashMap = new HashMap();
         }
         this.fu = hashMap;

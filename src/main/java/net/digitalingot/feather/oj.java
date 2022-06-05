@@ -2,17 +2,18 @@ package net.digitalingot.feather;
 
 import com.google.gson.annotations.SerializedName;
 import net.digitalingot.feather.enums.ao;
+import net.digitalingot.feather.interfaces.da;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 import java.util.UUID;
 
 public class oj
-implements da {
-    @SerializedName(value="selected")
+        implements da {
+    @SerializedName(value = "selected")
     @NotNull
     private final UUID vx;
-    @SerializedName(value="list")
+    @SerializedName(value = "list")
     @NotNull
     private final List<ay> qb;
 
@@ -38,20 +39,20 @@ implements da {
     }
 
     public static class ay {
-        @SerializedName(value="mcID")
+        @SerializedName(value = "mcID")
         @NotNull
         private final UUID hj;
-        @SerializedName(value="mcUsername")
+        @SerializedName(value = "mcUsername")
         @NotNull
         private final String hs;
-
-        public static ay ay(vi.ay ay2) {
-            return new ay(ay2.zx(), ay2.getName());
-        }
 
         public ay(@NotNull UUID uUID, @NotNull String string) {
             this.hj = uUID;
             this.hs = string;
+        }
+
+        public static ay ay(vi.ay ay2) {
+            return new ay(ay2.zx(), ay2.getName());
         }
 
         @NotNull

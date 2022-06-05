@@ -4,13 +4,25 @@ import net.digitalingot.feather.mods.impl.Keystrokes;
 import net.minecraft.client.settings.KeyBinding;
 
 class lt$rf
-extends Keystrokes.zz {
+        extends Keystrokes.zz {
     private String oD;
     private float oE;
     private float oF;
 
     public lt$rf(Keystrokes.bu bu2, Keystrokes.sd sd2, KeyBinding keyBinding) {
         super(bu2, sd2, keyBinding);
+    }
+
+    static String ay(lt$rf rf2) {
+        return rf2.oD;
+    }
+
+    static float rf(lt$rf rf2) {
+        return rf2.oE;
+    }
+
+    static float uj(lt$rf rf2) {
+        return rf2.oF;
     }
 
     @Override
@@ -30,22 +42,10 @@ extends Keystrokes.zz {
     }
 
     private void ps() {
-        float f = (float)fp.mq(this.oD) / 2.0f;
+        float f = (float) fp.mq(this.oD) / 2.0f;
         this.oE = this.oO + (this.oH.bounds.width - f) / 2.0f;
         this.oF = this.oT + 7.0f + 1.0f;
         this.oE *= 2.0f;
         this.oF *= 2.0f;
-    }
-
-    static String ay(lt$rf rf2) {
-        return rf2.oD;
-    }
-
-    static float rf(lt$rf rf2) {
-        return rf2.oE;
-    }
-
-    static float uj(lt$rf rf2) {
-        return rf2.oF;
     }
 }

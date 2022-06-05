@@ -2,13 +2,14 @@ package net.digitalingot.feather;
 
 import com.google.gson.annotations.SerializedName;
 import net.digitalingot.feather.enums.ao;
+import net.digitalingot.feather.interfaces.da;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Map;
 
 public class ml
-implements da {
-    @SerializedName(value="choices")
+        implements da {
+    @SerializedName(value = "choices")
     @NotNull
     private final Map<Integer, ay> bn;
 
@@ -28,13 +29,13 @@ implements da {
     }
 
     public static class ay {
-        @SerializedName(value="slug")
+        @SerializedName(value = "slug")
         @NotNull
         private final String slug;
-        @SerializedName(value="name")
+        @SerializedName(value = "name")
         @NotNull
         private final String name;
-        @SerializedName(value="icon")
+        @SerializedName(value = "icon")
         @NotNull
         private final String icon;
 

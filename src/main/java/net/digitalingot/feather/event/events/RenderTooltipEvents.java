@@ -1,12 +1,12 @@
 package net.digitalingot.feather.event.events;
 
 import net.digitalingot.feather.event.Event;
-import net.digitalingot.feather.jw;
+import net.digitalingot.feather.interfaces.jw;
 import net.minecraftforge.client.event.RenderTooltipEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class RenderTooltipEvents
-implements Event {
+        implements Event {
     public static int ou;
     public static int ov;
 

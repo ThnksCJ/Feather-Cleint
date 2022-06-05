@@ -1,6 +1,7 @@
 package net.digitalingot.feather;
 
 import net.digitalingot.feather.enums.ho;
+import net.digitalingot.feather.interfaces.cy;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -8,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 class ix<T extends ci>
-extends gc<T> {
+        extends gc<T> {
     @NotNull
     private final cy my;
     @NotNull
@@ -30,7 +31,7 @@ extends gc<T> {
     public T mb() {
         ci ci2 = super.sf();
         this.ay(ci2);
-        return (T)ci2;
+        return (T) ci2;
     }
 
     @Override

@@ -8,7 +8,7 @@ import net.minecraft.util.ResourceLocation;
 import java.io.IOException;
 
 public class om
-extends TypeAdapter<ResourceLocation> {
+        extends TypeAdapter<ResourceLocation> {
     public void ay(JsonWriter jsonWriter, ResourceLocation resourceLocation) {
         throw new IOException("operation unsupported");
     }
@@ -23,6 +23,6 @@ extends TypeAdapter<ResourceLocation> {
     }
 
     public void write(JsonWriter jsonWriter, Object object) {
-        this.ay(jsonWriter, (ResourceLocation)object);
+        this.ay(jsonWriter, (ResourceLocation) object);
     }
 }

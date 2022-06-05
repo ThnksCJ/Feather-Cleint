@@ -8,13 +8,13 @@ import org.capnproto.MessageReader;
 import java.util.List;
 
 public class oc
-extends MessageToMessageDecoder<MessageReader> {
+        extends MessageToMessageDecoder<MessageReader> {
     protected void ay(ChannelHandlerContext channelHandlerContext, MessageReader messageReader, List<Object> list) {
-        cm.uj.zz zz2 = (cm.uj.zz)((Object)messageReader.getRoot((FromPointerReader)cm.uj.AP));
+        cm.uj.zz zz2 = (cm.uj.zz) ((Object) messageReader.getRoot((FromPointerReader) cm.uj.AP));
         list.add(zz2);
     }
 
     protected void decode(ChannelHandlerContext channelHandlerContext, Object object, List list) {
-        this.ay(channelHandlerContext, (MessageReader)object, list);
+        this.ay(channelHandlerContext, (MessageReader) object, list);
     }
 }

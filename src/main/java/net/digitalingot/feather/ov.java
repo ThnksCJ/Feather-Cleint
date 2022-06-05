@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 import org.lwjgl.input.Mouse;
 
 public class ov
-extends GuiScreen {
+        extends GuiScreen {
     private final hv xu = new hv();
     private final ok fi = wg.INSTANCE.getScreen();
     private boolean gh;
@@ -51,7 +51,7 @@ extends GuiScreen {
         if (Mouse.getEventButton() == -1) {
             int n = Mouse.getEventX() * this.width / this.mc.displayWidth;
             int n2 = this.height - Mouse.getEventY() * this.height / this.mc.displayHeight - 1;
-            this.xu.ay((double)n, (double)n2);
+            this.xu.ay((double) n, (double) n2);
         }
         if (this.gh) {
             this.gh = false;

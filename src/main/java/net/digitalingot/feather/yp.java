@@ -1,12 +1,13 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.vt;
 import net.digitalingot.feather.jg;
 
 import java.nio.file.Files;
 import java.util.function.Consumer;
 
 public class yp
-implements vt<zh, po, jg> {
+        implements vt<zh, po, jg> {
     @Override
     public void ay(zh zh2, Consumer<po> consumer, Consumer<jg> consumer2) {
         ej ej2 = zz.nw().xn();

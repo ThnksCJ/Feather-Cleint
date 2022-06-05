@@ -2,15 +2,16 @@ package net.digitalingot.feather;
 
 import com.google.gson.annotations.SerializedName;
 import net.digitalingot.feather.enums.ao;
+import net.digitalingot.feather.interfaces.da;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class bb
-implements da {
-    @SerializedName(value="settings")
+        implements da {
+    @SerializedName(value = "settings")
     @Nullable
     private final ay uv;
-    @SerializedName(value="equipped")
+    @SerializedName(value = "equipped")
     @Nullable
     private final rf iz;
 

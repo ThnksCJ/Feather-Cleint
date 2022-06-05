@@ -2,11 +2,12 @@ package net.digitalingot.feather;
 
 import com.google.gson.annotations.SerializedName;
 import net.digitalingot.feather.enums.ao;
+import net.digitalingot.feather.interfaces.da;
 import org.jetbrains.annotations.NotNull;
 
 public class en
-implements da {
-    @SerializedName(value="channel")
+        implements da {
+    @SerializedName(value = "channel")
     @NotNull
     private final ay ay;
 

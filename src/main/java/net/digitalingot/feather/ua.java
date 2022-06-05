@@ -1,5 +1,7 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.gd;
+import net.digitalingot.feather.interfaces.rw;
 import net.digitalingot.feather.mods.Mod;
 import net.digitalingot.feather.mods.impl.Hypixel;
 import net.minecraft.client.Minecraft;
@@ -16,7 +18,7 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class ua
-extends mn<Hypixel.ay> {
+        extends mn<Hypixel.ay> {
     private static final File vG = new File(Minecraft.getMinecraft().mcDataDir, "feather/misc/oofmod");
     public static List<String> vH;
     private Clip vI;
@@ -26,6 +28,19 @@ extends mn<Hypixel.ay> {
 
     ua(@NotNull Mod<Hypixel.ay> ux2) {
         super(ux2);
+    }
+
+    @NotNull
+    public static List<String> vm() {
+        String[] stringArray = vG.list();
+        if (stringArray == null) {
+            return new ArrayList<String>(Collections.singletonList("oof.wav"));
+        }
+        List<String> list = Arrays.stream(stringArray).filter(string -> string.endsWith(".wav")).collect(Collectors.toList());
+        if (!list.contains("oof.wav")) {
+            list.add("oof.wav");
+        }
+        return list;
     }
 
     @Override
@@ -68,21 +83,8 @@ extends mn<Hypixel.ay> {
         AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(vG, this.vM.xd().vE));
         this.vI = AudioSystem.getClip();
         this.vI.open(audioInputStream);
-        FloatControl floatControl = (FloatControl)this.vI.getControl(FloatControl.Type.MASTER_GAIN);
+        FloatControl floatControl = (FloatControl) this.vI.getControl(FloatControl.Type.MASTER_GAIN);
         floatControl.setValue((float) this.vM.xd().vF - 30.0f);
-    }
-
-    @NotNull
-    public static List<String> vm() {
-        String[] stringArray = vG.list();
-        if (stringArray == null) {
-            return new ArrayList<String>(Collections.singletonList("oof.wav"));
-        }
-        List<String> list = Arrays.stream(stringArray).filter(string -> string.endsWith(".wav")).collect(Collectors.toList());
-        if (!list.contains("oof.wav")) {
-            list.add("oof.wav");
-        }
-        return list;
     }
 
     public boolean eb() {
@@ -101,7 +103,7 @@ extends mn<Hypixel.ay> {
         File file = new File(vG, "oof.wav");
         if (!file.exists()) {
             vG.mkdirs();
-            zd.yd("assets/feather/sounds/oof.wav").ay((rw)zd.xn(file).oE());
+            zd.yd("assets/feather/sounds/oof.wav").ay((rw) zd.xn(file).oE());
         }
     }
 

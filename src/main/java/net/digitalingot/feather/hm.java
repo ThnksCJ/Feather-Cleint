@@ -2,6 +2,7 @@ package net.digitalingot.feather;
 
 import net.digitalingot.feather.enums.ai;
 import net.digitalingot.feather.il;
+import net.digitalingot.feather.interfaces.*;
 import org.apache.commons.lang3.ClassUtils;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -27,8 +28,8 @@ public class hm {
             List list3 = list.size() < list2.size() ? list : list2;
             List list4 = list.size() < list2.size() ? list2 : list;
             for (int i = 0; i < list3.size(); ++i) {
-                if (((Integer)list3.get(i)).intValue() == ((Integer)list4.get(i)).intValue()) continue;
-                return (list3 == list ? 1 : -1) * ((Integer)list3.get(i) - (Integer)list4.get(i));
+                if (((Integer) list3.get(i)).intValue() == ((Integer) list4.get(i)).intValue()) continue;
+                return (list3 == list ? 1 : -1) * ((Integer) list3.get(i) - (Integer) list4.get(i));
             }
             return Comparator.comparingInt(List::size).compare(list, list2);
         })).map(Map.Entry::getKey).collect(Collectors.toList());
@@ -47,19 +48,20 @@ public class hm {
                 int n = ca2.fi().yp().vi();
                 object = new HashMap();
                 Object t2 = ca2.bu(t);
-                hm.ay(t2, ca2.wt().getAnnotation(cy.class), (Map<ai, List<Integer>>)object, new cs(t2.getClass()).ay(ca2.ta()));
+                hm.ay(t2, ca2.wt().getAnnotation(cy.class), (Map<ai, List<Integer>>) object, new cs(t2.getClass()).ay(ca2.ta()));
                 iterator = object.values().iterator();
                 while (iterator.hasNext()) {
-                    list2 = (List)iterator.next();
+                    list2 = (List) iterator.next();
                     list2.add(0, n);
                 }
-                map.putAll((Map<ai, List<Integer>>)object);
+                map.putAll((Map<ai, List<Integer>>) object);
                 continue;
             }
             au au2 = Objects.requireNonNull(ca2.su());
             object = au2.yp();
             int n = object.vi();
-            if (n <= -10 || au2.wd().equals("hudSelection") && ((iterator = t.getClass().getDeclaredAnnotation(rm.class)) == null || iterator.le().ae().isEmpty()) || ca2.hk() != null && ca2.hk().pu() || (iterator = hm.ay(cy2, ca2, ca2.hk())) == null) continue;
+            if (n <= -10 || au2.wd().equals("hudSelection") && ((iterator = t.getClass().getDeclaredAnnotation(rm.class)) == null || iterator.le().ae().isEmpty()) || ca2.hk() != null && ca2.hk().pu() || (iterator = hm.ay(cy2, ca2, ca2.hk())) == null)
+                continue;
             list2 = new ArrayList<Integer>(1);
             list2.add(n);
             map.put((ai) iterator, list2);
@@ -114,10 +116,10 @@ public class hm {
                 int n = ca2.sn().mf();
                 Class<?> clazz2 = hi.ay(clazz, 0, 0);
                 if (ClassUtils.isAssignable(clazz2, Enum.class, true)) {
-                    return new ai(ai.ay.CHECKBOX, string, string2, og2, (mu)new il(n, hm.sd(clazz2)), null, null);
+                    return new ai(ai.ay.CHECKBOX, string, string2, og2, (mu) new il(n, hm.sd(clazz2)), null, null);
                 }
                 if (ca2.xu() != null) {
-                    return new ai(ai.ay.CHECKBOX, string, string2, og2, (mu)new il(n, hm.rf(ca2.xu())), null, null);
+                    return new ai(ai.ay.CHECKBOX, string, string2, og2, (mu) new il(n, hm.rf(ca2.xu())), null, null);
                 }
             } else {
                 if (ClassUtils.isAssignable(clazz, km.class, true)) {
@@ -136,8 +138,8 @@ public class hm {
 
     @NotNull
     private static List<os> rf(@NotNull zq zq2) {
-        List list = (List)zq2.is().invoke(null, new Object[0]);
-        return list.stream().map(string -> new os((String)string, (String)string)).collect(Collectors.toList());
+        List list = (List) zq2.is().invoke(null, new Object[0]);
+        return list.stream().map(string -> new os((String) string, (String) string)).collect(Collectors.toList());
     }
 
     @NotNull
@@ -176,16 +178,16 @@ public class hm {
             if (fl2 != null) {
                 object3 = new HashMap();
                 object2 = field.get(t);
-                hm.ay(object2, (Map<ai, List<Integer>>)object3);
+                hm.ay(object2, (Map<ai, List<Integer>>) object3);
                 for (Object object4 : object3.values()) {
                     object4.add(0, fl2.yp().vi());
                 }
-                map.putAll((Map<ai, List<Integer>>)object3);
+                map.putAll((Map<ai, List<Integer>>) object3);
             }
             if (field.getType() != iv.class) continue;
             object3 = field.get(t);
-            object2 = ((iv)object3).getName();
-            ai ai2 = new ai(ai.ay.TITLE, (String)object2, null, null, null, null, null);
+            object2 = ((iv) object3).getName();
+            ai ai2 = new ai(ai.ay.TITLE, (String) object2, null, null, null, null, null);
             object4 = field.getDeclaredAnnotation(de.class);
             if (object4 == null) {
                 throw new jl(field, de.class);

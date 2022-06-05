@@ -8,30 +8,6 @@ public class jc {
     private static final NavigableMap<Integer, String> FS;
     private static final TreeMap<Integer, String> FT;
 
-    public static int pd(String string) {
-        string = string.toUpperCase();
-        int n = 0;
-        for (Map.Entry entry : FS.entrySet()) {
-            String string2 = (String)entry.getValue();
-            int n2 = (Integer)entry.getKey();
-            while (string.startsWith(string2)) {
-                n += n2;
-                string = string.substring(string2.length());
-            }
-        }
-        return n;
-    }
-
-    public static String mg(int n) {
-        StringBuilder stringBuilder = new StringBuilder();
-        while (n > 0) {
-            Map.Entry<Integer, String> entry = FT.floorEntry(n);
-            n -= entry.getKey().intValue();
-            stringBuilder.append(entry.getValue());
-        }
-        return stringBuilder.toString();
-    }
-
     static {
         FT = new TreeMap();
         FT.put(1, "I");
@@ -60,5 +36,29 @@ public class jc {
         FT.put(900000, "C\u0305M\u0305");
         FT.put(1000000, "M\u0305");
         FS = FT.descendingMap();
+    }
+
+    public static int pd(String string) {
+        string = string.toUpperCase();
+        int n = 0;
+        for (Map.Entry entry : FS.entrySet()) {
+            String string2 = (String) entry.getValue();
+            int n2 = (Integer) entry.getKey();
+            while (string.startsWith(string2)) {
+                n += n2;
+                string = string.substring(string2.length());
+            }
+        }
+        return n;
+    }
+
+    public static String mg(int n) {
+        StringBuilder stringBuilder = new StringBuilder();
+        while (n > 0) {
+            Map.Entry<Integer, String> entry = FT.floorEntry(n);
+            n -= entry.getKey().intValue();
+            stringBuilder.append(entry.getValue());
+        }
+        return stringBuilder.toString();
     }
 }

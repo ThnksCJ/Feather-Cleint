@@ -6,7 +6,7 @@ import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 class vi$1
-implements Consumer<tg> {
+        implements Consumer<tg> {
     final vi eP;
     final gw eQ;
 
@@ -22,6 +22,6 @@ implements Consumer<tg> {
 
     @Override
     public void accept(Object object) {
-        this.ay((tg)object);
+        this.ay((tg) object);
     }
 }

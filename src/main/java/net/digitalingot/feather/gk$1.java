@@ -7,7 +7,7 @@ import io.netty.channel.ChannelPipeline;
 import net.digitalingot.feather.jx;
 
 class gk$1
-extends ChannelInitializer<Channel> {
+        extends ChannelInitializer<Channel> {
     final gk Cr;
 
     gk$1(gk gk3) {
@@ -24,7 +24,7 @@ extends ChannelInitializer<Channel> {
         channelPipeline.addLast("packet-encoder", new gu());
         channelPipeline.addLast("redstone-decoder", new ct());
         channelPipeline.addLast("unauthenticated-handler", new am(gt2));
-        channelPipeline.addLast("inbound-exception-handler", (ChannelHandler)new jx.ay());
-        channelPipeline.addLast("outbound-exception-handler", (ChannelHandler)new jx.rf());
+        channelPipeline.addLast("inbound-exception-handler", (ChannelHandler) new jx.ay());
+        channelPipeline.addLast("outbound-exception-handler", (ChannelHandler) new jx.rf());
     }
 }

@@ -1,18 +1,28 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.gv;
 import net.digitalingot.feather.mixin.core.pv;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiIngameMenu;
 import net.minecraft.client.resources.I18n;
 
 public class nh {
+    private static boolean zs(Object object) {
+        if (!(object instanceof GuiButton)) {
+            return false;
+        }
+        GuiButton guiButton = (GuiButton) object;
+        String string = guiButton.displayString;
+        return string.equals(I18n.format("menu.shareToLan", new Object[0]));
+    }
+
     public void initialize() {
         gv.eq.ay(guiScreen -> {
             int n;
             if (!(guiScreen instanceof GuiIngameMenu)) {
                 return;
             }
-            pv pv2 = (pv)guiScreen;
+            pv pv2 = (pv) guiScreen;
             pv2.getRenderables().removeIf(nh::zs);
             String string = "Server List";
             String string2 = "Feather Settings";
@@ -29,14 +39,5 @@ public class nh {
             GuiButton guiButton2 = new GuiButton(100, n, n2, 98, 20, string2);
             dd.ay(guiScreen, guiButton2);
         });
-    }
-
-    private static boolean zs(Object object) {
-        if (!(object instanceof GuiButton)) {
-            return false;
-        }
-        GuiButton guiButton = (GuiButton)object;
-        String string = guiButton.displayString;
-        return string.equals(I18n.format("menu.shareToLan", new Object[0]));
     }
 }

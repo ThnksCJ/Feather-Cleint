@@ -7,7 +7,7 @@ import net.minecraft.util.text.TextComponentTranslation;
 import org.jetbrains.annotations.NotNull;
 
 public class hk
-extends xu {
+        extends xu {
     public hk(@NotNull nn nn2, @NotNull gk gk2, @NotNull rt rt2) {
         super(nn2, rt2, gk2, xu.ay.LEADER);
     }
@@ -22,13 +22,13 @@ extends xu {
             return;
         }
         switch (string2 = stringArray[0].toLowerCase()) {
-            case "normal": 
+            case "normal":
             case "n": {
                 rf2 = ps.rf.EVERYONE;
                 string = "feather.commands.featherparty.mode.successNormal";
                 break;
             }
-            case "proximity": 
+            case "proximity":
             case "p": {
                 rf2 = ps.rf.PROXIMITY;
                 string = "feather.commands.featherparty.mode.successProximity";
@@ -41,6 +41,6 @@ extends xu {
         }
         this.hG.lx().ay(rf2);
         String string3 = new TextComponentTranslation(string, new Object[0]);
-        dd.ay(entityPlayerSP, (ITextComponent)string3);
+        dd.ay(entityPlayerSP, (ITextComponent) string3);
     }
 }

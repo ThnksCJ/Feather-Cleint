@@ -6,20 +6,20 @@ import org.jetbrains.annotations.NotNull;
 import java.util.UUID;
 
 public class oj$ay {
-    @SerializedName(value="mcID")
+    @SerializedName(value = "mcID")
     @NotNull
     private final UUID hj;
-    @SerializedName(value="mcUsername")
+    @SerializedName(value = "mcUsername")
     @NotNull
     private final String hs;
-
-    public static oj$ay ay(vi.ay ay2) {
-        return new oj$ay(ay2.zx(), ay2.getName());
-    }
 
     public oj$ay(@NotNull UUID uUID, @NotNull String string) {
         this.hj = uUID;
         this.hs = string;
+    }
+
+    public static oj$ay ay(vi.ay ay2) {
+        return new oj$ay(ay2.zx(), ay2.getName());
     }
 
     @NotNull

@@ -6,6 +6,7 @@ import net.digitalingot.feather.*;
 import net.digitalingot.feather.enums.ho;
 import net.digitalingot.feather.enums.qc;
 import net.digitalingot.feather.enums.qx;
+import net.digitalingot.feather.interfaces.*;
 import net.digitalingot.feather.mods.HUDMod;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
@@ -21,10 +22,10 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
-@sv(aw= qc.POTION_EFFECTS, jf=@bx(vu="Potion Effects", jm="https://assets.feathercdn.net/game/mods/potioneffects.svg", mz="Display potion effects", lq={ly.ay.PVP, ly.ay.HUD}))
-@pq(we={@xd(bp=rf.class)})
+@sv(aw = qc.POTION_EFFECTS, jf = @bx(vu = "Potion Effects", jm = "https://assets.feathercdn.net/game/mods/potioneffects.svg", mz = "Display potion effects", lq = {ly.ay.PVP, ly.ay.HUD}))
+@pq(we = {@xd(bp = rf.class)})
 public class PotionEffects
-extends HUDMod<sd> {
+        extends HUDMod<sd> {
     private static final List<PotionEffect> qO = Lists.newArrayList(PotionEffects.kl(1, 1000, 1), PotionEffects.kl(2, 2456, 7), PotionEffects.kl(3, 8456, 12), PotionEffects.kl(4, 12456, 6), PotionEffects.kl(5, 45456, 17));
     private static final Set<Integer> qP = Sets.newHashSet(9, 12, 13, 14, 15, 16);
     private static final uj qQ = zz.bn();
@@ -71,39 +72,39 @@ extends HUDMod<sd> {
         }
     }
 
-    @rm(wm=true)
+    @rm(wm = true)
     public static class sd
-    extends zi {
-        @fl(yp=@de(vi=0))
-        @cy(yv= ho.CENTER_LEFT, ev=17.5)
+            extends zi {
+        @fl(yp = @de(vi = 0))
+        @cy(yv = ho.CENTER_LEFT, ev = 17.5)
         public ci iO;
-        @au(wd="hud", vu="Show HUD", pr="true", yp=@de(vi=10))
+        @au(wd = "hud", vu = "Show HUD", pr = "true", yp = @de(vi = 10))
         public boolean qT;
-        @au(wd="durationBlinkSeconds", vu="Blink Duration (in seconds)", pr="10", yp=@de(vi=11))
-        @mj(yu=1, js=60)
+        @au(wd = "durationBlinkSeconds", vu = "Blink Duration (in seconds)", pr = "10", yp = @de(vi = 11))
+        @mj(yu = 1, js = 60)
         public int qU;
-        @de(vi=20)
+        @de(vi = 20)
         public iv m = new iv("Color");
-        @au(wd="durationColor", vu="Color Duration (in seconds)", yp=@de(vi=21))
+        @au(wd = "durationColor", vu = "Color Duration (in seconds)", yp = @de(vi = 21))
         public gp qV;
-        @au(wd="effectNameColor", vu="Color Effect Name", yp=@de(vi=22))
+        @au(wd = "effectNameColor", vu = "Color Effect Name", yp = @de(vi = 22))
         public gp qW;
-        @au(wd="enableBackground", vu="Background", yp=@de(vi=23))
+        @au(wd = "enableBackground", vu = "Background", yp = @de(vi = 23))
         public boolean qX;
-        @de(vi=30)
+        @de(vi = 30)
         public iv iP = new iv("Show");
-        @au(wd="enableEffectName", vu="Effect Name", pr="true", yp=@de(vi=31))
+        @au(wd = "enableEffectName", vu = "Effect Name", pr = "true", yp = @de(vi = 31))
         public boolean qY;
-        @au(wd="enableIconBlink", vu="Icon Blink", pr="true", yp=@de(vi=32))
+        @au(wd = "enableIconBlink", vu = "Icon Blink", pr = "true", yp = @de(vi = 32))
         public boolean qZ;
-        @au(wd="hideInventoryStatus", vu="Hide Inventory Status", pr="true", yp=@de(vi=33))
+        @au(wd = "hideInventoryStatus", vu = "Hide Inventory Status", pr = "true", yp = @de(vi = 33))
         public boolean rv;
-        @au(wd="hideVanillaEffects", vu="Hide Vanilla Effects (1.12.2+)", pr="true", yp=@de(vi=34))
+        @au(wd = "hideVanillaEffects", vu = "Hide Vanilla Effects (1.12.2+)", pr = "true", yp = @de(vi = 34))
         public boolean rA;
     }
 
     public static class ay
-    implements uj {
+            implements uj {
         private static final ResourceLocation qR = new ResourceLocation("minecraft:textures/gui/container/inventory.png");
 
         @Override
@@ -141,7 +142,7 @@ extends HUDMod<sd> {
     }
 
     public class rf
-    extends kb {
+            extends kb {
         @Override
         public void ay(qx qx2) {
             switch (1.ef[qx2.ordinal()]) {
@@ -203,7 +204,7 @@ extends HUDMod<sd> {
                 this.kw.rf(0, 0, this.df(), bl ? this.ku() : this.hu(), new Color(0, 0, 0, 100).getRGB());
             }
             int n4 = 0;
-            boolean bl3 = bl2 = this.hh() + this.ch() / 2.0 <= (double)((float)new ScaledResolution(Minecraft.getMinecraft()).getScaledWidth() / 2.0f);
+            boolean bl3 = bl2 = this.hh() + this.ch() / 2.0 <= (double) ((float) new ScaledResolution(Minecraft.getMinecraft()).getScaledWidth() / 2.0f);
             if (bl2) {
                 n = ((sd) PotionEffects.this.vz).qX ? 6 : 0;
             } else {
@@ -227,19 +228,19 @@ extends HUDMod<sd> {
                     if (bl2) {
                         f = (((sd) PotionEffects.this.vz).qX ? 10 : 4) + 18;
                     } else {
-                        f = (float)(this.df() - this.kw.on(string)) - 18.0f;
+                        f = (float) (this.df() - this.kw.on(string)) - 18.0f;
                         f -= ((sd) PotionEffects.this.vz).qX ? 10.0f : 4.0f;
                     }
-                    this.kw.ay(string, f, (float)(n4 + (((sd) PotionEffects.this.vz).qX ? 4 : 0)), ((sd) PotionEffects.this.vz).qW, true);
+                    this.kw.ay(string, f, (float) (n4 + (((sd) PotionEffects.this.vz).qX ? 4 : 0)), ((sd) PotionEffects.this.vz).qW, true);
                 }
                 if (this.rf(potionEffect, potionEffect.getDuration(), ((sd) PotionEffects.this.vz).qU)) {
                     if (bl2) {
                         f = (((sd) PotionEffects.this.vz).qX ? 10 : 4) + 18;
                     } else {
-                        f = (float)(this.df() - this.kw.on(string2)) - 18.0f;
+                        f = (float) (this.df() - this.kw.on(string2)) - 18.0f;
                         f -= ((sd) PotionEffects.this.vz).qX ? 10.0f : 4.0f;
                     }
-                    this.kw.ay(string2, f, (float)(n4 + (((sd) PotionEffects.this.vz).qX ? 4 : 0) + (((sd) PotionEffects.this.vz).qY ? 10 : 5)), ((sd) PotionEffects.this.vz).qV, true);
+                    this.kw.ay(string2, f, (float) (n4 + (((sd) PotionEffects.this.vz).qX ? 4 : 0) + (((sd) PotionEffects.this.vz).qY ? 10 : 5)), ((sd) PotionEffects.this.vz).qV, true);
                 }
                 n4 += n2;
             }

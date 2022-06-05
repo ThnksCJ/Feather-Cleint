@@ -1,6 +1,8 @@
 package net.digitalingot.feather;
 
 import com.google.common.collect.Maps;
+import net.digitalingot.feather.interfaces.hl;
+import net.digitalingot.feather.interfaces.xo;
 import net.digitalingot.feather.mixin.core.zs;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.FallbackResourceManager;
@@ -17,6 +19,15 @@ public class bn {
         hl.bo.ay(this::oH);
     }
 
+    public static ResourceLocation vq(String string) {
+        return new ResourceLocation(EE, string);
+    }
+
+    private static Map<String, FallbackResourceManager> getDomainResourceManagers() {
+        zs zs2 = (zs) Minecraft.getMinecraft().getResourceManager();
+        return zs2.getDomainResourceManagers();
+    }
+
     public void ay(ResourceLocation resourceLocation, xo xo2) {
         this.EF.put(resourceLocation, xo2);
     }
@@ -31,14 +42,5 @@ public class bn {
 
     private void oH() {
         bn.getDomainResourceManagers().put(EE, new jy(this));
-    }
-
-    public static ResourceLocation vq(String string) {
-        return new ResourceLocation(EE, string);
-    }
-
-    private static Map<String, FallbackResourceManager> getDomainResourceManagers() {
-        zs zs2 = (zs)Minecraft.getMinecraft().getResourceManager();
-        return zs2.getDomainResourceManagers();
     }
 }

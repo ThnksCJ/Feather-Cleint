@@ -3,15 +3,16 @@ package net.digitalingot.feather;
 import com.google.gson.annotations.SerializedName;
 import net.digitalingot.feather.bw;
 import net.digitalingot.feather.enums.ao;
+import net.digitalingot.feather.interfaces.da;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class ib
-implements da {
-    @SerializedName(value="macro")
+        implements da {
+    @SerializedName(value = "macro")
     @Nullable
     private final String lr;
-    @SerializedName(value="payload")
+    @SerializedName(value = "payload")
     @NotNull
     private final bw ny;
 

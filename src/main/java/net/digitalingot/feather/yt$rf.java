@@ -10,6 +10,18 @@ class yt$rf {
     private yt$rf() {
     }
 
+    static double ay(yt$rf rf2, long l) {
+        return rf2.bu(l);
+    }
+
+    static List ay(yt$rf rf2) {
+        return rf2.tR;
+    }
+
+    static void rf(yt$rf rf2, long l) {
+        rf2.sd(l);
+    }
+
     private void sd(long l) {
         this.tR.add(l);
     }
@@ -23,17 +35,5 @@ class yt$rf {
             return d;
         }
         return 0.0;
-    }
-
-    static double ay(yt$rf rf2, long l) {
-        return rf2.bu(l);
-    }
-
-    static List ay(yt$rf rf2) {
-        return rf2.tR;
-    }
-
-    static void rf(yt$rf rf2, long l) {
-        rf2.sd(l);
     }
 }

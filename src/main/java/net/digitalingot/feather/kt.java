@@ -1,6 +1,8 @@
 package net.digitalingot.feather;
 
 import com.google.common.collect.ImmutableMap;
+import net.digitalingot.feather.interfaces.rm;
+import net.digitalingot.feather.interfaces.xg;
 import net.digitalingot.feather.mods.Mod;
 import org.jetbrains.annotations.NotNull;
 
@@ -24,7 +26,8 @@ public class kt {
             xg xg2;
             Object object = ux2.xd();
             Object object2 = object.getClass().getDeclaredAnnotation(rm.class);
-            if (object2 == null || (xg2 = object2.le()).ae().isEmpty() || !((zi)object).enabled || !((zi)object).vk || ej2.iv().contains(ux2.cs().aw())) continue;
+            if (object2 == null || (xg2 = object2.le()).ae().isEmpty() || !((zi) object).enabled || !((zi) object).vk || ej2.iv().contains(ux2.cs().aw()))
+                continue;
             ml.ay ay2 = new ml.ay(xg2.ae(), xg2.vu(), xg2.jm());
             treeMap.put(xg2.un(), ay2);
         }

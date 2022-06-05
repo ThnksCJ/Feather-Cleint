@@ -6,7 +6,7 @@ import com.google.gson.stream.JsonWriter;
 import net.digitalingot.feather.enums.qd;
 
 public class at$ay
-extends TypeAdapter<qd> {
+        extends TypeAdapter<qd> {
     public void ay(JsonWriter jsonWriter, qd qd2) {
         jsonWriter.beginObject();
         jsonWriter.name("name").value(qd2.getName());

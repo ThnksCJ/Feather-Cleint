@@ -5,14 +5,14 @@ public class ws {
     private static final byte Am = 0;
 
     public static void ay(byte[] byArray, float f) {
-        if (Math.abs((double)f - 1.0) < 0.001) {
+        if (Math.abs((double) f - 1.0) < 0.001) {
             return;
         }
         for (int i = 0; i < byArray.length; i += 2) {
             short s = ws.ay(byArray[i], byArray[i + 1]);
-            s = (short)((float)s * f);
-            byArray[i] = (byte)s;
-            byArray[i + 1] = (byte)(s >> 8);
+            s = (short) ((float) s * f);
+            byArray[i] = (byte) s;
+            byArray[i + 1] = (byte) (s >> 8);
         }
     }
 
@@ -20,12 +20,12 @@ public class ws {
         byte[] byArray2 = new byte[byArray.length * 2];
         for (int i = 0; i < byArray.length; i += 2) {
             short s = ws.ay(byArray[i], byArray[i + 1]);
-            short s2 = (short)((float)s * f);
-            short s3 = (short)((float)s * f2);
-            byArray2[i * 2] = (byte)s2;
-            byArray2[i * 2 + 1] = (byte)(s2 >> 8);
-            byArray2[i * 2 + 2] = (byte)s3;
-            byArray2[i * 2 + 3] = (byte)(s3 >> 8);
+            short s2 = (short) ((float) s * f);
+            short s3 = (short) ((float) s * f2);
+            byArray2[i * 2] = (byte) s2;
+            byArray2[i * 2 + 1] = (byte) (s2 >> 8);
+            byArray2[i * 2 + 2] = (byte) s3;
+            byArray2[i * 2 + 3] = (byte) (s3 >> 8);
         }
         return byArray2;
     }
@@ -49,16 +49,16 @@ public class ws {
             n += 2;
         }
         int n3 = n2 / 2;
-        d = n3 == 0 ? 0.0 : Math.sqrt(d / (double)n3);
+        d = n3 == 0 ? 0.0 : Math.sqrt(d / (double) n3);
         double d3 = d > 0.0 ? Math.min(Math.max(20.0 * Math.log10(d), -127.0), 0.0) : -127.0;
-        return (byte)d3;
+        return (byte) d3;
     }
 
     public static short ay(byte by, byte by2) {
-        return (short)((by2 & 0xFF) << 8 | by & 0xFF);
+        return (short) ((by2 & 0xFF) << 8 | by & 0xFF);
     }
 
     public static byte[] ay(short s) {
-        return new byte[]{(byte)(s & 0xFF), (byte)(s >> 8 & 0xFF)};
+        return new byte[]{(byte) (s & 0xFF), (byte) (s >> 8 & 0xFF)};
     }
 }

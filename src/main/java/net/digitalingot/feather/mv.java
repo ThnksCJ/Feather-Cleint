@@ -5,6 +5,7 @@ import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
+import net.digitalingot.feather.interfaces.zo;
 import net.minecraft.network.PacketBuffer;
 import net.minecraftforge.fml.common.network.FMLEmbeddedChannel;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
@@ -32,7 +33,7 @@ public class mv {
 
     @ChannelHandler.Sharable
     static class ay
-    extends ChannelInboundHandlerAdapter {
+            extends ChannelInboundHandlerAdapter {
         @NotNull
         private final zo Fg;
 
@@ -41,7 +42,7 @@ public class mv {
         }
 
         public void channelRead(ChannelHandlerContext channelHandlerContext, Object object) {
-            ByteBuf byteBuf = ((FMLProxyPacket)object).payload();
+            ByteBuf byteBuf = ((FMLProxyPacket) object).payload();
             int n = byteBuf.readableBytes();
             byte[] byArray = new byte[n];
             byteBuf.readBytes(byArray);

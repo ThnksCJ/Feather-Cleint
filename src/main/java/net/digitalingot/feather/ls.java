@@ -1,5 +1,6 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.gd;
 import net.digitalingot.feather.mods.Mod;
 import net.digitalingot.feather.mods.impl.Hypixel;
 import net.minecraft.client.Minecraft;
@@ -9,7 +10,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ls
-extends mn<Hypixel.ay> {
+        extends mn<Hypixel.ay> {
     private static final Pattern tV = Pattern.compile("\u00a7m----------------------------------------------------Friend request from (?:\\[.+] )?(?<name>[a-zA-Z0-9_]{1,16})\\[ACCEPT] - \\[DENY] - \\[IGNORE].*");
     private static final Pattern tW = Pattern.compile("You are now friends with \\[?[a-zA-Z0-9_]{1,16}(:?] )?");
     private static final Pattern tX = Pattern.compile("\\[?[a-zA-Z0-9_]{1,16}(:?] )? removed you from their friends list!");

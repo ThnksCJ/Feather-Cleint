@@ -4,16 +4,17 @@ import com.google.gson.JsonElement;
 import com.google.gson.annotations.SerializedName;
 import net.digitalingot.feather.enums.ao;
 import net.digitalingot.feather.enums.qc;
+import net.digitalingot.feather.interfaces.da;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Map;
 
 public class uz
-implements da {
-    @SerializedName(value="sidebar")
+        implements da {
+    @SerializedName(value = "sidebar")
     @NotNull
     private final qc rx;
-    @SerializedName(value="settings")
+    @SerializedName(value = "settings")
     @NotNull
     private final Map<String, JsonElement> ul;
 

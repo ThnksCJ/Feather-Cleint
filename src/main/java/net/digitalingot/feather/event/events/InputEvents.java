@@ -10,9 +10,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
 
-@SideOnly(value=Side.CLIENT)
+@SideOnly(value = Side.CLIENT)
 public class InputEvents
-implements Event {
+        implements Event {
     private static final Minecraft minecraft = Minecraft.getMinecraft();
 
     @SubscribeEvent

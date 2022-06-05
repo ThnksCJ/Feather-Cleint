@@ -1,5 +1,7 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.xs;
+import net.digitalingot.feather.interfaces.ze;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -7,7 +9,7 @@ import java.util.List;
 import java.util.UUID;
 
 public class iu
-implements ze {
+        implements ze {
     @NotNull
     private final xs hr;
     @NotNull
@@ -51,7 +53,7 @@ implements ze {
         this.dl.lm().clear();
         this.dl.wz().clear();
         for (String string : list) {
-            switch (1.ql[this.dl.zz(string).ordinal()]) {
+            switch (1. ql[this.dl.zz(string).ordinal()]){
                 case 1: {
                     sb sb2 = this.dl.sd(string);
                     assert (sb2 != null);

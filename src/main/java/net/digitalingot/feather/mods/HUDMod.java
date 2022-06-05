@@ -1,6 +1,11 @@
 package net.digitalingot.feather.mods;
 
-import net.digitalingot.feather.*;
+import net.digitalingot.feather.interfaces.be;
+import net.digitalingot.feather.interfaces.pq;
+import net.digitalingot.feather.interfaces.xd;
+import net.digitalingot.feather.jl;
+import net.digitalingot.feather.kb;
+import net.digitalingot.feather.zi;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -9,8 +14,8 @@ import java.util.Collections;
 import java.util.List;
 
 public abstract class HUDMod<C extends zi>
-extends Mod<C>
-implements be {
+        extends Mod<C>
+        implements be {
     @NotNull
     protected final List<kb> gu;
     @NotNull
@@ -35,7 +40,7 @@ implements be {
         this.jx = pq2.wy();
     }
 
-    protected HUDMod(@NotNull pq.ay ay2, kb ... kbArray) {
+    protected HUDMod(@NotNull pq.ay ay2, kb... kbArray) {
         this(ay2, Arrays.asList(kbArray));
     }
 

@@ -7,7 +7,7 @@ import org.cef.callback.CefMenuModel;
 import org.cef.handler.CefContextMenuHandlerAdapter;
 
 class wg$3
-extends CefContextMenuHandlerAdapter {
+        extends CefContextMenuHandlerAdapter {
     wg$3() {
     }
 

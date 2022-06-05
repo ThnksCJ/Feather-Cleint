@@ -2,15 +2,16 @@ package net.digitalingot.feather.mods.impl;
 
 import net.digitalingot.feather.*;
 import net.digitalingot.feather.enums.qc;
+import net.digitalingot.feather.interfaces.*;
 import net.digitalingot.feather.mods.HUDMod;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.math.RayTraceResult;
 
-@sv(aw= qc.COMBO_DISPLAY, jf=@bx(vu="Combo Display", jm="https://assets.feathercdn.net/game/mods/combodisplay.svg", mz="Display number of consecutive hits", lq={ly.ay.PVP, ly.ay.HUD}))
-@pq(we={@xd(bp= rf.class)})
+@sv(aw = qc.COMBO_DISPLAY, jf = @bx(vu = "Combo Display", jm = "https://assets.feathercdn.net/game/mods/combodisplay.svg", mz = "Display number of consecutive hits", lq = {ly.ay.PVP, ly.ay.HUD}))
+@pq(we = {@xd(bp = rf.class)})
 public class ComboDisplay
-extends HUDMod<ay> {
+        extends HUDMod<ay> {
     private static final long jL = 2000L;
     private static final long jM = 500L;
     private static final Minecraft MINECRAFT = Minecraft.getMinecraft();
@@ -61,16 +62,16 @@ extends HUDMod<ay> {
     }
 
     public static class ay
-    extends zi {
-        @fl(yp=@de(vi=0))
-        @cy(dz=33.0, ev=8.0)
+            extends zi {
+        @fl(yp = @de(vi = 0))
+        @cy(dz = 33.0, ev = 8.0)
         public fw jQ;
-        @au(wd="reversed", vu="Reversed", yp=@de(vi=1))
+        @au(wd = "reversed", vu = "Reversed", yp = @de(vi = 1))
         public boolean jR;
     }
 
     public class rf
-    extends mo {
+            extends mo {
         @Override
         public Object so() {
             if (ComboDisplay.this.jO == 0) {

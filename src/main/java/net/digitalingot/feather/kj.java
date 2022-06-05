@@ -2,11 +2,12 @@ package net.digitalingot.feather;
 
 import com.google.gson.annotations.SerializedName;
 import net.digitalingot.feather.enums.ao;
+import net.digitalingot.feather.interfaces.da;
 import org.jetbrains.annotations.NotNull;
 
 public class kj
-implements da {
-    @SerializedName(value="level")
+        implements da {
+    @SerializedName(value = "level")
     private double qg;
 
     public kj(double d) {

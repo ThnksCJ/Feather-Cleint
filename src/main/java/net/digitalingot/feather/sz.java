@@ -5,7 +5,7 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 import org.jetbrains.annotations.NotNull;
 
 public class sz
-extends ChannelInboundHandlerAdapter {
+        extends ChannelInboundHandlerAdapter {
     @NotNull
     private final gq AE;
 

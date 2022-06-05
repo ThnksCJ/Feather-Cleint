@@ -1,11 +1,12 @@
 package net.digitalingot.feather;
 
 import net.digitalingot.feather.enums.qx;
+import net.digitalingot.feather.interfaces.be;
 import net.digitalingot.feather.mods.HUDMod;
 import org.jetbrains.annotations.NotNull;
 
 public abstract class kb
-implements be {
+        implements be {
     @NotNull
     protected final ya kw = new ya(this);
     protected HUDMod<?> gz;
@@ -54,11 +55,11 @@ implements be {
     }
 
     public final double ch() {
-        return (double)(bd.INSTANCE.getRenderLayer() == qx.HUD_OVERLAY ? this.df() : this.bs()) * this.te().yx();
+        return (double) (bd.INSTANCE.getRenderLayer() == qx.HUD_OVERLAY ? this.df() : this.bs()) * this.te().yx();
     }
 
     public final double iq() {
-        return (double)(bd.INSTANCE.getRenderLayer() == qx.HUD_OVERLAY ? this.hu() : this.ku()) * this.te().yx();
+        return (double) (bd.INSTANCE.getRenderLayer() == qx.HUD_OVERLAY ? this.hu() : this.ku()) * this.te().yx();
     }
 
     public void ay(qx qx2) {

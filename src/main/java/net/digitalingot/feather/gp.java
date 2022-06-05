@@ -7,15 +7,20 @@ import org.jetbrains.annotations.NotNull;
 import java.awt.*;
 
 public class gp {
-    @SerializedName(value="chroma")
+    @SerializedName(value = "chroma")
     private boolean e;
-    @SerializedName(value="color")
+    @SerializedName(value = "color")
     @NotNull
     private Color f;
 
     public gp(boolean bl, @NotNull Color color) {
         this.e = bl;
         this.f = color;
+    }
+
+    @NotNull
+    public static gp ay(@NotNull ChromaColor chromaColor) {
+        return new gp(chromaColor.isChroma(), new Color(chromaColor.getColor()));
     }
 
     public int aq() {
@@ -37,10 +42,5 @@ public class gp {
     @NotNull
     public Color pg() {
         return this.f;
-    }
-
-    @NotNull
-    public static gp ay(@NotNull ChromaColor chromaColor) {
-        return new gp(chromaColor.isChroma(), new Color(chromaColor.getColor()));
     }
 }

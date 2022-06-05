@@ -6,7 +6,7 @@ import org.capnproto.SegmentReader;
 import org.capnproto.StructReader;
 
 public final class rr$ay$uj
-extends StructReader {
+        extends StructReader {
     rr$ay$uj(SegmentReader segmentReader, int n, int n2, int n3, short s, int n4) {
         super(segmentReader, n, n2, n3, s, n4);
     }
@@ -16,6 +16,6 @@ extends StructReader {
     }
 
     public final DataList.Reader gO() {
-        return (DataList.Reader)this._getPointerField((FromPointerReaderRefDefault)DataList.factory, 0, null, 0);
+        return (DataList.Reader) this._getPointerField((FromPointerReaderRefDefault) DataList.factory, 0, null, 0);
     }
 }

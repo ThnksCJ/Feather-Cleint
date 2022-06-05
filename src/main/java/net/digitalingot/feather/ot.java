@@ -1,5 +1,6 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.an;
 import net.digitalingot.feather.mods.impl.General;
 import net.digitalingot.feather.mods.impl.Voice;
 import net.minecraft.client.Minecraft;
@@ -12,7 +13,7 @@ import java.util.List;
 import java.util.UUID;
 
 public class ot
-extends kl {
+        extends kl {
     private static final an<General> CORE_PROVIDER = ej.ay(General.class);
     @NotNull
     private final Voice eO;
@@ -31,7 +32,7 @@ extends kl {
             return;
         }
         switch (string = stringArray[0].toLowerCase()) {
-            case "add": 
+            case "add":
             case "remove": {
                 this.ay(entityPlayerSP, stringArray, string);
                 break;

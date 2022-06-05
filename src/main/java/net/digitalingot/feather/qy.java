@@ -9,7 +9,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.UUID;
 
 public class qy
-extends ChannelInboundHandlerAdapter {
+        extends ChannelInboundHandlerAdapter {
     @NotNull
     private final gm yC;
 
@@ -18,7 +18,7 @@ extends ChannelInboundHandlerAdapter {
     }
 
     public void channelRead(ChannelHandlerContext channelHandlerContext, Object object) {
-        tb.rf.uj uj2 = (tb.rf.uj)object;
+        tb.rf.uj uj2 = (tb.rf.uj) object;
         UUID uUID = hc.nw(uj2.jv().toArray());
         long l = uj2.vk();
         byte[] byArray = uj2.ud() ? uj2.oe().toArray() : new byte[]{};

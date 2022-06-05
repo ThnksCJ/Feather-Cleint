@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 public class fn
-extends dc {
+        extends dc {
     @NotNull
     private final gm yC;
 
@@ -22,7 +22,7 @@ extends dc {
         Objects.requireNonNull(string, "trying to connect to voice with null jwt token");
         vm.Fq.debug("Authenticating with voice backend...");
         MessageBuilder messageBuilder = new MessageBuilder();
-        mh.zz.ay ay2 = (mh.zz.ay)((Object)messageBuilder.initRoot((FromPointerBuilder)mh.zz.AX));
+        mh.zz.ay ay2 = (mh.zz.ay) ((Object) messageBuilder.initRoot((FromPointerBuilder) mh.zz.AX));
         mh.ay.ay ay3 = ay2.m().r();
         ay3.hj(string);
         this.ay(messageBuilder);

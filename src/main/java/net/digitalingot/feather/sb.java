@@ -6,19 +6,19 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class sb {
-    @SerializedName(value="name")
+    @SerializedName(value = "name")
     @NotNull
     private final String name;
-    @SerializedName(value="slug")
+    @SerializedName(value = "slug")
     @NotNull
     private final String slug;
-    @SerializedName(value="icon")
+    @SerializedName(value = "icon")
     @NotNull
     private final String icon;
-    @SerializedName(value="type")
+    @SerializedName(value = "type")
     @NotNull
     private final ay yw;
-    @SerializedName(value="defaultSettings")
+    @SerializedName(value = "defaultSettings")
     @Nullable
     private final JsonElement rd;
 

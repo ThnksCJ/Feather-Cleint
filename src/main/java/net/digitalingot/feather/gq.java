@@ -1,6 +1,7 @@
 package net.digitalingot.feather;
 
 import io.netty.channel.Channel;
+import net.digitalingot.feather.interfaces.ey;
 import org.capnproto.Data;
 import org.capnproto.DataList;
 import org.capnproto.FromPointerBuilder;
@@ -11,7 +12,7 @@ import java.util.List;
 import java.util.UUID;
 
 public class gq
-extends dc {
+        extends dc {
     @NotNull
     private final gm yC;
     private final int AD;
@@ -25,7 +26,7 @@ extends dc {
     public void pp() {
         ey ey2 = this.yC.vp();
         MessageBuilder messageBuilder = new MessageBuilder();
-        mh.zz.ay ay2 = (mh.zz.ay)((Object)messageBuilder.initRoot((FromPointerBuilder)mh.zz.AX));
+        mh.zz.ay ay2 = (mh.zz.ay) ((Object) messageBuilder.initRoot((FromPointerBuilder) mh.zz.AX));
         mh.rf.ay ay3 = ay2.m().u();
         ay3.ay(ey2.uu());
         List<UUID> list = ey2.np();

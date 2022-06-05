@@ -3,14 +3,15 @@ package net.digitalingot.feather.mods.impl;
 import net.digitalingot.feather.*;
 import net.digitalingot.feather.enums.qc;
 import net.digitalingot.feather.enums.wi;
+import net.digitalingot.feather.interfaces.*;
 import net.digitalingot.feather.mods.Mod;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.settings.GameSettings;
 
-@sv(aw= qc.PERSPECTIVE, jf=@bx(vu="Perspective", jm="https://assets.feathercdn.net/game/mods/perspective.svg", mz="Freelook", lq={}))
+@sv(aw = qc.PERSPECTIVE, jf = @bx(vu = "Perspective", jm = "https://assets.feathercdn.net/game/mods/perspective.svg", mz = "Freelook", lq = {}))
 public class Perspective
-extends Mod<ay> {
+        extends Mod<ay> {
     private Minecraft minecraft;
     private float cY = 0.0f;
     private float cZ = 0.0f;
@@ -30,7 +31,7 @@ extends Mod<ay> {
             }
             this.dD = false;
         });
-        qo.ay(() -> ((ay)this.vz).dF, () -> {
+        qo.ay(() -> ((ay) this.vz).dF, () -> {
             if (!this.gc()) {
                 return;
             }
@@ -47,7 +48,7 @@ extends Mod<ay> {
             }
             this.ey();
         }, () -> {
-            if (!((ay)this.vz).dI || !this.dD) {
+            if (!((ay) this.vz).dI || !this.dD) {
                 return;
             }
             GameSettings gameSettings = this.minecraft.gameSettings;
@@ -64,8 +65,8 @@ extends Mod<ay> {
             if (!this.dD) {
                 return wi.PASS;
             }
-            this.cZ += f * (((ay)this.vz).dH ? -0.15f : 0.15f);
-            this.cY += f2 * (((ay)this.vz).dG ? 0.15f : -0.15f);
+            this.cZ += f * (((ay) this.vz).dH ? -0.15f : 0.15f);
+            this.cY += f2 * (((ay) this.vz).dG ? 0.15f : -0.15f);
             if (this.cY < -90.0f) {
                 this.cY = -90.0f;
             }
@@ -131,14 +132,14 @@ extends Mod<ay> {
     }
 
     public static class ay
-    extends zi {
-        @au(wd="keyPerspective", vu="Perspective", pr="75", yp=@de(vi=0))
+            extends zi {
+        @au(wd = "keyPerspective", vu = "Perspective", pr = "75", yp = @de(vi = 0))
         public km dF;
-        @au(wd="invertPitch", vu="Invert Pitch (Up and Down)", yp=@de(vi=1))
+        @au(wd = "invertPitch", vu = "Invert Pitch (Up and Down)", yp = @de(vi = 1))
         public boolean dG;
-        @au(wd="invertYaw", vu="Invert Yaw (Right and Left)", yp=@de(vi=2))
+        @au(wd = "invertYaw", vu = "Invert Yaw (Right and Left)", yp = @de(vi = 2))
         public boolean dH;
-        @au(wd="returnOnRelease", vu="Return on Release", pr="true", yp=@de(vi=3))
+        @au(wd = "returnOnRelease", vu = "Return on Release", pr = "true", yp = @de(vi = 3))
         public boolean dI;
     }
 }

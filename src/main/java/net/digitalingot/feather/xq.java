@@ -5,7 +5,7 @@ import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.util.ResourceLocation;
 
 public class xq
-extends FontRenderer {
+        extends FontRenderer {
     private final FontRenderer EA;
 
     public xq() {

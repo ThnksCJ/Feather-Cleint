@@ -2,13 +2,14 @@ package net.digitalingot.feather;
 
 import com.google.gson.annotations.SerializedName;
 import net.digitalingot.feather.enums.ao;
+import net.digitalingot.feather.interfaces.da;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
 public class nk
-implements da {
-    @SerializedName(value="cosmetics")
+        implements da {
+    @SerializedName(value = "cosmetics")
     @NotNull
     private final List<String> it;
 

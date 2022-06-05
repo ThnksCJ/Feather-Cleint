@@ -10,6 +10,6 @@ public class rg$ay {
     }
 
     public float jc() {
-        return (float)this.wO * this.wP * 2.0f;
+        return (float) this.wO * this.wP * 2.0f;
     }
 }

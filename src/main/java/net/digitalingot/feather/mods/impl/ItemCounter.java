@@ -4,6 +4,7 @@ import net.digitalingot.feather.*;
 import net.digitalingot.feather.enums.ho;
 import net.digitalingot.feather.enums.qc;
 import net.digitalingot.feather.enums.qx;
+import net.digitalingot.feather.interfaces.*;
 import net.digitalingot.feather.mods.HUDMod;
 import net.minecraft.client.Minecraft;
 import net.minecraft.init.Items;
@@ -15,10 +16,10 @@ import org.jetbrains.annotations.NotNull;
 /*
  * Illegal identifiers - recommend switching to table mode
  */
-@sv(aw= qc.ITEM_COUNTER, jf=@bx(vu="Item Counter", jm="https://assets.feathercdn.net/game/mods/itemcounter.svg", mz="Count items in your inventory", lq={ly.ay.PVP, ly.ay.HUD}))
-@pq(we={@xd(bp=rf.class)})
+@sv(aw = qc.ITEM_COUNTER, jf = @bx(vu = "Item Counter", jm = "https://assets.feathercdn.net/game/mods/itemcounter.svg", mz = "Count items in your inventory", lq = {ly.ay.PVP, ly.ay.HUD}))
+@pq(we = {@xd(bp = rf.class)})
 public class ItemCounter
-extends HUDMod<ay> {
+        extends HUDMod<ay> {
     private static final Minecraft MINECRAFT = Minecraft.getMinecraft();
     private static final ItemStack lQ = ItemCounter.ay(Items.POTIONITEM, 8197);
     private static final ItemStack lR = ItemCounter.ay(Items.POTIONITEM, 8229);
@@ -32,87 +33,51 @@ extends HUDMod<ay> {
     private static final int lZ = 2;
     private static final int mA = 2;
 
-    @NotNull
-    private static ItemStack ay(@NotNull Item item, int n) {
-        ItemStack itemStack = new ItemStack(item, 1);
-        itemStack.setItemDamage(n);
-        switch (n) {
-            case 8197: 
-            case 16389: {
-                ItemCounter.ay(itemStack, "minecraft:healing");
-                break;
-            }
-            case 8229: 
-            case 16421: {
-                ItemCounter.ay(itemStack, "minecraft:strong_healing");
-                break;
-            }
-        }
-        return itemStack;
-    }
-
-    private static void ay(ItemStack itemStack, String string) {
-        NBTTagCompound nBTTagCompound = new NBTTagCompound();
-        nBTTagCompound.setString("Potion", string);
-        itemStack.setTagCompound(nBTTagCompound);
-        itemStack.setItemDamage(0);
-    }
-
-    public int qe() {
-        int n = 0;
-        for (boolean bl : new boolean[]{((ay)this.vz).mI, ((ay)this.vz).mL, ((ay)this.vz).mO, ((ay)this.vz).mR, ((ay)this.vz).mU, ((ay)this.vz).mX}) {
-            if (!bl) continue;
-            ++n;
-        }
-        return n;
-    }
-
-    public static classox$ay
-    extends zi {
-        @de(vi=10)
+    zi {
+        @de(vi = 10)
         public iv mD = new iv("Item Counter");
-        @au(wd="displayMode", vu="Display Mode", pr="horizontal", yp=@de(vi=11))
+        @au(wd = "displayMode", vu = "Display Mode", pr = "horizontal", yp = @de(vi = 11))
         public ay mE;
-        @au(wd="textAlignment", vu="Text Alignment", pr="top", yp=@de(vi=12))
+        @au(wd = "textAlignment", vu = "Text Alignment", pr = "top", yp = @de(vi = 12))
         public rf mF;
-        @fl(yp=@de(vi=20))
-        @cy(yv= ho.BOTTOM_CENTER, dz=151.0)
+        @fl(yp = @de(vi = 20))
+        @cy(yv = ho.BOTTOM_CENTER, dz = 151.0)
         public ju mG;
-        @de(vi=30)
+        @de(vi = 30)
         public iv mH = new iv("Arrows");
-        @au(wd="arrows", vu="Arrows", pr="true", yp=@de(vi=31))
+        @au(wd = "arrows", vu = "Arrows", pr = "true", yp = @de(vi = 31))
         public boolean mI;
-        @au(wd="arrowsColor", vu="Color", nu=@ra(wd="arrows"), yp=@de(vi=32))
+        @au(wd = "arrowsColor", vu = "Color", nu = @ra(wd = "arrows"), yp = @de(vi = 32))
         public gp mJ;
-        @de(vi=40)
+        @de(vi = 40)
         public iv mK = new iv("Food");
-        @au(wd="food", vu="Food", pr="true", yp=@de(vi=41))
+        @au(wd = "food", vu = "Food", pr = "true", yp = @de(vi = 41))
         public boolean mL;
-        @au(wd="foodColor", vu="Color", nu=@ra(wd="food"), yp=@de(vi=42))
+        @au(wd = "foodColor", vu = "Color", nu = @ra(wd = "food"), yp = @de(vi = 42))
         public gp mM;
-        @de(vi=50)
+        @de(vi = 50)
         public iv mN = new iv("Potions");
-        @au(wd="potions", vu="Potions", pr="true", yp=@de(vi=51))
+        @au(wd = "potions", vu = "Potions", pr = "true", yp = @de(vi = 51))
         public boolean mO;
-        @au(wd="potionsColor", vu="Color", nu=@ra(wd="potions"), yp=@de(vi=52))
+        @au(wd = "potionsColor", vu = "Color", nu = @ra(wd = "potions"), yp = @de(vi = 52))
         public gp mP;
-        @de(vi=60)
+        @de(vi = 60)
         public iv mQ = new iv("Golden Apples");
-        @au(wd="goldenApples", vu="Golden Apples", pr="true", yp=@de(vi=61))
+        @au(wd = "goldenApples", vu = "Golden Apples", pr = "true", yp = @de(vi = 61))
         public boolean mR;
-        @au(wd="goldenApplesColor", vu="Color", nu=@ra(wd="goldenApples"), yp=@de(vi=62))
+        @au(wd = "goldenApplesColor", vu = "Color", nu = @ra(wd = "goldenApples"), yp = @de(vi = 62))
         public gp mS;
-        @de(vi=70)
+        @de(vi = 70)
         public iv mT = new iv("God Apples");
-        @au(wd="godApples", vu="God Apples", pr="true", yp=@de(vi=71))
+        @au(wd = "godApples", vu = "God Apples", pr = "true", yp = @de(vi = 71))
         public boolean mU;
-        @au(wd="godApplesColor", vu="Color", nu=@ra(wd="godApples"), yp=@de(vi=72))
+        @au(wd = "godApplesColor", vu = "Color", nu = @ra(wd = "godApples"), yp = @de(vi = 72))
         public gp mV;
-        @de(vi=80)
+        @de(vi = 80)
         public iv mW = new iv("Soup");
-        @au(wd="soup", vu="Soup", pr="true", yp=@de(vi=81))
+        @au(wd = "soup", vu = "Soup", pr = "true", yp = @de(vi = 81))
         public boolean mX;
-        @au(wd="soupColor", vu="Color", nu=@ra(wd="soup"), yp=@de(vi=82))
+        @au(wd = "soupColor", vu = "Color", nu = @ra(wd = "soup"), yp = @de(vi = 82))
         public gp mY;
 
         public static enum ay {
@@ -130,8 +95,46 @@ extends HUDMod<ay> {
         }
     }
 
+    @NotNull
+    private static ItemStack ay(@NotNull Item item, int n) {
+        ItemStack itemStack = new ItemStack(item, 1);
+        itemStack.setItemDamage(n);
+        switch (n) {
+            case 8197:
+            case 16389: {
+                ItemCounter.ay(itemStack, "minecraft:healing");
+                break;
+            }
+            case 8229:
+            case 16421: {
+                ItemCounter.ay(itemStack, "minecraft:strong_healing");
+                break;
+            }
+        }
+        return itemStack;
+    }
+
+    private static void ay(ItemStack itemStack, String string) {
+        NBTTagCompound nBTTagCompound = new NBTTagCompound();
+        nBTTagCompound.setString("Potion", string);
+        itemStack.setTagCompound(nBTTagCompound);
+        itemStack.setItemDamage(0);
+    }
+
+    public static classox$ay
+    extends
+
+    public int qe() {
+        int n = 0;
+        for (boolean bl : new boolean[]{((ay) this.vz).mI, ((ay) this.vz).mL, ((ay) this.vz).mO, ((ay) this.vz).mR, ((ay) this.vz).mU, ((ay) this.vz).mX}) {
+            if (!bl) continue;
+            ++n;
+        }
+        return n;
+    }
+
     public class rf
-    extends kb {
+            extends kb {
         private int mZ = 0;
 
         private void iu(boolean bl) {
@@ -150,11 +153,11 @@ extends HUDMod<ay> {
                 this.kw.rf(0, 0, n2, n, ((ay) ItemCounter.this.vz).mG.kv.getRGB());
                 if (((ay) ItemCounter.this.vz).mG.pi) {
                     int n10 = ((ay) ItemCounter.this.vz).mG.hi.getRGB();
-                    float f = (float)((ay) ItemCounter.this.vz).mG.xt / 20.0f;
+                    float f = (float) ((ay) ItemCounter.this.vz).mG.xt / 20.0f;
                     this.kw.ay(0, 0, n2, n, n10, f);
                 }
             }
-            switch (1.mB[((ay) ItemCounter.this.vz).mE.ordinal()]) {
+            switch (1. mB[((ay) ItemCounter.this.vz).mE.ordinal()]){
                 case 1: {
                     n2 = 0;
                     n = 2;
@@ -259,7 +262,7 @@ extends HUDMod<ay> {
             int n5;
             int n6;
             int n7;
-            switch (1.mC[rf2.ordinal()]) {
+            switch (1. mC[rf2.ordinal()]){
                 case 1: {
                     n7 = n;
                     n6 = n2;
@@ -293,7 +296,7 @@ extends HUDMod<ay> {
                 }
             }
             this.kw.ay(itemStack, n7, n6, false, false);
-            this.kw.ay(String.valueOf(n3), (float)n5, (float)n4, gp2, !((ay) ItemCounter.this.vz).mG.bg);
+            this.kw.ay(String.valueOf(n3), (float) n5, (float) n4, gp2, !((ay) ItemCounter.this.vz).mG.bg);
             fp.ay(1.0f, 1.0f, 1.0f, 1.0f);
         }
 

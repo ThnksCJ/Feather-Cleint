@@ -6,7 +6,7 @@ import io.netty.handler.codec.MessageToByteEncoder;
 import net.digitalingot.feather.enums.vp;
 
 public class qf
-extends MessageToByteEncoder<ByteBuf> {
+        extends MessageToByteEncoder<ByteBuf> {
     private final vp Gt;
 
     public qf() {
@@ -20,7 +20,7 @@ extends MessageToByteEncoder<ByteBuf> {
     protected void ay(ChannelHandlerContext channelHandlerContext, ByteBuf byteBuf, ByteBuf byteBuf2) {
         int n = byteBuf.readableBytes();
         byteBuf2.ensureWritable(this.Gt.getSize() + n);
-        switch (1.Gu[this.Gt.ordinal()]) {
+        switch (1. Gu[this.Gt.ordinal()]){
             case 1: {
                 byteBuf2.writeShort(n);
                 break;
@@ -33,6 +33,6 @@ extends MessageToByteEncoder<ByteBuf> {
     }
 
     protected void encode(ChannelHandlerContext channelHandlerContext, Object object, ByteBuf byteBuf) {
-        this.ay(channelHandlerContext, (ByteBuf)object, byteBuf);
+        this.ay(channelHandlerContext, (ByteBuf) object, byteBuf);
     }
 }

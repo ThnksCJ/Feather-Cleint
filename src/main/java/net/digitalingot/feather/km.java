@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.StringJoiner;
 
 public class km {
-    @SerializedName(value="keys")
+    @SerializedName(value = "keys")
     private final int[] ry;
 
     public km(int[] nArray) {

@@ -16,10 +16,10 @@ public class hc {
         long l = 0L;
         long l2 = 0L;
         for (n = 0; n < 8; ++n) {
-            l = l << 8 | (long)(byArray[n] & 0xFF);
+            l = l << 8 | (long) (byArray[n] & 0xFF);
         }
         for (n = 8; n < 16; ++n) {
-            l2 = l2 << 8 | (long)(byArray[n] & 0xFF);
+            l2 = l2 << 8 | (long) (byArray[n] & 0xFF);
         }
         return new UUID(l, l2);
     }

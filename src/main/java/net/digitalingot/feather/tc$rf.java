@@ -3,7 +3,7 @@ package net.digitalingot.feather;
 import java.awt.event.KeyEvent;
 
 class tc$rf
-implements tc.ay {
+        implements tc.ay {
     private tc$rf() {
     }
 

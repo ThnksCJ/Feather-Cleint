@@ -8,11 +8,11 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Map;
 
 public class xy {
-    @SerializedName(value="enabled")
+    @SerializedName(value = "enabled")
     private final boolean enabled;
-    @SerializedName(value="favorite")
+    @SerializedName(value = "favorite")
     private final boolean bc;
-    @SerializedName(value="settings")
+    @SerializedName(value = "settings")
     @NotNull
     private final JsonElement gi;
 
@@ -27,14 +27,14 @@ public class xy {
         JsonObject jsonObject = gw.GSON.toJsonTree(object).getAsJsonObject();
         JsonObject jsonObject2 = new JsonObject();
         for (Map.Entry entry : jsonObject.entrySet()) {
-            String string = (String)entry.getKey();
-            JsonElement jsonElement = (JsonElement)entry.getValue();
+            String string = (String) entry.getKey();
+            JsonElement jsonElement = (JsonElement) entry.getValue();
             if (string.startsWith("nested_")) {
                 String string2 = string.substring("nested_".length());
                 string2 = string2.isEmpty() ? "" : string2 + ":";
                 JsonElement jsonElement2 = this.uj(jsonElement);
                 for (Map.Entry entry2 : jsonElement2.getAsJsonObject().entrySet()) {
-                    jsonObject2.add(string2 + entry2.getKey(), (JsonElement)entry2.getValue());
+                    jsonObject2.add(string2 + entry2.getKey(), (JsonElement) entry2.getValue());
                 }
                 continue;
             }

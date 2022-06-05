@@ -6,7 +6,7 @@ import java.nio.ByteBuffer;
 import java.nio.channels.ReadableByteChannel;
 
 class fk$ay
-implements ReadableByteChannel {
+        implements ReadableByteChannel {
     private final ByteBuf Gr;
 
     public fk$ay(ByteBuf byteBuf) {

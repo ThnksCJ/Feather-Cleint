@@ -1,5 +1,6 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.ny;
 import net.digitalingot.feather.lr;
 import net.digitalingot.feather.vx;
 import org.jetbrains.annotations.NotNull;

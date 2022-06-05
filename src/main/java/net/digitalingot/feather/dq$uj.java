@@ -46,7 +46,7 @@ class dq$uj {
             if (!this.cD) {
                 this.cD = true;
                 SkinManager.SkinAvailableCallback skinAvailableCallback = (type, resourceLocation, minecraftProfileTexture) -> {
-                    switch (dq.1.bP[type.ordinal()]) {
+                    switch (dq .1.bP[type.ordinal()]){
                         case 1: {
                             this.cF = resourceLocation;
                             this.cE = minecraftProfileTexture.getMetadata("model");

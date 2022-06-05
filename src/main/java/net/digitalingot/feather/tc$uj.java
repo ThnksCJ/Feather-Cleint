@@ -4,26 +4,23 @@ import java.awt.event.KeyEvent;
 import java.lang.reflect.Method;
 
 class tc$uj
-extends tc.rf {
+        extends tc.rf {
     private static final int ri = 0;
     private static final int nk = 0;
     private static final Method bb;
+
+    static {
+        Class<?> clazz = Class.forName("org.lwjgl.opengl.WindowsKeyboard");
+        bb = clazz.getDeclaredMethod("MapVirtualKey", Integer.TYPE, Integer.TYPE);
+        bb.setAccessible(true);
+    }
 
     private tc$uj() {
         super(null);
     }
 
-    @Override
-    public void rf(KeyEvent keyEvent, int n) {
-        int n2;
-        int n3 = tc$uj.ac(n);
-        if (n3 != 0 && (n2 = tc$uj.cp(n3)) != 0) {
-            sq.ay(keyEvent, n2);
-        }
-    }
-
     private static int cp(int n) {
-        return (Integer)bb.invoke(null, n, 0);
+        return (Integer) bb.invoke(null, n, 0);
     }
 
     private static int ac(int n) {
@@ -368,9 +365,12 @@ extends tc.rf {
         return 0;
     }
 
-    static {
-        Class<?> clazz = Class.forName("org.lwjgl.opengl.WindowsKeyboard");
-        bb = clazz.getDeclaredMethod("MapVirtualKey", Integer.TYPE, Integer.TYPE);
-        bb.setAccessible(true);
+    @Override
+    public void rf(KeyEvent keyEvent, int n) {
+        int n2;
+        int n3 = tc$uj.ac(n);
+        if (n3 != 0 && (n2 = tc$uj.cp(n3)) != 0) {
+            sq.ay(keyEvent, n2);
+        }
     }
 }

@@ -8,10 +8,10 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 public class ym$rf {
-    @SerializedName(value="match")
+    @SerializedName(value = "match")
     @NotNull
     private final List<String> Fe;
-    @SerializedName(value="disabledMods")
+    @SerializedName(value = "disabledMods")
     @NotNull
     private final List<String> Fd;
 

@@ -62,7 +62,7 @@ class lt$zz {
             boolean bl3 = bl = this.oK != 1.0f;
         }
         if (bl) {
-            this.oK = eb.ag((float)((double)(l - this.oM) / Math.max(1.0, this.oG.oY)));
+            this.oK = eb.ag((float) ((double) (l - this.oM) / Math.max(1.0, this.oG.oY)));
             this.oJ.oC = this.ay(this.oG.pB, this.oG.sa);
             this.oJ.oB = this.ay(this.oG.pA, this.oG.kv);
         }
@@ -81,7 +81,7 @@ class lt$zz {
         this.oP = f2 * (uj2.height + 1.0f);
         this.oQ = this.oO + uj2.width;
         this.oR = this.oP + uj2.height;
-        this.oS = this.oO + (uj2.width - (float)this.oH.getTextWidth(this.oG)) / 2.0f;
+        this.oS = this.oO + (uj2.width - (float) this.oH.getTextWidth(this.oG)) / 2.0f;
         this.oT = this.oP + (uj2.height - 7.0f) / 2.0f;
     }
 
@@ -91,8 +91,8 @@ class lt$zz {
         this.oO = f * (uj2.width + uj2.margin);
         this.oP = f2 * (uj2.height + 1.0f);
         this.oQ = this.oO + uj2.width;
-        this.oR = this.oP + (float)n;
-        this.oS = this.oO + (uj2.width - (float)this.oH.getTextWidth(this.oG)) / 2.0f;
+        this.oR = this.oP + (float) n;
+        this.oS = this.oO + (uj2.width - (float) this.oH.getTextWidth(this.oG)) / 2.0f;
         this.oT = this.oP + (uj2.height - 7.0f) / 2.0f;
     }
 }

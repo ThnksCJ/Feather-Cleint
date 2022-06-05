@@ -24,7 +24,7 @@ class pt$ay {
 
     @NotNull
     public Color ea() {
-        return Color.getHSBColor((float)this.kp / 100.0f, (float)this.ao / 100.0f, (float)this.nx / 100.0f);
+        return Color.getHSBColor((float) this.kp / 100.0f, (float) this.ao / 100.0f, (float) this.nx / 100.0f);
     }
 
     public pt$ay nw(int n) {

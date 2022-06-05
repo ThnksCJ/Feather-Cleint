@@ -1,6 +1,7 @@
 package net.digitalingot.feather;
 
 import com.google.common.collect.ImmutableSet;
+import net.digitalingot.feather.interfaces.xo;
 import net.digitalingot.feather.zp;
 import net.minecraft.client.resources.FallbackResourceManager;
 import net.minecraft.client.resources.IResource;
@@ -13,7 +14,7 @@ import java.util.List;
 import java.util.Set;
 
 public class jy
-extends FallbackResourceManager {
+        extends FallbackResourceManager {
     private final bn kl;
 
     public jy(bn bn2) {

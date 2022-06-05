@@ -1,6 +1,7 @@
 package net.digitalingot.feather;
 
 import com.google.common.collect.ImmutableMap;
+import net.digitalingot.feather.interfaces.bs;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -16,17 +17,6 @@ public class ku<T> {
     private final bs<T> jk;
     @NotNull
     private String aa;
-
-    @Nullable
-    private static String uj(@NotNull Class<?> clazz) {
-        for (Map.Entry<Class<?>, String> entry : pc.entrySet()) {
-            Class<?> clazz2 = entry.getKey();
-            String string = entry.getValue();
-            if (!clazz2.isAssignableFrom(clazz)) continue;
-            return string;
-        }
-        return null;
-    }
 
     public ku(@NotNull Class<T> clazz, @NotNull String string) {
         this(new ca(clazz), string);
@@ -46,6 +36,17 @@ public class ku<T> {
         } else {
             this.aa = string;
         }
+    }
+
+    @Nullable
+    private static String uj(@NotNull Class<?> clazz) {
+        for (Map.Entry<Class<?>, String> entry : pc.entrySet()) {
+            Class<?> clazz2 = entry.getKey();
+            String string = entry.getValue();
+            if (!clazz2.isAssignableFrom(clazz)) continue;
+            return string;
+        }
+        return null;
     }
 
     @NotNull

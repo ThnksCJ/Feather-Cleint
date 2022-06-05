@@ -15,7 +15,7 @@ import java.util.StringJoiner;
 import java.util.concurrent.ForkJoinPool;
 
 public class ma
-extends kl {
+        extends kl {
     public ma() {
         super("featherscreenshot", Collections.emptyList());
     }
@@ -35,16 +35,16 @@ extends kl {
         ForkJoinPool.commonPool().execute(() -> {
             switch (string) {
                 case "copy": {
-                    me.uj((File)file);
+                    me.uj((File) file);
                     break;
                 }
                 case "upload": {
-                    String string2 = sx.nn((File)file);
+                    String string2 = sx.nn((File) file);
                     this.mi(string2);
                     break;
                 }
                 case "tweet": {
-                    String string3 = sx.nn((File)file);
+                    String string3 = sx.nn((File) file);
                     this.mi(this.em(string3));
                 }
             }
@@ -57,6 +57,6 @@ extends kl {
     }
 
     private void mi(@NotNull String string) {
-        uv.ay((URI)new URL(string).toURI());
+        uv.ay((URI) new URL(string).toURI());
     }
 }

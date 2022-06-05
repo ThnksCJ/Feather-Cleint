@@ -47,15 +47,6 @@ public enum kx$ay {
     @NotNull
     private final String scoreboardName;
 
-    @NotNull
-    public static kx$ay fromScoreboardName(@NotNull String string) {
-        for (kx$ay ay2 : kx$ay.values()) {
-            if (!string.equalsIgnoreCase(ay2.getScoreboardName())) continue;
-            return ay2;
-        }
-        return LOBBY;
-    }
-
     kx$ay(String string2) {
         this.displayName = string2;
         this.scoreboardName = string2;
@@ -64,6 +55,15 @@ public enum kx$ay {
     kx$ay(String string2, String string3) {
         this.displayName = string2;
         this.scoreboardName = string3;
+    }
+
+    @NotNull
+    public static kx$ay fromScoreboardName(@NotNull String string) {
+        for (kx$ay ay2 : kx$ay.values()) {
+            if (!string.equalsIgnoreCase(ay2.getScoreboardName())) continue;
+            return ay2;
+        }
+        return LOBBY;
     }
 
     @NotNull

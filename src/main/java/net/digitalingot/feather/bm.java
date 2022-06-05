@@ -2,16 +2,17 @@ package net.digitalingot.feather;
 
 import com.google.gson.annotations.SerializedName;
 import net.digitalingot.feather.enums.ao;
+import net.digitalingot.feather.interfaces.da;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
 public class bm
-implements da {
-    @SerializedName(value="selected")
+        implements da {
+    @SerializedName(value = "selected")
     @NotNull
     private final String pn;
-    @SerializedName(value="list")
+    @SerializedName(value = "list")
     @NotNull
     private final List<String> zo;
 

@@ -2,16 +2,17 @@ package net.digitalingot.feather;
 
 import com.google.gson.annotations.SerializedName;
 import net.digitalingot.feather.enums.ao;
+import net.digitalingot.feather.interfaces.da;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Map;
 
 public class sh
-implements da {
-    @SerializedName(value="settings")
+        implements da {
+    @SerializedName(value = "settings")
     @NotNull
     private final Map<String, oh> gs;
-    @SerializedName(value="equipped")
+    @SerializedName(value = "equipped")
     @NotNull
     private final Map<sb.ay, String> dv;
 

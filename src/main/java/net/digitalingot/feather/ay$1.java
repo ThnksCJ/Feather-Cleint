@@ -1,7 +1,7 @@
 package net.digitalingot.feather;
 
 class ay$1
-extends Thread {
+        extends Thread {
     ay$1(ThreadGroup threadGroup, Runnable runnable, String string) {
         super(threadGroup, runnable, string);
     }

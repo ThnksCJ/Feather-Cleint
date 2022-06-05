@@ -1,11 +1,12 @@
 package net.digitalingot.feather;
 
 import io.netty.channel.Channel;
+import net.digitalingot.feather.interfaces.wz;
 import org.capnproto.MessageBuilder;
 import org.jetbrains.annotations.NotNull;
 
 public class gt
-extends jq {
+        extends jq {
     public gt(@NotNull Channel channel, @NotNull gk gk2) {
         super(channel, gk2);
     }

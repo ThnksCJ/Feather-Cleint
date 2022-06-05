@@ -6,13 +6,13 @@ import java.util.Objects;
 import java.util.UUID;
 
 public class vi$ay {
-    @SerializedName(value="email")
+    @SerializedName(value = "email")
     private final String eR;
-    @SerializedName(value="uuid")
+    @SerializedName(value = "uuid")
     private final UUID hj;
-    @SerializedName(value="name")
+    @SerializedName(value = "name")
     private final String name;
-    @SerializedName(value="authToken")
+    @SerializedName(value = "authToken")
     private final String eS;
 
     public vi$ay(String string, UUID uUID, String string2, String string3) {
@@ -45,7 +45,7 @@ public class vi$ay {
         if (object == null || this.getClass() != object.getClass()) {
             return false;
         }
-        vi$ay ay2 = (vi$ay)object;
+        vi$ay ay2 = (vi$ay) object;
         return Objects.equals(this.eR, ay2.eR) && Objects.equals(this.hj, ay2.hj) && Objects.equals(this.name, ay2.name) && Objects.equals(this.eS, ay2.eS);
     }
 

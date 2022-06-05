@@ -1,12 +1,13 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.hg;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.io.InputStream;
 
 public class wf
-implements hg {
+        implements hg {
     @NotNull
     private final String EL;
     @Nullable

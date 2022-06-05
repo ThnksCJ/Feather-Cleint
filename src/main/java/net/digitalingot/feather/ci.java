@@ -1,19 +1,21 @@
 package net.digitalingot.feather;
 
 import net.digitalingot.feather.enums.ho;
+import net.digitalingot.feather.interfaces.au;
+import net.digitalingot.feather.interfaces.de;
 
 import java.awt.geom.Point2D;
 
 public class ci {
-    @au(wd="hudEnabled", vu="Enabled", yp=@de(vi=0))
+    @au(wd = "hudEnabled", vu = "Enabled", yp = @de(vi = 0))
     public boolean ks;
-    @au(wd="hudAnchor", vu="AnchorPoint", pr="top_left", yp=@de(vi=-99))
+    @au(wd = "hudAnchor", vu = "AnchorPoint", pr = "top_left", yp = @de(vi = -99))
     public transient ho zk;
-    @au(wd="hudRelativeX", vu="Relative X", yp=@de(vi=-98))
+    @au(wd = "hudRelativeX", vu = "Relative X", yp = @de(vi = -98))
     public transient double ow;
-    @au(wd="hudRelativeY", vu="Relative Y", yp=@de(vi=-97))
+    @au(wd = "hudRelativeY", vu = "Relative Y", yp = @de(vi = -97))
     public transient double zw;
-    @au(wd="hudScale", vu="Scale", yp=@de(vi=-96))
+    @au(wd = "hudScale", vu = "Scale", yp = @de(vi = -96))
     public transient double fk;
 
     public double getX(double d) {

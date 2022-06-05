@@ -1,17 +1,33 @@
 package net.digitalingot.feather.mods.impl;
 
-import net.digitalingot.feather.*;
+import net.digitalingot.feather.ay;
 import net.digitalingot.feather.enums.qc;
 import net.digitalingot.feather.enums.un$ay$ay;
+import net.digitalingot.feather.interfaces.*;
+import net.digitalingot.feather.km;
 import net.digitalingot.feather.mods.Mod;
+import net.digitalingot.feather.qo;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.settings.GameSettings;
 
-@sv(aw= qc.SNAPLOOK, jf=@bx(vu="Snaplook", jm="https://assets.feathercdn.net/game/mods/snaplook.svg", mz="Snap to a particular perspective", lq={}))
+@sv(aw = qc.SNAPLOOK, jf = @bx(vu = "Snaplook", jm = "https://assets.feathercdn.net/game/mods/snaplook.svg", mz = "Snap to a particular perspective", lq = {}))
 public class Snaplook
-extends Mod<ay> {
+        extends Mod<ay> {
     private boolean dN;
     private int dE = 0;
+
+    zi {
+        @au(wd = "keyBind", pr = "0", vu = "Keybind", yp = @de(vi = 0))
+        public km dO;
+        @au(wd = "viewMode", pr = "third", vu = "View Mode", yp = @de(vi = 1))
+        public ay dP;
+
+        public static enum ay {
+            THIRD,
+            FORWARD
+
+        }
+    }
 
     @Override
     public void initialize() {
@@ -21,7 +37,7 @@ extends Mod<ay> {
             }
             this.dN = false;
         });
-        qo.ay(() -> ((ay)this.vz).dO, () -> {
+        qo.ay(() -> ((ay) this.vz).dO, () -> {
             if (!this.gc()) {
                 return;
             }
@@ -29,7 +45,7 @@ extends Mod<ay> {
             Minecraft minecraft = Minecraft.getMinecraft();
             GameSettings gameSettings = minecraft.gameSettings;
             this.dE = gameSettings.thirdPersonView;
-            gameSettings.thirdPersonView = ((ay)this.vz).dP == un$ay$ay.THIRD ? 1 : 2;
+            gameSettings.thirdPersonView = ((ay) this.vz).dP == un$ay$ay.THIRD ? 1 : 2;
             this.ey();
         }, () -> {
             if (!this.gc() || !this.dN) {
@@ -43,23 +59,12 @@ extends Mod<ay> {
         });
     }
 
+    public static classun$ay
+    extends
+
     private void ey() {
         Minecraft minecraft = Minecraft.getMinecraft();
         GameSettings gameSettings = minecraft.gameSettings;
         minecraft.renderGlobal.setDisplayListEntitiesDirty();
-    }
-
-    public static classun$ay
-    extends zi {
-        @au(wd="keyBind", pr="0", vu="Keybind", yp=@de(vi=0))
-        public km dO;
-        @au(wd="viewMode", pr="third", vu="View Mode", yp=@de(vi=1))
-        public ay dP;
-
-        public static enum ay {
-            THIRD,
-            FORWARD
-
-        }
     }
 }

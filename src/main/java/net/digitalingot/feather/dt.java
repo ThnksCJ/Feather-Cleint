@@ -1,11 +1,12 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.hg;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.InputStream;
 
 public class dt
-implements hg {
+        implements hg {
     @NotNull
     private final InputStream EM;
 

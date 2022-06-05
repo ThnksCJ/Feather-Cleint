@@ -1,5 +1,6 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.ey;
 import net.digitalingot.feather.je;
 import org.jetbrains.annotations.NotNull;
 
@@ -7,8 +8,8 @@ import javax.sound.sampled.TargetDataLine;
 import java.io.Closeable;
 
 public class hb
-extends Thread
-implements Closeable {
+        extends Thread
+        implements Closeable {
     @NotNull
     private final gm yC;
     @NotNull
@@ -25,7 +26,8 @@ implements Closeable {
 
     @Override
     public void run() {
-        block0: {
+        block0:
+        {
             this.zb();
             if (this.AB == null) break block0;
             this.AB.close();

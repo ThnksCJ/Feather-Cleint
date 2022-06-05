@@ -5,13 +5,13 @@ import net.digitalingot.feather.mods.impl.CPS;
 import java.text.DecimalFormat;
 
 public class ko$rf
-extends mo {
+        extends mo {
     private static final String rR = " | ";
     private final DecimalFormat pD = wk.yl("#.#");
 
     @Override
     public Object so() {
-        return this.pD.format(CPS.this.pC.wk()) + (((CPS.ay)((CPS) CPS.this).vz).tI ? rR + this.pD.format(CPS.this.pC.si()) : "") + (((CPS.ay)((CPS) CPS.this).vz).tJ ? " CPS" : "");
+        return this.pD.format(CPS.this.pC.wk()) + (((CPS.ay) ((CPS) CPS.this).vz).tI ? rR + this.pD.format(CPS.this.pC.si()) : "") + (((CPS.ay) ((CPS) CPS.this).vz).tJ ? " CPS" : "");
     }
 
     @Override
@@ -21,13 +21,13 @@ extends mo {
 
     @Override
     public void zq() {
-        wk.ay(this.pD, ((CPS.ay)((CPS) CPS.this).vz).rJ);
+        wk.ay(this.pD, ((CPS.ay) ((CPS) CPS.this).vz).rJ);
         super.zq();
     }
 
     @Override
     public fw bt() {
-        return ((CPS.ay)((CPS) CPS.this).vz).jQ;
+        return ((CPS.ay) ((CPS) CPS.this).vz).jQ;
     }
 
     @Override

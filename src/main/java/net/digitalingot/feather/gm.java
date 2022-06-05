@@ -7,6 +7,9 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioDatagramChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import net.digitalingot.feather.ht;
+import net.digitalingot.feather.interfaces.av;
+import net.digitalingot.feather.interfaces.dj;
+import net.digitalingot.feather.interfaces.ey;
 import net.digitalingot.feather.jx;
 import net.digitalingot.feather.mt;
 import net.digitalingot.feather.oi;
@@ -23,7 +26,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 public class gm
-implements Closeable {
+        implements Closeable {
     @NotNull
     private final fb zQ;
     @NotNull
@@ -38,12 +41,10 @@ implements Closeable {
     private final NioEventLoopGroup gy;
     @NotNull
     private final List<wr> zU = Collections.synchronizedList(new ArrayList());
-    @Nullable
-    private hb zV;
     @NotNull
     private final @NotNull Map<@NotNull UUID, @NotNull ht> zW = new ConcurrentHashMap<UUID, ht>();
     @Nullable
-    private gq zX;
+    private hb zV;
     private final av<List<oi>> zY = ph.ay(() -> {
         ArrayList<oi> arrayList = new ArrayList<oi>(this.zW.size() + 1);
         for (Object object : this.zW.values()) {
@@ -54,10 +55,12 @@ implements Closeable {
             Object object;
             UUID uUID = Minecraft.getMinecraft().player.func_110124_au();
             object = Minecraft.getMinecraft().player.func_70005_c_();
-            arrayList.add(new oi(uUID, (String)object));
+            arrayList.add(new oi(uUID, (String) object));
         }
         return arrayList;
     }, 200L);
+    @Nullable
+    private gq zX;
 
     private gm(@NotNull oq oq2, @NotNull ey ey2, @NotNull lo lo2) {
         this.zQ = new fb(this);
@@ -96,14 +99,14 @@ implements Closeable {
         Bootstrap bootstrap = new Bootstrap();
         bootstrap.group(this.gy);
         bootstrap.channel(NioSocketChannel.class);
-        bootstrap.option(ChannelOption.SO_KEEPALIVE, (Object)true);
-        bootstrap.option(ChannelOption.CONNECT_TIMEOUT_MILLIS, (Object)5000);
-        bootstrap.option(ChannelOption.SO_RCVBUF, (Object)65536);
-        bootstrap.option(ChannelOption.SO_SNDBUF, (Object)65536);
-        bootstrap.option(ChannelOption.AUTO_READ, (Object)true);
+        bootstrap.option(ChannelOption.SO_KEEPALIVE, (Object) true);
+        bootstrap.option(ChannelOption.CONNECT_TIMEOUT_MILLIS, (Object) 5000);
+        bootstrap.option(ChannelOption.SO_RCVBUF, (Object) 65536);
+        bootstrap.option(ChannelOption.SO_SNDBUF, (Object) 65536);
+        bootstrap.option(ChannelOption.AUTO_READ, (Object) true);
         bootstrap.remoteAddress(cl.zG, 5433);
         vm.Fq.info("Establishing voice control connection to " + cl.zG + ":" + 5433 + "...");
-        bootstrap.handler(new ChannelInitializer<Channel>(){
+        bootstrap.handler(new ChannelInitializer<Channel>() {
 
             protected void initChannel(Channel channel) {
                 fn fn2 = new fn(channel, gm2);
@@ -115,8 +118,8 @@ implements Closeable {
                 channelPipeline.addLast("packet-encoder", new gu());
                 channelPipeline.addLast("control-packet-processor", new oc());
                 channelPipeline.addLast("unauthenticated-handler", new th(fn2));
-                channelPipeline.addLast("inbound-exception-handler", (ChannelHandler)new jx.ay());
-                channelPipeline.addLast("outbound-exception-handler", (ChannelHandler)new jx.rf());
+                channelPipeline.addLast("inbound-exception-handler", (ChannelHandler) new jx.ay());
+                channelPipeline.addLast("outbound-exception-handler", (ChannelHandler) new jx.rf());
             }
         });
         ChannelFuture channelFuture = bootstrap.connect();
@@ -151,7 +154,7 @@ implements Closeable {
         Object[] objectArray = this.jx();
         vm.Fq.info("Fetched voice IPs: " + Arrays.toString(objectArray));
         for (Object object : objectArray) {
-            this.yb((String)object);
+            this.yb((String) object);
         }
     }
 
@@ -160,11 +163,11 @@ implements Closeable {
         Bootstrap bootstrap = new Bootstrap();
         bootstrap.group(this.gy);
         bootstrap.channel(NioDatagramChannel.class);
-        bootstrap.option(ChannelOption.SO_RCVBUF, (Object)65536);
-        bootstrap.option(ChannelOption.SO_SNDBUF, (Object)65536);
-        bootstrap.option(ChannelOption.AUTO_READ, (Object)true);
+        bootstrap.option(ChannelOption.SO_RCVBUF, (Object) 65536);
+        bootstrap.option(ChannelOption.SO_SNDBUF, (Object) 65536);
+        bootstrap.option(ChannelOption.AUTO_READ, (Object) true);
         bootstrap.remoteAddress(string, 5432);
-        bootstrap.handler(new ChannelInitializer<Channel>(){
+        bootstrap.handler(new ChannelInitializer<Channel>() {
 
             protected void initChannel(Channel channel) {
                 ChannelPipeline channelPipeline = channel.pipeline();
@@ -172,16 +175,16 @@ implements Closeable {
                 channelPipeline.addLast("packet-encoder", new gu());
                 channelPipeline.addLast("voice-decoder", new ex());
                 channelPipeline.addLast("voice-handler", new qy(gm2));
-                channelPipeline.addLast("inbound-exception-handler", (ChannelHandler)new jx.ay());
-                channelPipeline.addLast("outbound-exception-handler", (ChannelHandler)new jx.rf());
+                channelPipeline.addLast("inbound-exception-handler", (ChannelHandler) new jx.ay());
+                channelPipeline.addLast("outbound-exception-handler", (ChannelHandler) new jx.rf());
             }
         });
         ChannelFuture channelFuture = bootstrap.connect();
         Channel channel = channelFuture.channel();
         channelFuture.addListener(future -> {
-            InetSocketAddress inetSocketAddress = (InetSocketAddress)channel.remoteAddress();
+            InetSocketAddress inetSocketAddress = (InetSocketAddress) channel.remoteAddress();
             InetAddress inetAddress = inetSocketAddress.getAddress();
-            InetAddress inetAddress2 = ((InetSocketAddress)this.zX.ia().remoteAddress()).getAddress();
+            InetAddress inetAddress2 = ((InetSocketAddress) this.zX.ia().remoteAddress()).getAddress();
             boolean bl = inetAddress.equals(inetAddress2);
             wr wr2 = new wr(gm2, channel, bl);
             gm2.yq().add(wr2);

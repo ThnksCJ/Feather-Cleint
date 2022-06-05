@@ -7,7 +7,7 @@ import io.netty.channel.ChannelPipeline;
 import net.digitalingot.feather.jx;
 
 class gm$2
-extends ChannelInitializer<Channel> {
+        extends ChannelInitializer<Channel> {
     final gm zZ;
 
     gm$2(gm gm3) {
@@ -20,7 +20,7 @@ extends ChannelInitializer<Channel> {
         channelPipeline.addLast("packet-encoder", new gu());
         channelPipeline.addLast("voice-decoder", new ex());
         channelPipeline.addLast("voice-handler", new qy(this.zZ));
-        channelPipeline.addLast("inbound-exception-handler", (ChannelHandler)new jx.ay());
-        channelPipeline.addLast("outbound-exception-handler", (ChannelHandler)new jx.rf());
+        channelPipeline.addLast("inbound-exception-handler", (ChannelHandler) new jx.ay());
+        channelPipeline.addLast("outbound-exception-handler", (ChannelHandler) new jx.rf());
     }
 }

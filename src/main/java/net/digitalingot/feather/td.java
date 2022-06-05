@@ -3,15 +3,16 @@ package net.digitalingot.feather;
 import com.google.gson.annotations.SerializedName;
 import net.digitalingot.feather.enums.ao;
 import net.digitalingot.feather.enums.qd;
+import net.digitalingot.feather.interfaces.da;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
 public class td
-implements da {
-    @SerializedName(value="main")
+        implements da {
+    @SerializedName(value = "main")
     private final List<fm> rw;
-    @SerializedName(value="header")
+    @SerializedName(value = "header")
     private final List<qd> ah;
 
     public td(@NotNull List<fm> list, @NotNull List<qd> list2) {

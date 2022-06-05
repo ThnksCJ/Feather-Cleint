@@ -1,5 +1,6 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.xs;
 import net.minecraft.client.Minecraft;
 import org.jetbrains.annotations.NotNull;
 
@@ -7,7 +8,7 @@ import java.util.List;
 import java.util.UUID;
 
 public class uh
-implements xs {
+        implements xs {
     @NotNull
     private final nu gZ;
 

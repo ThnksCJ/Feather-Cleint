@@ -1,9 +1,10 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.bs;
 import org.jetbrains.annotations.NotNull;
 
 public class iq
-implements bs<Boolean> {
+        implements bs<Boolean> {
     @NotNull
     public Boolean uj(@NotNull String string, @NotNull Class<? extends Boolean> clazz) {
         if (string.equalsIgnoreCase("true")) {
@@ -23,7 +24,7 @@ implements bs<Boolean> {
     @Override
     @NotNull
     public String kl(@NotNull Object object) {
-        return this.zz((Boolean)object);
+        return this.zz((Boolean) object);
     }
 
     @Override

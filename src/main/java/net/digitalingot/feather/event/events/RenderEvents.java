@@ -1,9 +1,9 @@
 package net.digitalingot.feather.event.events;
 
 import net.digitalingot.feather.cv;
-import net.digitalingot.feather.event.Event;
 import net.digitalingot.feather.enums.wi;
-import net.digitalingot.feather.zx;
+import net.digitalingot.feather.event.Event;
+import net.digitalingot.feather.interfaces.zx;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -11,9 +11,9 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import org.jetbrains.annotations.Nullable;
 
-@SideOnly(value=Side.CLIENT)
+@SideOnly(value = Side.CLIENT)
 public class RenderEvents
-implements Event {
+        implements Event {
     @SubscribeEvent
     public void ay(RenderGameOverlayEvent.Pre pre) {
         RenderGameOverlayEvent.ElementType elementType = pre.getType();
@@ -45,7 +45,7 @@ implements Event {
 
     @Nullable
     private cv.uj ay(RenderGameOverlayEvent.ElementType elementType) {
-        switch (1.wj[elementType.ordinal()]) {
+        switch (1. wj[elementType.ordinal()]){
             case 1: {
                 return cv.uj.ALL;
             }

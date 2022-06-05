@@ -5,7 +5,7 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 import org.jetbrains.annotations.NotNull;
 
 public class th
-extends ChannelInboundHandlerAdapter {
+        extends ChannelInboundHandlerAdapter {
     @NotNull
     private final fn AF;
 
@@ -16,7 +16,7 @@ extends ChannelInboundHandlerAdapter {
     public void channelRead(ChannelHandlerContext channelHandlerContext, Object object) {
         cm.uj.zz zz2 = (cm.uj.zz) object;
         if (zz2.b().sj() != cm.uj.uj.zz.AUTH_SUCCESSFUL) {
-            vm.Fq.error("received packet type {} while still unauthenticated", (Object)zz2.b());
+            vm.Fq.error("received packet type {} while still unauthenticated", (Object) zz2.b());
             return;
         }
         cm.ay.uj uj2 = zz2.b().a();

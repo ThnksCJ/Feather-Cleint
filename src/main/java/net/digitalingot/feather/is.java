@@ -1,5 +1,6 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.ny;
 import net.digitalingot.feather.lr;
 import net.digitalingot.feather.vx;
 import net.minecraft.client.Minecraft;
@@ -10,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.UUID;
 
 public class is
-implements ny {
+        implements ny {
     @NotNull
     private final nn xs;
     @NotNull

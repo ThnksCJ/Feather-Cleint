@@ -7,10 +7,10 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class og {
-    @SerializedName(value="field")
+    @SerializedName(value = "field")
     @NotNull
     private final String si;
-    @SerializedName(value="values")
+    @SerializedName(value = "values")
     @Nullable
     private final List<String> jn;
 

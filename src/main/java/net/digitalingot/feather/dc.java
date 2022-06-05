@@ -13,7 +13,7 @@ public class dc {
     }
 
     protected void ay(MessageBuilder messageBuilder) {
-        this.fq.eventLoop().submit(() -> this.fq.writeAndFlush((Object)messageBuilder));
+        this.fq.eventLoop().submit(() -> this.fq.writeAndFlush((Object) messageBuilder));
     }
 
     @NotNull

@@ -1,5 +1,6 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.*;
 import org.apache.commons.lang3.ClassUtils;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -20,7 +21,7 @@ public class cs<T> {
 
     @NotNull
     public List<ca> gh() {
-        return this.ay((wv)null);
+        return this.ay((wv) null);
     }
 
     @NotNull
@@ -82,11 +83,11 @@ public class cs<T> {
             }
         }
         if ((awArray = field.getDeclaredAnnotation(qk.class)) != null) {
-            Method method = this.ay((qk)awArray);
+            Method method = this.ay((qk) awArray);
             if (method == null) {
                 throw new jl("No matching @AllowedValues found for value = \"" + awArray.wd() + "\" in class " + this.rp.getName());
             }
-            zq2 = new zq((qk)awArray, ClassUtils.primitiveToWrapper(field.getType()), method);
+            zq2 = new zq((qk) awArray, ClassUtils.primitiveToWrapper(field.getType()), method);
         } else {
             zq2 = null;
         }

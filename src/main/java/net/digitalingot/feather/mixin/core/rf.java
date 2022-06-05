@@ -7,11 +7,11 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 
 import java.util.List;
 
-@Mixin(value={GuiNewChat.class})
+@Mixin(value = {GuiNewChat.class})
 public interface rf {
-    @Accessor(value="chatLines")
+    @Accessor(value = "chatLines")
     List<ChatLine> getAllMessages();
 
-    @Accessor(value="drawnChatLines")
+    @Accessor(value = "drawnChatLines")
     List<ChatLine> getTrimmedMessages();
 }

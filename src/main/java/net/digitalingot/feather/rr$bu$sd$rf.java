@@ -3,7 +3,7 @@ package net.digitalingot.feather;
 import org.capnproto.*;
 
 public final class rr$bu$sd$rf
-extends StructFactory<rr.bu.sd.ay, rr.bu.sd.zz> {
+        extends StructFactory<rr.bu.sd.ay, rr.bu.sd.zz> {
     public final rr.bu.sd.zz hs(SegmentReader segmentReader, int n, int n2, int n3, short s, int n4) {
         return new rr.bu.sd.zz(segmentReader, n, n2, n3, s, n4);
     }

@@ -2,8 +2,9 @@ package net.digitalingot.feather;
 
 import net.digitalingot.feather.enums.hh;
 import net.digitalingot.feather.enums.qc;
-import net.digitalingot.feather.mods.Mod;
+import net.digitalingot.feather.interfaces.sv;
 import net.digitalingot.feather.mods.HUDMod;
+import net.digitalingot.feather.mods.Mod;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -42,7 +43,7 @@ public class vb {
         qc qc2 = ux2.cs().aw();
         Map<String, String> map2 = map.get(qc2);
         gc<?> gc2 = hh.INSTANCE.create(clazz, map2, null);
-        zi zi2 = (zi)gc2.sf();
+        zi zi2 = (zi) gc2.sf();
         cd cd2 = this.zs.wq().ub();
         List<qc> list = cd2.zh();
         zi2.bc = list.contains(qc2);

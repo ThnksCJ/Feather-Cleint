@@ -15,27 +15,29 @@ public abstract class jq {
     @NotNull
     protected final gk hG;
 
+    {
+        return this.hG;
+    }
+
     protected jq(@NotNull Channel channel, @NotNull gk gk2) {
         this.fq = channel;
         this.hG = gk2;
     }
 
     @NotNull
-    protected rr.ig.uj.ay zz(MessageBuilder messageBuilder) {
-        rr.ig.ay ay2 = (rr.ig.ay)((Object)messageBuilder.initRoot((FromPointerBuilder)rr.ig.Ee));
-        return ay2.kU();
-    }
+    public gk if()
 
     @NotNull
-    public gk if() {
-        return this.hG;
+    protected rr.ig.uj.ay zz(MessageBuilder messageBuilder) {
+        rr.ig.ay ay2 = (rr.ig.ay) ((Object) messageBuilder.initRoot((FromPointerBuilder) rr.ig.Ee));
+        return ay2.kU();
     }
 
     protected void ay(MessageBuilder messageBuilder) {
         if (this.fq.eventLoop().inEventLoop()) {
-            this.fq.writeAndFlush((Object)messageBuilder).addListener(ChannelFutureListener.FIRE_EXCEPTION_ON_FAILURE);
+            this.fq.writeAndFlush((Object) messageBuilder).addListener(ChannelFutureListener.FIRE_EXCEPTION_ON_FAILURE);
         } else {
-            this.fq.eventLoop().submit(() -> this.fq.writeAndFlush((Object)messageBuilder).addListener(ChannelFutureListener.FIRE_EXCEPTION_ON_FAILURE));
+            this.fq.eventLoop().submit(() -> this.fq.writeAndFlush((Object) messageBuilder).addListener(ChannelFutureListener.FIRE_EXCEPTION_ON_FAILURE));
         }
     }
 }

@@ -1,18 +1,23 @@
 package net.digitalingot.feather;
 
 import net.digitalingot.feather.fs;
+import net.digitalingot.feather.interfaces.va;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 public class wc
-implements va {
+        implements va {
     @NotNull
     private final if Bo;
 
     public wc(@NotNull if if_) {
         this.Bo = if_;
+    }
+
+    ay(wc wc2) {
+        return wc2.Bo;
     }
 
     @Override
@@ -26,6 +31,8 @@ implements va {
         gw2.rf(new yi(), new /* Unavailable Anonymous Inner Class!! */, null);
     }
 
+    static if
+
     @Override
     public void rf(@NotNull UUID uUID, @NotNull fs.ay ay2) {
         if.rf rf2 = this.Bo.M().remove(uUID);
@@ -35,9 +42,5 @@ implements va {
         }
         lp lp2 = new lp(rf2.mo(), null, ay2.qk(), ay2.be());
         zz.nw().pv().rf(lp2, new /* Unavailable Anonymous Inner Class!! */, null);
-    }
-
-    static if ay(wc wc2) {
-        return wc2.Bo;
     }
 }

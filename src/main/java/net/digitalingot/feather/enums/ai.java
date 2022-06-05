@@ -1,31 +1,31 @@
 package net.digitalingot.feather.enums;
 
 import com.google.gson.annotations.SerializedName;
-import net.digitalingot.feather.mu;
+import net.digitalingot.feather.interfaces.mu;
 import net.digitalingot.feather.og;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class ai {
-    @SerializedName(value="type")
+    @SerializedName(value = "type")
     @NotNull
     private final ay wa;
-    @SerializedName(value="name")
+    @SerializedName(value = "name")
     @NotNull
     private final String name;
-    @SerializedName(value="slug")
+    @SerializedName(value = "slug")
     @Nullable
     private final String slug;
-    @SerializedName(value="parent")
+    @SerializedName(value = "parent")
     @Nullable
     private final og rk;
-    @SerializedName(value="value")
+    @SerializedName(value = "value")
     @Nullable
     private final mu az;
-    @SerializedName(value="chroma")
+    @SerializedName(value = "chroma")
     @Nullable
     private final Boolean jb;
-    @SerializedName(value="opacity")
+    @SerializedName(value = "opacity")
     @Nullable
     private final Boolean wk;
 

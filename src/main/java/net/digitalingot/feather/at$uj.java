@@ -6,7 +6,7 @@ import com.google.gson.stream.JsonWriter;
 import net.digitalingot.feather.enums.li;
 
 public class at$uj
-extends TypeAdapter<li> {
+        extends TypeAdapter<li> {
     public void ay(JsonWriter jsonWriter, li li2) {
         jsonWriter.beginObject();
         jsonWriter.name("slug").value(li2.getSlug());

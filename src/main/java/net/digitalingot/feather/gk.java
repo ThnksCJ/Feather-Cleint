@@ -5,6 +5,7 @@ import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.util.AttributeKey;
+import net.digitalingot.feather.interfaces.*;
 import net.digitalingot.feather.jx;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -29,10 +30,10 @@ public class gk {
     private final va Co;
     @NotNull
     private final NioEventLoopGroup gy;
-    @Nullable
-    private Channel fq;
     @NotNull
     private final Map<UUID, pk.ay.uj.rf.uj> Cp = new HashMap<UUID, pk.ay.uj.rf.uj>();
+    @Nullable
+    private Channel fq;
     @Nullable
     private nf Cq;
 
@@ -62,9 +63,9 @@ public class gk {
         Bootstrap bootstrap = new Bootstrap();
         bootstrap.group(this.gy);
         bootstrap.channel(NioSocketChannel.class);
-        bootstrap.option(ChannelOption.SO_KEEPALIVE, (Object)true);
+        bootstrap.option(ChannelOption.SO_KEEPALIVE, (Object) true);
         bootstrap.remoteAddress(Cj, 1668);
-        bootstrap.handler(new ChannelInitializer<Channel>(){
+        bootstrap.handler(new ChannelInitializer<Channel>() {
 
             protected void initChannel(Channel channel) {
                 gt gt2 = new gt(channel, gk2);
@@ -76,8 +77,8 @@ public class gk {
                 channelPipeline.addLast("packet-encoder", new gu());
                 channelPipeline.addLast("redstone-decoder", new ct());
                 channelPipeline.addLast("unauthenticated-handler", new am(gt2));
-                channelPipeline.addLast("inbound-exception-handler", (ChannelHandler)new jx.ay());
-                channelPipeline.addLast("outbound-exception-handler", (ChannelHandler)new jx.rf());
+                channelPipeline.addLast("inbound-exception-handler", (ChannelHandler) new jx.ay());
+                channelPipeline.addLast("outbound-exception-handler", (ChannelHandler) new jx.rf());
             }
         });
         ChannelFuture channelFuture = bootstrap.connect();
@@ -91,9 +92,9 @@ public class gk {
                 throw new IllegalArgumentException("Game token couldn't be fetched");
             }
             this.fq = channelFuture.channel();
-            this.fq.config().setOption(ChannelOption.SO_RCVBUF, (Object)65536);
-            this.fq.config().setOption(ChannelOption.SO_SNDBUF, (Object)65536);
-            this.fq.config().setOption(ChannelOption.AUTO_READ, (Object)true);
+            this.fq.config().setOption(ChannelOption.SO_RCVBUF, (Object) 65536);
+            this.fq.config().setOption(ChannelOption.SO_SNDBUF, (Object) 65536);
+            this.fq.config().setOption(ChannelOption.AUTO_READ, (Object) true);
             vm.Fq.info("Established Redstone connection to " + this.fq.remoteAddress());
             gt gt2 = this.fq.attr(Ci).get();
             gt2.dy(zs2.yw());

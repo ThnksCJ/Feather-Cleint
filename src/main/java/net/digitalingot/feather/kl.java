@@ -10,7 +10,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 public abstract class kl
-extends CommandBase {
+        extends CommandBase {
     @NotNull
     private final String iu;
     @NotNull
@@ -45,7 +45,7 @@ extends CommandBase {
     }
 
     public void ay(Void void_) {
-        ClientCommandHandler.instance.func_71560_a((ICommand)this);
+        ClientCommandHandler.instance.func_71560_a((ICommand) this);
     }
 
     public abstract void ay(@NotNull String[] var1);

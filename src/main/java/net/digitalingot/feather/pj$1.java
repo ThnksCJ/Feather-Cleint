@@ -8,7 +8,7 @@ import net.digitalingot.feather.enums.vp;
 import net.digitalingot.feather.jx;
 
 class pj$1
-extends ChannelInitializer<Channel> {
+        extends ChannelInitializer<Channel> {
     pj$1() {
     }
 
@@ -17,7 +17,7 @@ extends ChannelInitializer<Channel> {
         channelPipeline.addLast("frame-decoder", new rs(vp.INTEGER));
         channelPipeline.addLast("frame-encoder", new qf(vp.INTEGER));
         channelPipeline.addLast("packetProcessor", new pj.ay());
-        channelPipeline.addLast("inboundExceptionHandler", (ChannelHandler)new jx.ay());
-        channelPipeline.addLast("outboundExceptionHandler", (ChannelHandler)new jx.rf());
+        channelPipeline.addLast("inboundExceptionHandler", (ChannelHandler) new jx.ay());
+        channelPipeline.addLast("outboundExceptionHandler", (ChannelHandler) new jx.rf());
     }
 }

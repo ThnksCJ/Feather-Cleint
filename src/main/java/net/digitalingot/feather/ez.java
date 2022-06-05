@@ -33,8 +33,8 @@ public class ez {
         Map<Boolean, Map<qc, Map>> map2 = map.entrySet().stream().collect(Collectors.groupingBy(entry -> entry.getKey().isSidebar(), Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue)));
         Map map3 = map2.getOrDefault(false, new EnumMap(qc.class));
         Map map4 = map2.getOrDefault(true, new EnumMap(qc.class));
-        this.ay(this.vp.zc(), (Map<qc, Map<String, String>>)map3);
-        this.ay(this.vp.uk(), (Map<qc, Map<String, String>>)map4);
+        this.ay(this.vp.zc(), (Map<qc, Map<String, String>>) map3);
+        this.ay(this.vp.uk(), (Map<qc, Map<String, String>>) map4);
     }
 
     private void ay(@NotNull File file, @NotNull Map<qc, Map<String, String>> map) {

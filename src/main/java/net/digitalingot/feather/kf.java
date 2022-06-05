@@ -1,6 +1,7 @@
 package net.digitalingot.feather;
 
 import net.digitalingot.feather.enums.qc;
+import net.digitalingot.feather.interfaces.it;
 import net.digitalingot.feather.mods.Mod;
 import org.jetbrains.annotations.NotNull;
 
@@ -28,7 +29,7 @@ public class kf {
         for (Class<? extends Mod<?>> clazz : this.ed.zm()) {
             Map.Entry entry2 = this.ed.qq().entrySet().stream().filter(entry -> entry.getValue().getClass() == clazz).findFirst().orElseThrow(IllegalStateException::new);
             qc qc2 = (qc) entry2.getKey();
-            Mod ux2 = (Mod)entry2.getValue();
+            Mod ux2 = (Mod) entry2.getValue();
             if (bl && qc2.isCore() || !ux2.xd().nv() || this.ed.iv().contains(ux2.cs().aw())) continue;
             this.nn(ux2);
         }
@@ -44,7 +45,7 @@ public class kf {
             Class<? extends Mod<?>> clazz = list.get(i);
             Map.Entry entry2 = this.ed.qq().entrySet().stream().filter(entry -> entry.getValue().getClass() == clazz).findFirst().orElseThrow(IllegalStateException::new);
             qc qc2 = (qc) entry2.getKey();
-            Mod ux2 = (Mod)entry2.getValue();
+            Mod ux2 = (Mod) entry2.getValue();
             if (bl && qc2.isCore() || !ux2.gc()) continue;
             this.ed(ux2);
         }

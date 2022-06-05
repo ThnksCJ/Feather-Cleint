@@ -1,6 +1,8 @@
 package net.digitalingot.feather;
 
-@rm(wm=true)
+import net.digitalingot.feather.interfaces.rm;
+
+@rm(wm = true)
 public class Class3$ay
-extends zi {
+        extends zi {
 }

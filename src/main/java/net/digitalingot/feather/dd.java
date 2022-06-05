@@ -24,7 +24,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class dd {
     public static int ay(@NotNull Gui gui) {
-        return (int)((ay)gui).getBlitOffset();
+        return (int) ((ay) gui).getBlitOffset();
     }
 
     public static Entity ay(@NotNull RenderManager renderManager) {
@@ -156,7 +156,7 @@ public class dd {
     }
 
     public static <T extends GuiButton> T ay(@NotNull GuiScreen guiScreen, T t) {
-        pv pv2 = (pv)guiScreen;
+        pv pv2 = (pv) guiScreen;
         pv2.getRenderables().add(t);
         return t;
     }

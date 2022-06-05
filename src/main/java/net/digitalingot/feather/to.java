@@ -1,6 +1,7 @@
 package net.digitalingot.feather;
 
 import com.google.common.collect.ImmutableMap;
+import net.digitalingot.feather.interfaces.bs;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -8,7 +9,7 @@ import java.awt.*;
 import java.util.Map;
 
 public class to {
-    private static final Map<Class<?>, bs<?>> sj = ImmutableMap.builder().put(Boolean.class, new iq()).put(Enum.class, (Object)new pl()).put(Double.class, (Object)new te()).put(Float.class, (Object)new bk()).put(Integer.class, (Object)new hz()).put(String.class, (Object)new xv()).put(Color.class, (Object)new tv()).put(gp.class, (Object)new ms()).put(km.class, (Object)new yx()).build();
+    private static final Map<Class<?>, bs<?>> sj = ImmutableMap.builder().put(Boolean.class, new iq()).put(Enum.class, new pl()).put(Double.class, new te()).put(Float.class, new bk()).put(Integer.class, new hz()).put(String.class, new xv()).put(Color.class, new tv()).put(gp.class, new ms()).put(km.class, new yx()).build();
 
     @Nullable
     static <T> bs<T> zz(@NotNull Class<T> clazz) {

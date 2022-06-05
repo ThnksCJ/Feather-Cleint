@@ -2,15 +2,16 @@ package net.digitalingot.feather;
 
 import com.google.gson.annotations.SerializedName;
 import net.digitalingot.feather.enums.ao;
+import net.digitalingot.feather.interfaces.da;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class hw
-implements da {
-    @SerializedName(value="colorPicker")
+        implements da {
+    @SerializedName(value = "colorPicker")
     @Nullable
     private final qi pk;
-    @SerializedName(value="modMenu")
+    @SerializedName(value = "modMenu")
     @Nullable
     private final cd rr;
 

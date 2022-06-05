@@ -1,5 +1,6 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.gd;
 import net.digitalingot.feather.mods.Mod;
 import net.digitalingot.feather.mods.impl.Hypixel;
 import net.minecraft.client.Minecraft;
@@ -9,7 +10,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.regex.Pattern;
 
 public class ob
-extends mn<Hypixel.ay> {
+        extends mn<Hypixel.ay> {
     @NotNull
     private static final Pattern tY = Pattern.compile("(:?1st(:? Killer| Place)?(:? - |:))|(:?Winner(:?s)?(:?:| - | #1))|(:?Winning Team(:?:| -) )|(:?Damage Dealt)|(:?Game over)|(:? won the game!)|(:?Last team standing!)");
     private static final Pattern tZ = Pattern.compile("\\S{1,16}: .*");

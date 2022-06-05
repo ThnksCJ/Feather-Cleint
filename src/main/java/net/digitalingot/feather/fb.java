@@ -1,5 +1,6 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.an;
 import net.digitalingot.feather.mods.impl.General;
 import org.jetbrains.annotations.NotNull;
 
@@ -20,7 +21,7 @@ public class fb {
     public fb(@NotNull gm gm2) {
         this.yC = gm2;
         if (this.b.exists()) {
-            List list = (List)zd.xn(this.b).ay(new /* Unavailable Anonymous Inner Class!! */.getType());
+            List list = (List) zd.xn(this.b).ay(new /* Unavailable Anonymous Inner Class!! */.getType());
             this.Ag.addAll(list);
         }
     }

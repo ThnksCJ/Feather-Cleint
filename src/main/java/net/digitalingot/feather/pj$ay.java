@@ -7,12 +7,12 @@ import io.netty.channel.ChannelHandlerContext;
 import java.nio.charset.StandardCharsets;
 
 public class pj$ay
-extends ChannelDuplexHandler {
+        extends ChannelDuplexHandler {
     public void channelRead(ChannelHandlerContext channelHandlerContext, Object object) {
         if (!(object instanceof ByteBuf)) {
             throw new IllegalArgumentException("Don't know how to cast " + object.getClass() + " to ByteBuf");
         }
-        ByteBuf byteBuf = (ByteBuf)object;
+        ByteBuf byteBuf = (ByteBuf) object;
         int n = byteBuf.readableBytes();
         byte[] byArray = new byte[n];
         byteBuf.readBytes(byArray);

@@ -14,13 +14,13 @@ public enum ho {
 
 
     public double getX(double d) {
-        switch (1.jh[this.ordinal()]) {
-            case 1: 
-            case 2: 
+        switch (1. jh[this.ordinal()]){
+            case 1:
+            case 2:
             case 3: {
                 return d;
             }
-            case 4: 
+            case 4:
             case 5: {
                 return d / 2.0;
             }
@@ -29,13 +29,13 @@ public enum ho {
     }
 
     public double getY(double d) {
-        switch (1.jh[this.ordinal()]) {
-            case 2: 
-            case 5: 
+        switch (1. jh[this.ordinal()]){
+            case 2:
+            case 5:
             case 6: {
                 return d;
             }
-            case 3: 
+            case 3:
             case 7: {
                 return d / 2.0;
             }
@@ -48,9 +48,9 @@ public enum ho {
     }
 
     public boolean isRightSide() {
-        switch (1.jh[this.ordinal()]) {
-            case 1: 
-            case 2: 
+        switch (1. jh[this.ordinal()]){
+            case 1:
+            case 2:
             case 3: {
                 return true;
             }
@@ -63,9 +63,9 @@ public enum ho {
     }
 
     public boolean isBottomSide() {
-        switch (1.jh[this.ordinal()]) {
-            case 2: 
-            case 5: 
+        switch (1. jh[this.ordinal()]){
+            case 2:
+            case 5:
             case 6: {
                 return true;
             }

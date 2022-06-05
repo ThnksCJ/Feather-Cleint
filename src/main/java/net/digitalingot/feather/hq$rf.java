@@ -1,13 +1,14 @@
 package net.digitalingot.feather;
 
 import net.digitalingot.feather.fc;
+import net.digitalingot.feather.interfaces.vt;
 import net.digitalingot.feather.jg;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Consumer;
 
 public class hq$rf
-implements vt<xm, fc, jg> {
+        implements vt<xm, fc, jg> {
     @NotNull
     private final if Bo;
 
@@ -20,7 +21,7 @@ implements vt<xm, fc, jg> {
         nf nf2;
         if.rf rf2 = new if.rf(xm2.mo(), System.currentTimeMillis());
         this.Bo.M().put(xm2.zi(), rf2);
-        gk gk2 = this.Bo.if();
+        gk gk2 = this.Bo. if () ;
         nf nf3 = nf2 = gk2 != null ? gk2.lx() : null;
         if (nf2 == null) {
             consumer2.accept(new jg("redstone connection not established"));

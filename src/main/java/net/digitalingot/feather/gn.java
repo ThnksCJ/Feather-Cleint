@@ -7,13 +7,13 @@ import java.awt.*;
 import java.nio.ByteBuffer;
 
 abstract class gn
-implements ICefRenderer {
-    private boolean da = false;
+        implements ICefRenderer {
     protected int pa = 0;
     protected int gw = 0;
     protected Rectangle vt = new Rectangle(0, 0, 0, 0);
     protected Rectangle pj = new Rectangle(0, 0, 0, 0);
     protected int er = 0;
+    private boolean da = false;
 
     gn() {
     }

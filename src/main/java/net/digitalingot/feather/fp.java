@@ -175,26 +175,26 @@ public final class fp {
 
     @Deprecated
     public static void rf(float f, float f2, float f3) {
-        ky.rf((float)f, (float)f2, (float)f3);
+        ky.rf((float) f, (float) f2, (float) f3);
     }
 
     @Deprecated
     public static void ay(double d, double d2, double d3) {
-        ky.ay((double)d, (double)d2, (double)d3);
+        ky.ay((double) d, (double) d2, (double) d3);
     }
 
     @Deprecated
     public static void rf(float f, float f2, float f3, float f4) {
-        ky.rf((float)f, (float)f2, (float)f3, (float)f4);
+        ky.rf((float) f, (float) f2, (float) f3, (float) f4);
     }
 
     @Deprecated
     public static void uj(float f, float f2, float f3) {
-        ky.uj((float)f, (float)f2, (float)f3);
+        ky.uj((float) f, (float) f2, (float) f3);
     }
 
     @Deprecated
     public static void rf(double d, double d2, double d3) {
-        ky.rf((double)d, (double)d2, (double)d3);
+        ky.rf((double) d, (double) d2, (double) d3);
     }
 }

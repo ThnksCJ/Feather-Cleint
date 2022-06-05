@@ -1,5 +1,6 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.qk;
 import org.jetbrains.annotations.NotNull;
 
 import java.lang.reflect.Method;

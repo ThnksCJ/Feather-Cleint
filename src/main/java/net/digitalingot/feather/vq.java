@@ -53,6 +53,6 @@ public final class vq {
             Object object = methodHandle2.invokeWithArguments(objectArray2);
         }
         methodHandle = var3_6;
-        return (T)Proxy.newProxyInstance(vq.class.getClassLoader(), new Class[]{clazz}, (object2, method, objectArray) -> methodArray);
+        return (T) Proxy.newProxyInstance(vq.class.getClassLoader(), new Class[]{clazz}, (object2, method, objectArray) -> methodArray);
     }
 }

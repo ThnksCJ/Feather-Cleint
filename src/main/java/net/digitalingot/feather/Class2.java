@@ -1,7 +1,7 @@
 package net.digitalingot.feather;
 
 public class Class2
-extends RuntimeException {
+        extends RuntimeException {
     public Class2(String string, Throwable throwable) {
         super(string, throwable);
     }

@@ -14,6 +14,19 @@ public class vs {
     private static long hv;
     private static boolean qo;
 
+    static {
+        Class<?> clazz = Class.forName("com.replaymod.replay.ReplayModReplay");
+        if (clazz == null) {
+            ho = null;
+            km = null;
+            db = null;
+        } else {
+            ho = clazz;
+            km = clazz.getDeclaredField("instance");
+            db = clazz.getDeclaredMethod("getReplayHandler");
+        }
+    }
+
     public static boolean kx() {
         return ho != null;
     }
@@ -40,18 +53,5 @@ public class vs {
         hv = l;
         qo = object2 != null;
         return qo;
-    }
-
-    static {
-        Class<?> clazz = Class.forName("com.replaymod.replay.ReplayModReplay");
-        if (clazz == null) {
-            ho = null;
-            km = null;
-            db = null;
-        } else {
-            ho = clazz;
-            km = clazz.getDeclaredField("instance");
-            db = clazz.getDeclaredMethod("getReplayHandler");
-        }
     }
 }

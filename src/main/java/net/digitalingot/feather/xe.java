@@ -1,5 +1,6 @@
 package net.digitalingot.feather;
 
+import net.digitalingot.feather.interfaces.hg;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -8,7 +9,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class xe
-implements hg {
+        implements hg {
     @NotNull
     private final URL EO;
     @Nullable
@@ -34,7 +35,7 @@ implements hg {
         if (this.EM != null) {
             return this.EM;
         }
-        this.EP = (HttpURLConnection)this.EO.openConnection();
+        this.EP = (HttpURLConnection) this.EO.openConnection();
         this.EP.setRequestMethod("GET");
         this.EP.setUseCaches(true);
         this.EP.setRequestProperty("User-Agent", this.EQ);

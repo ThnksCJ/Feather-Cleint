@@ -7,7 +7,7 @@ import com.google.gson.stream.JsonWriter;
 import java.util.ArrayList;
 
 public class zy
-extends TypeAdapter<km> {
+        extends TypeAdapter<km> {
     public void ay(JsonWriter jsonWriter, km km2) {
         if (km2 == null) {
             jsonWriter.nullValue();
@@ -48,6 +48,6 @@ extends TypeAdapter<km> {
     }
 
     public void write(JsonWriter jsonWriter, Object object) {
-        this.ay(jsonWriter, (km)object);
+        this.ay(jsonWriter, (km) object);
     }
 }

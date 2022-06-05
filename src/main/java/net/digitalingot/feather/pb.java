@@ -18,8 +18,8 @@ public class pb {
     }
 
     public static pb ay(int n, int n2, int n3) {
-        int n4 = (int)Math.floor((float)n3 / (float)n);
-        int n5 = (int)Math.floor((float)n3 / (float)n2);
+        int n4 = (int) Math.floor((float) n3 / (float) n);
+        int n5 = (int) Math.floor((float) n3 / (float) n2);
         int n6 = n4 * n5;
         int n7 = n4 * n;
         int n8 = n5 * n2;

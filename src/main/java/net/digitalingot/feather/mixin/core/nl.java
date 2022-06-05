@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 
 import java.util.List;
 
-@Mixin(value={RenderGlobal.class})
+@Mixin(value = {RenderGlobal.class})
 public interface nl {
     @Accessor
     ViewFrustum getViewFrustum();

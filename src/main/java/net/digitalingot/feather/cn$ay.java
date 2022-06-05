@@ -6,10 +6,10 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class cn$ay
-extends mo {
+        extends mo {
     @Override
     public Object so() {
-        DateTimeFormatter dateTimeFormatter = ((Time.rf)((Time) Time.this).vz).sL == Time.rf.ay.HOUR_12 ? sH : sI;
+        DateTimeFormatter dateTimeFormatter = ((Time.rf) ((Time) Time.this).vz).sL == Time.rf.ay.HOUR_12 ? sH : sI;
         return LocalDateTime.now().format(dateTimeFormatter);
     }
 
@@ -20,7 +20,7 @@ extends mo {
 
     @Override
     public fw bt() {
-        return ((Time.rf)((Time) Time.this).vz).jQ;
+        return ((Time.rf) ((Time) Time.this).vz).jQ;
     }
 
     @Override
