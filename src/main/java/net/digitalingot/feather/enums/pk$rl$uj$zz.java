@@ -1,0 +1,19 @@
+package net.digitalingot.feather.enums;
+
+public enum pk$rl$uj$zz {
+    AUTHENTICATION_SUCCESS,
+    SOFT_ERROR,
+    EMOTE_UPDATE,
+    OPTION_REFRESH_PROMPT,
+    BULK_OPTION_RESPONSE,
+    COSMETIC_SET,
+    COSMETIC_OWNED,
+    PARTY_INFO,
+    PARTY_INVITE,
+    PARTY_INVITE_DENIED,
+    PARTY_LEAVE,
+    P2P_JOIN_REQUEST,
+    P2P_JOIN_ACCEPTED,
+    _NOT_IN_SCHEMA
+
+}

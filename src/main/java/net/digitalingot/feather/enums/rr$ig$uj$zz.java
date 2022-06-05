@@ -1,0 +1,21 @@
+package net.digitalingot.feather.enums;
+
+public enum rr$ig$uj$zz {
+    HANDSHAKE,
+    METRICS,
+    TRACKING_UPDATE,
+    BULK_OPTION_REQUEST,
+    COSMETIC_REQUEST,
+    COSMETIC_SET,
+    EMOTE_EXECUTE,
+    PARTY_CREATE,
+    PARTY_SET_OWNER,
+    PARTY_INVITE,
+    PARTY_INVITE_RESPONSE,
+    PARTY_LEAVE,
+    PARTY_SETTINGS,
+    P2P_JOIN_REQUEST,
+    P2P_JOIN_ACCEPTED,
+    _NOT_IN_SCHEMA
+
+}
